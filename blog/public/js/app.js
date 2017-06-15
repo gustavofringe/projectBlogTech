@@ -14,3 +14,6 @@ for (var i = 0; i < img.length; i++) {
         title.textContent = ''
     })
 }
+var d = new Date()
+var ds = d.getSeconds(1000)
+document.write(ds).setTimeout((0,1000))
