@@ -1,4 +1,41 @@
-h1{
-    color: red;
-    text-align: center;
+@import "compass";
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+
+h1 {
+  img {
+    width: 300px;
+    margin: 50px auto;
+  }
+}
+
+.background {
+  background-image: url('../../public/img/png.png');
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+  .slide {
+    @include transition-duration(0.3s);
+    @include box-shadow(red 3px 10px 10px);
+    width: 600px;
+    height: 300px;
+    display: none;
+    margin: 0 auto;
+    opacity: .5;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+  }
+
+}
+.tabs{
+  .text{
+    .lorem{
+      display: none;
+    }
+    .active{
+      display: block;
+    }
+  }
 }
