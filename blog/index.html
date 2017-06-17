@@ -16,39 +16,61 @@
         <!--
         title of site
         -->
-        <h1><img src="public/img/logo.jpg" alt="titre principal"></h1>
-        <!--
-        slide
-        -->
-        <div class="background">
-            <img class="img-blog slide" src="public/img/slide1.jpg" alt="Jeu concours">
-            <img class="img-blog slide" src="public/img/slide2.jpg" alt="téléphone">
-            <img class="img-blog slide" src="public/img/slide3.jpg" alt="Jeu vidéo">
-        </div>
-        <p id="text"></p>
-        <div class="tabs">
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link list" id="p_a" href="#">Test</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link list" id="p_b" href="#">Idée de la semaine</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link list" id="p_c" href="#">A propos</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="text">
-                <p id="c_a" class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab consequuntur deleniti dolor dolore eos ex harum inventore ipsa nemo nesciunt praesentium quam quia quod ratione rem repellat, sed velit?</p>
-                <p id="c_b" class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eligendi expedita incidunt optio quidem sequi voluptatum! Aspernatur dignissimos eos ex harum iste, mollitia nemo nesciunt repudiandae rerum saepe totam vel.</p>
-                <p id="c_c" class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi corporis, distinctio dolore doloribus dolorum enim et id in obcaecati quibusdam, vel voluptas voluptatibus! Aliquid assumenda blanditiis excepturi provident quidem?</p>
+        <div class="container">
+            <h1><img src="public/img/logo.jpg" alt="titre principal"></h1>
+            <!--
+            slide
+            -->
+            <div class="background">
+                <img class="img-blog slide" src="public/img/slide1.jpg" alt="Jeu concours">
+                <img class="img-blog slide" src="public/img/slide2.jpg" alt="téléphone">
+                <img class="img-blog slide" src="public/img/slide3.jpg" alt="Jeu vidéo">
+            </div>
+            <p id="text"></p>
+            <!--
 
+            navigation
+            -->
+            <div class="menu">
+                    <ul class="tabs nav">
+                        <li class="nav-item" id="tab_1">
+                            <a class="nav-link list" onclick="show('content_1');tabs('tab_1')" href="#">Test</a>
+                        </li>
+                        <li class="nav-item" id="tab_2">
+                            <a class="nav-link list" onclick="show('content_2');tabs('tab_2')" href="#">Idée de la semaine</a>
+                        </li>
+                        <li class="nav-item" id="tab_3">
+                            <a class="nav-link list" onclick="show('content_3');tabs('tab_3')" href="#">A propos</a>
+                        </li>
+                    </ul>
+                <!--
+                content tabs
+                -->
+                <div class="tabs-content">
+                    <p id="content_1" class="lorem" onmouseover="tabs('tab_1')">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+                        consequuntur deleniti dolor dolore eos ex harum inventore ipsa nemo nesciunt praesentium quam
+                        quia quod ratione rem repellat, sed velit?</p>
+                    <p id="content_2" class="lorem" onmouseover="tabs('tab_2')">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
+                        eligendi expedita incidunt optio quidem sequi voluptatum! Aspernatur dignissimos eos ex harum
+                        iste, mollitia nemo nesciunt repudiandae rerum saepe totam vel.</p>
+                    <p  id="content_3" class="lorem" onmouseover="tabs('tab_3')">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+                        commodi corporis, distinctio dolore doloribus dolorum enim et id in obcaecati quibusdam, vel
+                        voluptas voluptatibus! Aliquid assumenda blanditiis excepturi provident quidem?</p>
+
+                </div>
             </div>
         </div>
-        <div class="date"></div>
     </header>
+    <footer>
+        <div class="container">
+            <div class="date"></div>
+            <div id="hours"></div>
+            <p id="minutes"></p>
+            <p id="seconde"></p>
+            <p id="dixiem"></p>
+        </div>
+    </footer>
+
 </body>
 <script src="public/js/jquery-3.2.1.min.js"></script>
 <script src="public/js/bootstrap.min.js"></script>

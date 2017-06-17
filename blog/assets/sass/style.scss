@@ -2,11 +2,17 @@
 @import "compass/css3/transition";
 @import "compass/css3/opacity";
 @import "compass/css3/box-shadow";
+@import "fonts";
+
+html, body {
+  font-family: 'oswald-bold';
+}
 
 h1 {
+  width: 300px;
+  margin: 50px auto !important;
   img {
     width: 300px;
-    margin: 50px auto;
   }
 }
 
@@ -27,15 +33,26 @@ h1 {
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
   }
-
 }
-.tabs{
-  .text{
+
+  .tabs-content{
     .lorem{
       display: none;
-    }
-    .active{
-      display: block;
+      position: absolute;
+      width: 250px;
+      height: 300px;
+      background-color: #fff;
+      border: 1px solid grey;
+      z-index: 2;
     }
   }
+.nav-item.active{
+  background-color: red;
+}
+.lorem.active{
+  display: block;
+}
+
+footer{
+  background-image: url('../../public/img/png.png');
 }

@@ -1,17 +1,38 @@
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../../public/fonts/fontawesome-webfont.woff");
+}
+@font-face {
+  font-family: 'oswald';
+  src: url("../../public/fonts/oswald.woff2");
+}
+@font-face {
+  font-family: 'oswald-bold';
+  src: url("../../public/fonts/oswald_bold.woff2");
+}
 /* line 7, ../../assets/sass/style.scss */
-h1 img {
-  width: 300px;
-  margin: 50px auto;
+html, body {
+  font-family: 'oswald-bold';
 }
 
-/* line 13, ../../assets/sass/style.scss */
+/* line 11, ../../assets/sass/style.scss */
+h1 {
+  width: 300px;
+  margin: 50px auto !important;
+}
+/* line 14, ../../assets/sass/style.scss */
+h1 img {
+  width: 300px;
+}
+
+/* line 19, ../../assets/sass/style.scss */
 .background {
   background-image: url("../../public/img/png.png");
   width: 700px;
   height: 300px;
   margin: 0 auto;
 }
-/* line 18, ../../assets/sass/style.scss */
+/* line 24, ../../assets/sass/style.scss */
 .background .slide {
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -30,11 +51,28 @@ h1 img {
   -webkit-transition: opacity .25s ease-in-out;
 }
 
-/* line 34, ../../assets/sass/style.scss */
-.tabs .text .lorem {
+/* line 39, ../../assets/sass/style.scss */
+.tabs-content .lorem {
   display: none;
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid grey;
+  z-index: 2;
 }
-/* line 37, ../../assets/sass/style.scss */
-.tabs .text .active {
+
+/* line 49, ../../assets/sass/style.scss */
+.nav-item.active {
+  background-color: red;
+}
+
+/* line 52, ../../assets/sass/style.scss */
+.lorem.active {
   display: block;
+}
+
+/* line 56, ../../assets/sass/style.scss */
+footer {
+  background-image: url("../../public/img/png.png");
 }
