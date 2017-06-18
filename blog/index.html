@@ -6,70 +6,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="public/css/style.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" media="screen"/>
     <title>Le blog</title>
 </head>
 
 <body>
-    <header>
+<header>
+    <!--
+    title of site
+    -->
+    <div class="container">
+        <h1><img src="public/img/logo.jpg" alt="titre principal"></h1>
         <!--
-        title of site
+        slide
         -->
-        <div class="container">
-            <h1><img src="public/img/logo.jpg" alt="titre principal"></h1>
+        <div class="background">
+            <img class="img-blog slide" src="public/img/slide1.jpg" alt="Jeu concours">
+            <img class="img-blog slide" src="public/img/slide2.jpg" alt="téléphone">
+            <img class="img-blog slide" src="public/img/slide3.jpg" alt="Jeu vidéo">
+        </div>
+        <p id="text"></p>
+        <!--
+
+        navigation
+        -->
+        <div class="menu mt-4">
+            <ul class="tabs nav">
+                <li class="nav-item">
+                    <a class="nav-link tab" id="tab_1" onclick="show('1'); tabs('1')" href="#test">Test</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab" id="tab_2" onclick="show('2'); tabs('2')" href="#idea">Idée de la
+                        semaine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab" id="tab_3" onclick="show('3'); tabs('3')" href="#about">A propos</a>
+                </li>
+            </ul>
             <!--
-            slide
+            content tabs
             -->
-            <div class="background">
-                <img class="img-blog slide" src="public/img/slide1.jpg" alt="Jeu concours">
-                <img class="img-blog slide" src="public/img/slide2.jpg" alt="téléphone">
-                <img class="img-blog slide" src="public/img/slide3.jpg" alt="Jeu vidéo">
+            <div class="tabs-content">
+                <p class="content" id="content_1" id="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                    ab
+                    consequuntur deleniti dolor dolore eos ex harum inventore ipsa nemo nesciunt praesentium quam
+                    quia quod ratione rem repellat, sed velit?</p>
+                <p class="content" id="content_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
+                    eligendi expedita incidunt optio quidem sequi voluptatum! Aspernatur dignissimos eos ex harum
+                    iste, mollitia nemo nesciunt repudiandae rerum saepe totam vel.</p>
+                <p class="content" id="content_3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+                    commodi corporis, distinctio dolore doloribus dolorum enim et id in obcaecati quibusdam, vel
+                    voluptas voluptatibus! Aliquid assumenda blanditiis excepturi provident quidem?</p>
+
             </div>
-            <p id="text"></p>
-            <!--
+        </div>
+    </div>
+</header>
+<main id="blog" class="container d-flex">
+    <!--
+    aside
+    -->
+    <aside class="news mt-4 hidden-md-down">
+        <h2>actualités</h2>
+        <img src="public/img/monkey.gif" alt="gif">
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cum doloribus ea excepturi
+            nam nisi omnis quis sapiente veritatis vero. Amet at aut consequuntur exercitationem hic minima placeat
+            quisquam repudiandae.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid est fuga incidunt itaque neque
+            praesentium reiciendis rem ullam vero? Debitis dignissimos dolores esse ex laborum obcaecati ratione
+            repellat similique.</p>
+    </aside>
+    <!--
+    end aside
+    -->
+    <div class="d-block">
+        <div class="new m-4">
+            <div class="row pb-4">
+                <div class="col-md-12 col-lg-6">
+                    <img src="public/img/img_blog1.jpg" alt="enceinte bluetooth">
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Energy</h3>
+                    <h4>Music Box 5 – La boite à son bluetooth au bon rapport qualité/prix</h4>
+                    <div class="post-user">
+                        <i class="icon-user d-inline"></i>
+                        <span class="user d-inline">Fabien Pinel</span>
+                        <span class="post_date d-inline">le 15 mai 2017</span>
+                        <i class="icon-comment-alt d-inline"></i>
+                        <span class="d-inline"><a href="pages/show.html">1 Comment</a></span>
+                    </div>
 
-            navigation
-            -->
-            <div class="menu">
-                    <ul class="tabs nav">
-                        <li class="nav-item" id="tab_1">
-                            <a class="nav-link list" onclick="show('content_1');tabs('tab_1')" href="#">Test</a>
-                        </li>
-                        <li class="nav-item" id="tab_2">
-                            <a class="nav-link list" onclick="show('content_2');tabs('tab_2')" href="#">Idée de la semaine</a>
-                        </li>
-                        <li class="nav-item" id="tab_3">
-                            <a class="nav-link list" onclick="show('content_3');tabs('tab_3')" href="#">A propos</a>
-                        </li>
-                    </ul>
-                <!--
-                content tabs
-                -->
-                <div class="tabs-content">
-                    <p id="content_1" class="lorem" onmouseover="tabs('tab_1')">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
-                        consequuntur deleniti dolor dolore eos ex harum inventore ipsa nemo nesciunt praesentium quam
-                        quia quod ratione rem repellat, sed velit?</p>
-                    <p id="content_2" class="lorem" onmouseover="tabs('tab_2')">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-                        eligendi expedita incidunt optio quidem sequi voluptatum! Aspernatur dignissimos eos ex harum
-                        iste, mollitia nemo nesciunt repudiandae rerum saepe totam vel.</p>
-                    <p  id="content_3" class="lorem" onmouseover="tabs('tab_3')">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                        commodi corporis, distinctio dolore doloribus dolorum enim et id in obcaecati quibusdam, vel
-                        voluptas voluptatibus! Aliquid assumenda blanditiis excepturi provident quidem?</p>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet
+                        aperiam, beatae cum earum enim
+                        et eum facere iusto maxime nesciunt nobis provident quia quos ratione sed similique suscipit
+                        tempora....
+                    </p>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="pages/show1.html">Lire la
+                        suite >></a></button>
+                </div>
+            </div>
+            <div class="pub mt-4">
+                <img src="public/img/pub.jpg" alt="publicité">
+            </div>
+        </div>
+        <div class="new m-4">
+            <div class="row pb-4">
+                <div class="col-md-12 col-lg-6">
+                    <img src="public/img/img_blog1.jpg" alt="enceinte bluetooth">
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Energy</h3>
+                    <h4>Music Box 5 – La boite à son bluetooth au bon rapport qualité/prix</h4>
+                    <div class="post-user">
+                        <i class="icon-user d-inline"></i>
+                        <span class="user d-inline">Fabien Pinel</span>
+                        <span class="post_date d-inline">le 15 mai 2017</span>
+                        <i class="icon-comment-alt d-inline"></i>
+                        <span class="d-inline"><a href="pages/show.html">1 Comment</a></span>
+                    </div>
 
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet
+                        aperiam, beatae cum earum enim
+                        et eum facere iusto maxime nesciunt nobis provident quia quos ratione sed similique suscipit
+                        tempora....
+                    </p>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="pages/show1.html">Lire la
+                        suite >></a></button>
                 </div>
             </div>
         </div>
-    </header>
-    <footer>
-        <div class="container">
-            <div class="date"></div>
-            <div id="hours"></div>
-            <p id="minutes"></p>
-            <p id="seconde"></p>
-            <p id="dixiem"></p>
+        <div class="new m-4">
+            <div class="row pb-4">
+                <div class="col-md-12 col-lg-6">
+                    <img src="public/img/img_blog1.jpg" alt="enceinte bluetooth">
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Energy</h3>
+                    <h4>Music Box 5 – La boite à son bluetooth au bon rapport qualité/prix</h4>
+                    <div class="post-user">
+                        <i class="icon-user d-inline"></i>
+                        <span class="user d-inline">Fabien Pinel</span>
+                        <span class="post_date d-inline">le 15 mai 2017</span>
+                        <i class="icon-comment-alt d-inline"></i>
+                        <span class="d-inline"><a href="pages/show.html">1 Comment</a></span>
+                    </div>
+
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet
+                        aperiam, beatae cum earum enim
+                        et eum facere iusto maxime nesciunt nobis provident quia quos ratione sed similique suscipit
+                        tempora....
+                    </p>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="pages/show1.html">Lire la
+                        suite >></a></button>
+                </div>
+            </div>
         </div>
-    </footer>
+        <div class="new m-4">
+            <div class="row pb-4">
+                <div class="col-md-12 col-lg-6">
+                    <img src="public/img/img_blog1.jpg" alt="enceinte bluetooth">
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Energy</h3>
+                    <h4>Music Box 5 – La boite à son bluetooth au bon rapport qualité/prix</h4>
+                    <div class="post-user">
+                        <i class="icon-user d-inline"></i>
+                        <span class="user d-inline">Fabien Pinel</span>
+                        <span class="post_date d-inline">le 15 mai 2017</span>
+                        <i class="icon-comment-alt d-inline"></i>
+                        <span class="d-inline"><a href="pages/show.html">1 Comment</a></span>
+                    </div>
+
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet
+                        aperiam, beatae cum earum enim
+                        et eum facere iusto maxime nesciunt nobis provident quia quos ratione sed similique suscipit
+                        tempora....
+                    </p>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="pages/show1.html">Lire la
+                        suite >></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!--
+footer
+-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="date"></div>
+            </div>
+            <div class="col-md-2">
+                <div id="hours"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="minutes" class="d-inline"></div>
+                <div id="seconde" class="d-inline"></div>
+                <div id="dixiem" class="d-inline"></div>
+            </div>
+        </div>
+        <div class="social">
+            <span class="d-inline">Nous suivre</span>
+            <img src="public/img/gplus.png" alt="google plus" class="d-inline">
+            <img src="public/img/twitter.png" alt="twitter" class="d-inline">
+            <img src="public/img/youtube.png" alt="youtube" class="d-inline">
+            <img src="public/img/facebook.png" alt="facebook" class="d-inline">
+        </div>
+    </div>
+</footer>
 
 </body>
 <script src="public/js/jquery-3.2.1.min.js"></script>

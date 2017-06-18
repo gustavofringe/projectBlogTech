@@ -43,42 +43,31 @@ slide();
  *tabs
  *
  * */
-/*var tabs = document.querySelectorAll('.tabs a');
-for (var i = 0;i<tabs.length; i++){
-    tabs[i].addEventListener('click', function(){
-        var li = this.parentNode;
-        var div = this.parentNode.parentNode.parentNode;
 
-        div.querySelector('.tabs .active').classList.remove('active');
-        li.classList.add('active');
-        div.querySelector('.lorem.active').classList.toggle('active');
-
-        div.querySelector(this.getAttribute('href')).classList.toggle('active');
-    });
-}*/
 
 function show(id) {
-    var d = document.getElementById(id);
+    var lorem = document.getElementById('content_'+id);
     for (var i = 1; i<=3; i++) {
         if (document.getElementById('content_'+i))
         {
             document.getElementById('content_'+i).classList.remove('active');
         }
     }
-    if (d){
-        d.classList.toggle('active')
+    if (lorem){
+        lorem.classList.add('active')
     }
 }
 function tabs(id) {
-    var c = document.getElementById(id);
+    var tabs = document.getElementById('tab_'+id);
     for (var i = 1; i<=3; i++) {
-        if (document.getElementById('tab_'+i))
+        var tab = document.getElementById('tab_'+i)
+        if (tab)
         {
-            document.getElementById('tab_'+i).classList.remove('active');
+            tab.classList.remove('active');
         }
     }
-    if (c){
-        c.classList.toggle('active')
+    if (tabs){
+        tabs.classList.toggle('active')
     }
 }
 
@@ -112,7 +101,7 @@ var chrono = function () {
     //Je renvoie l'info dans mon html
     dixiem.innerHTML = centi
     seconde.innerHTML = secon + " secondes"
-    minute.innerHTML = "Temps passé sur la page: "+ minu + " Minutes"
+    minute.innerHTML = "Temps passé sur la page: "+ minu + " Minute(s)"
 }
 //J'injecte ma fonction dans mon html
 setTimeout(chrono,100);
