@@ -1,0 +1,189 @@
+@import "compass";
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+@import "animations";
+@import "fonts";
+/*
+Theme Name: newstech
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: Dussart Guillaume
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.8
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/**
+*
+*
+*html,body
+*
+*
+**/
+html, body {
+  font-family: 'fontawesome';
+}
+/**
+*
+*=================================================== page title
+*
+**/
+h1 {
+  width: 300px;
+  margin: 50px auto !important;
+  img {
+    width: 300px;
+  }
+}
+/**
+*
+*
+*====================================================== slide header
+*
+**/
+.background {
+  background-image: url('img/png.png');
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  .slide {
+    @include transition-duration(0.3s);
+    @include box-shadow(red 3px 10px 10px);
+    width: 60%;
+    height: 300px;
+    display: none;
+    margin: 0 auto;
+    opacity: .5;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+  }
+}
+/**
+*
+*
+*================================================== tabs dropdown
+*
+**/
+  .tabs-content{
+    .content{
+      display: none;
+      position: absolute;
+      width: 250px;
+      height: 300px;
+      background-color: #fff;
+      border: 1px solid grey;
+      z-index: 2;
+    }
+  }
+.nav-item.active{
+  background-color: red;
+}
+.content.active{
+  display: block;
+}
+/**
+*
+*
+*================================================ alt effect
+*
+**/
+#text{
+  @include animation('animate-object 10s infinite');
+  font-size: 50px;
+  color: #01ff70;
+  width:100%;
+  height:auto;
+  position:absolute;
+  top: 120px;
+  left: 65px;
+}
+@include keyframes(animate-object) {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+/**
+*
+*
+*================================================== aside
+*
+**/
+aside{
+  width: 25%;
+  p{
+    text-align: justify;
+  }
+  img{
+    width: 100%;
+  }
+  h2{
+    text-transform: uppercase;
+  }
+}
+/**
+*
+*
+*=================================================== blog part
+*
+**/
+.new{
+  img{
+    width: 100%;
+    height: 350px;
+  }
+  .icon-user, .icon-comment-alt{
+    font-family: 'fontawesome';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    }
+  .icon-user:before{
+    content: '\f007';
+    color: grey;
+  }
+  .icon-comment-alt:before{
+    content: '\f0e5';
+    color: grey;
+  }
+  .row{
+    border-bottom: 2px solid grey;
+  }
+}
+/*
+*
+*========================================= pub
+*
+**/
+.pub{
+  img{
+    height: 125px;
+  }
+}
+/**
+*
+*
+*======================================== footer
+*
+**/
+
+footer{
+  line-height: 60px;
+  height: 100%;
+  color: white;
+  background-image: url('img/png.png');
+}

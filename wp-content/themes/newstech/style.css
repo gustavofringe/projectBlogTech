@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'fontawesome';
+  src: url("fonts/fontawesome-webfont.woff");
+}
+@font-face {
+  font-family: 'oswald';
+  src: url("fonts/oswald.woff2");
+}
+@font-face {
+  font-family: 'oswald-bold';
+  src: url("fonts/oswald_bold.woff2");
+}
+/*
+Theme Name: newstech
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: Dussart Guillaume
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.8
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/**
+*
+*
+*html,body
+*
+*
+**/
+/* line 29, assets/sass/style.scss */
+html, body {
+  font-family: 'fontawesome';
+}
+
+/**
+*
+*=================================================== page title
+*
+**/
+/* line 37, assets/sass/style.scss */
+h1 {
+  width: 300px;
+  margin: 50px auto !important;
+}
+/* line 40, assets/sass/style.scss */
+h1 img {
+  width: 300px;
+}
+
+/**
+*
+*
+*====================================================== slide header
+*
+**/
+/* line 50, assets/sass/style.scss */
+.background {
+  background-image: url("img/png.png");
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+/* line 55, assets/sass/style.scss */
+.background .slide {
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-box-shadow: red 3px 10px 10px;
+  -webkit-box-shadow: red 3px 10px 10px;
+  box-shadow: red 3px 10px 10px;
+  width: 60%;
+  height: 300px;
+  display: none;
+  margin: 0 auto;
+  opacity: .5;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+/**
+*
+*
+*================================================== tabs dropdown
+*
+**/
+/* line 75, assets/sass/style.scss */
+.tabs-content .content {
+  display: none;
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid grey;
+  z-index: 2;
+}
+
+/* line 85, assets/sass/style.scss */
+.nav-item.active {
+  background-color: red;
+}
+
+/* line 88, assets/sass/style.scss */
+.content.active {
+  display: block;
+}
+
+/**
+*
+*
+*================================================ alt effect
+*
+**/
+/* line 97, assets/sass/style.scss */
+#text {
+  -webkit-animation: animate-object 10s infinite;
+  -moz-animation: animate-object 10s infinite;
+  -o-animation: animate-object 10s infinite;
+  animation: animate-object 10s infinite;
+  font-size: 50px;
+  color: #01ff70;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 120px;
+  left: 65px;
+}
+
+@-webkit-keyframes animate-object {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+@-moz-keyframes animate-object {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+@-o-keyframes animate-object {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+@keyframes animate-object {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+/**
+*
+*
+*================================================== aside
+*
+**/
+/* line 125, assets/sass/style.scss */
+aside {
+  width: 25%;
+}
+/* line 127, assets/sass/style.scss */
+aside p {
+  text-align: justify;
+}
+/* line 130, assets/sass/style.scss */
+aside img {
+  width: 100%;
+}
+/* line 133, assets/sass/style.scss */
+aside h2 {
+  text-transform: uppercase;
+}
+
+/**
+*
+*
+*=================================================== blog part
+*
+**/
+/* line 144, assets/sass/style.scss */
+.new img {
+  width: 100%;
+  height: 350px;
+}
+/* line 148, assets/sass/style.scss */
+.new .icon-user, .new .icon-comment-alt {
+  font-family: 'fontawesome';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+/* line 155, assets/sass/style.scss */
+.new .icon-user:before {
+  content: '\f007';
+  color: grey;
+}
+/* line 159, assets/sass/style.scss */
+.new .icon-comment-alt:before {
+  content: '\f0e5';
+  color: grey;
+}
+/* line 163, assets/sass/style.scss */
+.new .row {
+  border-bottom: 2px solid grey;
+}
+
+/*
+*
+*========================================= pub
+*
+**/
+/* line 173, assets/sass/style.scss */
+.pub img {
+  height: 125px;
+}
+
+/**
+*
+*
+*======================================== footer
+*
+**/
+/* line 184, assets/sass/style.scss */
+footer {
+  line-height: 60px;
+  height: 100%;
+  color: white;
+  background-image: url("img/png.png");
+}
