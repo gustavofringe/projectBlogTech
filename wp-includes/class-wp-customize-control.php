@@ -132,7 +132,7 @@ class WP_Customize_Control {
 	/**
 	 * List of custom input attributes for control output, where attribute names are the keys and values are the values.
 	 *
-	 * Not used for 'checkbox', 'radio', 'select', 'textarea', or 'dropdown-pages' control types.
+	 * Not used for 'checkbox', 'radio', 'select', 'textarea', or 'dropdown-template-parts' control types.
 	 *
 	 * @since 4.0.0
 	 * @access public
@@ -141,7 +141,7 @@ class WP_Customize_Control {
 	public $input_attrs = array();
 
 	/**
-	 * Show UI for adding new content, currently only used for the dropdown-pages control.
+	 * Show UI for adding new content, currently only used for the dropdown-template-parts control.
 	 *
 	 * @since 4.7.0
 	 * @access public
@@ -213,10 +213,10 @@ class WP_Customize_Control {
 	 *     @type array                $input_attrs     List of custom input attributes for control output, where
 	 *                                                 attribute names are the keys and values are the values. Not
 	 *                                                 used for 'checkbox', 'radio', 'select', 'textarea', or
-	 *                                                 'dropdown-pages' control types. Default empty array.
+	 *                                                 'dropdown-template-parts' control types. Default empty array.
 	 *     @type array                $json            Deprecated. Use WP_Customize_Control::json() instead.
 	 *     @type string               $type            Control type. Core controls include 'text', 'checkbox',
-	 *                                                 'textarea', 'radio', 'select', and 'dropdown-pages'. Additional
+	 *                                                 'textarea', 'radio', 'select', and 'dropdown-template-parts'. Additional
 	 *                                                 input types such as 'email', 'url', 'number', 'hidden', and
 	 *                                                 'date' are supported implicitly. Default 'text'.
 	 * }
@@ -334,7 +334,7 @@ class WP_Customize_Control {
 		$this->json['description'] = $this->description;
 		$this->json['instanceNumber'] = $this->instance_number;
 
-		if ( 'dropdown-pages' === $this->type ) {
+		if ( 'dropdown-template-parts' === $this->type ) {
 			$this->json['allow_addition'] = $this->allow_addition;
 		}
 	}
@@ -486,7 +486,7 @@ class WP_Customize_Control {
 	 *
 	 * Allows the content to be overridden without having to rewrite the wrapper in `$this::render()`.
 	 *
-	 * Supports basic input types `text`, `checkbox`, `textarea`, `radio`, `select` and `dropdown-pages`.
+	 * Supports basic input types `text`, `checkbox`, `textarea`, `radio`, `select` and `dropdown-template-parts`.
 	 * Additional input types such as `email`, `url`, `number`, `hidden` and `date` are supported implicitly.
 	 *
 	 * Control content can alternately be rendered in JS. See WP_Customize_Control::print_template().
@@ -563,7 +563,7 @@ class WP_Customize_Control {
 				</label>
 				<?php
 				break;
-			case 'dropdown-pages':
+			case 'dropdown-template-parts':
 				?>
 				<label>
 				<?php if ( ! empty( $this->label ) ) : ?>
@@ -574,7 +574,7 @@ class WP_Customize_Control {
 				<?php endif; ?>
 
 				<?php
-				$dropdown_name = '_customize-dropdown-pages-' . $this->id;
+				$dropdown_name = '_customize-dropdown-template-parts-' . $this->id;
 				$show_option_none = __( '&mdash; Select &mdash;' );
 				$option_none_value = '0';
 				$dropdown = wp_dropdown_pages(
@@ -596,7 +596,7 @@ class WP_Customize_Control {
 				$dropdown = str_replace( '<select', '<select ' . $this->get_link(), $dropdown );
 
 				// Even more hacikly add auto-draft page stubs.
-				// @todo Eventually this should be removed in favor of the pages being injected into the underlying get_pages() call. See <https://github.com/xwp/wp-customize-posts/pull/250>.
+				// @todo Eventually this should be removed in favor of the template-parts being injected into the underlying get_pages() call. See <https://github.com/xwp/wp-customize-posts/pull/250>.
 				$nav_menus_created_posts_setting = $this->manager->get_setting( 'nav_menus_created_posts' );
 				if ( $nav_menus_created_posts_setting && current_user_can( 'publish_pages' ) ) {
 					$auto_draft_page_options = '';

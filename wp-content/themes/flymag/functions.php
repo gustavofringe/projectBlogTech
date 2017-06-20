@@ -37,7 +37,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
+		 * Enable support for Post Thumbnails on posts and template-parts.
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
@@ -295,7 +295,7 @@ function flymag_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Home page', 'flymag' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Widgets added here will be displayed on pages using the Front Page template', 'flymag' ),
+		'description'   => __( 'Widgets added here will be displayed on template-parts using the Front Page template', 'flymag' ),
 		'before_widget' => '<aside id="%1$s" class="widget wow fadeIn %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title"><span>',
@@ -304,7 +304,7 @@ function flymag_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Home page top', 'flymag' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Widgets added here will be displayed above the main content area and sidebar on pages using the Front Page template', 'flymag' ),
+		'description'   => __( 'Widgets added here will be displayed above the main content area and sidebar on template-parts using the Front Page template', 'flymag' ),
 		'before_widget' => '<aside id="%1$s" class="widget wow fadeIn %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title"><span>',

@@ -575,8 +575,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		/**
 		 * Enqueue thickbox scripts/styles for plugin info.
 		 *
-		 * Thickbox is not automatically included on all admin pages, so we must
-		 * manually enqueue it for those pages.
+		 * Thickbox is not automatically included on all admin template-parts, so we must
+		 * manually enqueue it for those template-parts.
 		 *
 		 * Thickbox is only loaded if the user has not dismissed the admin
 		 * notice or if there are any plugins left to install and activate.
@@ -1139,7 +1139,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				add_settings_error( 'tgmpa', 'tgmpa', $rendered, $this->get_admin_notice_class() );
 			}
 
-			// Admin options pages already output settings_errors, so this is to avoid duplication.
+			// Admin options template-parts already output settings_errors, so this is to avoid duplication.
 			if ( 'options-general' !== $GLOBALS['current_screen']->parent_base ) {
 				$this->display_settings_errors();
 			}

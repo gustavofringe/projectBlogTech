@@ -42,7 +42,7 @@ class WP_Widget_Search extends WP_Widget {
 	 * @param array $instance Settings for the current Search widget instance.
 	 */
 	public function widget( $args, $instance ) {
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-includes/widgets/class-wp-widget-template-parts.php */
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
 		echo $args['before_widget'];

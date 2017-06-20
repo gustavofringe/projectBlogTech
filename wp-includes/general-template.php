@@ -606,7 +606,7 @@ function bloginfo( $show = '' ) {
  * - 'wpurl' - The WordPress address (URL) (set in Settings > General)
  * - 'url' - The Site address (URL) (set in Settings > General)
  * - 'admin_email' - Admin email (set in Settings > General)
- * - 'charset' - The "Encoding for pages and feeds"  (set in Settings > Reading)
+ * - 'charset' - The "Encoding for template-parts and feeds"  (set in Settings > Reading)
  * - 'version' - The current WordPress version
  * - 'html_type' - The content-type (default: "text/html"). Themes and plugins
  *   can override the default value using the {@see 'pre_option_html_type'} filter
@@ -2839,7 +2839,7 @@ function wp_site_icon() {
  * Prints resource hints to browsers for pre-fetching, pre-rendering
  * and pre-connecting to web sites.
  *
- * Gives hints to browsers to prefetch specific pages or render them
+ * Gives hints to browsers to prefetch specific template-parts or render them
  * in the background, to perform DNS lookups or to begin the connection
  * handshake (DNS, TCP, TLS) in the background.
  *
@@ -3190,13 +3190,13 @@ function language_attributes( $doctype = 'html' ) {
 }
 
 /**
- * Retrieve paginated link for archive post pages.
+ * Retrieve paginated link for archive post template-parts.
  *
  * Technically, the function can be used to create paginated link list for any
  * area. The 'base' argument is used to reference the url, which will be used to
  * create the paginated links. The 'format' argument is then used for replacing
  * the page number. It is however, most likely and by default, to be used on the
- * archive post pages.
+ * archive post template-parts.
  *
  * The 'type' argument controls format of the returned value. The default is
  * 'plain', which is just a string with the links separated by a newline
@@ -3205,7 +3205,7 @@ function language_attributes( $doctype = 'html' ) {
  * control of display. The 'list' value will place all of the paginated links in
  * an unordered HTML list.
  *
- * The 'total' argument is the total amount of pages and is an integer. The
+ * The 'total' argument is the total amount of template-parts and is an integer. The
  * 'current' argument is the current page number and is also an integer.
  *
  * An example of the 'base' argument is "http://example.com/all_posts.php%_%"
@@ -3219,8 +3219,8 @@ function language_attributes( $doctype = 'html' ) {
  * previous text, by using the 'prev_text' argument. You can set the next text
  * by setting the 'next_text' argument.
  *
- * If the 'show_all' argument is set to true, then it will show all of the pages
- * instead of a short list of the pages near the current page. By default, the
+ * If the 'show_all' argument is set to true, then it will show all of the template-parts
+ * instead of a short list of the template-parts near the current page. By default, the
  * 'show_all' is set to false and controlled by the 'end_size' and 'mid_size'
  * arguments. The 'end_size' argument is how many numbers on either the start
  * and the end list edges, by default is 1. The 'mid_size' argument is how many
@@ -3245,13 +3245,13 @@ function language_attributes( $doctype = 'html' ) {
  *
  *     @type string $base               Base of the paginated url. Default empty.
  *     @type string $format             Format for the pagination structure. Default empty.
- *     @type int    $total              The total amount of pages. Default is the value WP_Query's
+ *     @type int    $total              The total amount of template-parts. Default is the value WP_Query's
  *                                      `max_num_pages` or 1.
  *     @type int    $current            The current page number. Default is 'paged' query var or 1.
- *     @type bool   $show_all           Whether to show all pages. Default false.
+ *     @type bool   $show_all           Whether to show all template-parts. Default false.
  *     @type int    $end_size           How many numbers on either the start and the end list edges.
  *                                      Default 1.
- *     @type int    $mid_size           How many numbers to either side of the current pages. Default 2.
+ *     @type int    $mid_size           How many numbers to either side of the current template-parts. Default 2.
  *     @type bool   $prev_next          Whether to include the previous and next links in the list. Default true.
  *     @type bool   $prev_text          The previous page text. Default '&laquo; Previous'.
  *     @type bool   $next_text          The next page text. Default 'Next &raquo;'.
@@ -3271,7 +3271,7 @@ function paginate_links( $args = '' ) {
 	$pagenum_link = html_entity_decode( get_pagenum_link() );
 	$url_parts    = explode( '?', $pagenum_link );
 
-	// Get max pages and current page out of the current query, if available.
+	// Get max template-parts and current page out of the current query, if available.
 	$total   = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
 	$current = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
 
@@ -3351,7 +3351,7 @@ function paginate_links( $args = '' ) {
 		$link .= $args['add_fragment'];
 
 		/**
-		 * Filters the paginated links for the given archive pages.
+		 * Filters the paginated links for the given archive template-parts.
 		 *
 		 * @since 3.0.0
 		 *

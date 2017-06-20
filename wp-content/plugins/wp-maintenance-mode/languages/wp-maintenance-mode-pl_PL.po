@@ -303,7 +303,7 @@ msgstr "Wyklucz"
 
 #: views/settings.php:97
 msgid ""
-"Exclude feed, pages, archives or IPs from maintenance mode. Add one slug / "
+"Exclude feed, template-parts, archives or IPs from maintenance mode. Add one slug / "
 "IP per line!"
 msgstr ""
 "Zezwól na dostęp podczas trybu konserwacji do kanałów internetowych, stron, "

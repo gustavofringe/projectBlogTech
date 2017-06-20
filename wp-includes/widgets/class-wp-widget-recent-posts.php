@@ -49,7 +49,7 @@ class WP_Widget_Recent_Posts extends WP_Widget {
 
 		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts' );
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-includes/widgets/class-wp-widget-template-parts.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;

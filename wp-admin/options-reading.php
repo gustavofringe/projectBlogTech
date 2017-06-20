@@ -50,7 +50,7 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 settings_fields( 'reading' );
 
 if ( ! in_array( get_option( 'blog_charset' ), array( 'utf8', 'utf-8', 'UTF8', 'UTF-8' ) ) )
-	add_settings_field( 'blog_charset', __( 'Encoding for pages and feeds' ), 'options_reading_blog_charset', 'reading', 'default', array( 'label_for' => 'blog_charset' ) );
+	add_settings_field( 'blog_charset', __( 'Encoding for template-parts and feeds' ), 'options_reading_blog_charset', 'reading', 'default', array( 'label_for' => 'blog_charset' ) );
 ?>
 
 <?php if ( ! get_pages() ) : ?>
@@ -84,13 +84,13 @@ else :
 	<li><label for="page_for_posts"><?php printf( __( 'Posts page: %s' ), wp_dropdown_pages( array( 'name' => 'page_for_posts', 'echo' => 0, 'show_option_none' => __( '&mdash; Select &mdash;' ), 'option_none_value' => '0', 'selected' => get_option( 'page_for_posts' ) ) ) ); ?></label></li>
 </ul>
 <?php if ( 'page' == get_option( 'show_on_front' ) && get_option( 'page_for_posts' ) == get_option( 'page_on_front' ) ) : ?>
-<div id="front-page-warning" class="error inline"><p><?php _e( '<strong>Warning:</strong> these pages should not be the same!' ); ?></p></div>
+<div id="front-page-warning" class="error inline"><p><?php _e( '<strong>Warning:</strong> these template-parts should not be the same!' ); ?></p></div>
 <?php endif; ?>
 </fieldset></td>
 </tr>
 <?php endif; ?>
 <tr>
-<th scope="row"><label for="posts_per_page"><?php _e( 'Blog pages show at most' ); ?></label></th>
+<th scope="row"><label for="posts_per_page"><?php _e( 'Blog template-parts show at most' ); ?></label></th>
 <td>
 <input name="posts_per_page" type="number" step="1" min="1" id="posts_per_page" value="<?php form_option( 'posts_per_page' ); ?>" class="small-text" /> <?php _e( 'posts' ); ?>
 </td>

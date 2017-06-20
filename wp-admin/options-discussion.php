@@ -19,7 +19,7 @@ add_action( 'admin_print_footer_scripts', 'options_discussion_add_js' );
 get_current_screen()->add_help_tab( array(
 	'id'      => 'overview',
 	'title'   => __('Overview'),
-	'content' => '<p>' . __('This screen provides many options for controlling the management and display of comments and links to your posts/pages. So many, in fact, they won&#8217;t all fit here! :) Use the documentation links to get information on what each discussion setting does.') . '</p>' .
+	'content' => '<p>' . __('This screen provides many options for controlling the management and display of comments and links to your posts/template-parts. So many, in fact, they won&#8217;t all fit here! :) Use the documentation links to get information on what each discussion setting does.') . '</p>' .
 		'<p>' . __('You must click the Save Changes button at the bottom of the screen for new settings to take effect.') . '</p>',
 ) );
 
@@ -111,7 +111,7 @@ if ( 'oldest' == get_option('default_comments_page') ) $default_comments_page .=
 $default_comments_page .= '>' . __('first') . '</option></select>';
 printf(
 	/* translators: 1: Form field control for number of top level comments per page, 2: Form field control for the 'first' or 'last' page */
-	__( 'Break comments into pages with %1$s top level comments per page and the %2$s page displayed by default' ),
+	__( 'Break comments into template-parts with %1$s top level comments per page and the %2$s page displayed by default' ),
 	'</label> <label for="comments_per_page"><input name="comments_per_page" type="number" step="1" min="0" id="comments_per_page" value="' . esc_attr( get_option( 'comments_per_page' ) ) . '" class="small-text" />',
 	$default_comments_page
 );

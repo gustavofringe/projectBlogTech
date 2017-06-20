@@ -1074,14 +1074,14 @@ jQuery(document).ready( function($) {
 function network_edit_site_nav( $args = array() ) {
 
 	/**
-	 * Filters the links that appear on site-editing network pages.
+	 * Filters the links that appear on site-editing network template-parts.
 	 *
 	 * Default links: 'site-info', 'site-users', 'site-themes', and 'site-settings'.
 	 *
 	 * @since 4.6.0
 	 *
 	 * @param array $links {
-	 *     An array of link data representing individual network admin pages.
+	 *     An array of link data representing individual network admin template-parts.
 	 *
 	 *     @type array $link_slug {
 	 *         An array of information about the individual link to a page.

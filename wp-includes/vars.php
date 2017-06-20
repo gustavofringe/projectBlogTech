@@ -21,7 +21,7 @@ global $pagenow,
 
 // On which page are we ?
 if ( is_admin() ) {
-	// wp-admin pages are checked more carefully
+	// wp-admin template-parts are checked more carefully
 	if ( is_network_admin() )
 		preg_match('#/wp-admin/network/?(.*?)$#i', $_SERVER['PHP_SELF'], $self_matches);
 	elseif ( is_user_admin() )

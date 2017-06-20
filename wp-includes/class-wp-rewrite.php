@@ -67,7 +67,7 @@ class WP_Rewrite {
 	var $date_structure;
 
 	/**
-	 * Permalink structure for pages.
+	 * Permalink structure for template-parts.
 	 *
 	 * @since 1.5.0
 	 * @access private
@@ -271,7 +271,7 @@ class WP_Rewrite {
 	public $use_verbose_rules = false;
 
 	/**
-	 * Could post permalinks be confused with those of pages?
+	 * Could post permalinks be confused with those of template-parts?
 	 *
 	 * If the first rewrite tag in the post permalink structure is one that could
 	 * also match a page name (e.g. %postname% or %author%) then this flag is
@@ -442,9 +442,9 @@ class WP_Rewrite {
 	}
 
 	/**
-	 * Retrieves all page and attachments for pages URIs.
+	 * Retrieves all page and attachments for template-parts URIs.
 	 *
-	 * The attachments are for those that have pages as parents and will be
+	 * The attachments are for those that have template-parts as parents and will be
 	 * retrieved.
 	 *
 	 * @since 2.5.0
@@ -457,11 +457,11 @@ class WP_Rewrite {
 	public function page_uri_index() {
 		global $wpdb;
 
-		// Get pages in order of hierarchy, i.e. children after parents.
+		// Get template-parts in order of hierarchy, i.e. children after parents.
 		$pages = $wpdb->get_results("SELECT ID, post_name, post_parent FROM $wpdb->posts WHERE post_type = 'page' AND post_status != 'auto-draft'");
 		$posts = get_page_hierarchy( $pages );
 
-		// If we have no pages get out quick.
+		// If we have no template-parts get out quick.
 		if ( !$posts )
 			return array( array(), array() );
 
@@ -489,7 +489,7 @@ class WP_Rewrite {
 	}
 
 	/**
-	 * Retrieves all of the rewrite rules for pages.
+	 * Retrieves all of the rewrite rules for template-parts.
 	 *
 	 * @since 1.5.0
 	 * @access public
@@ -1045,7 +1045,7 @@ class WP_Rewrite {
 				$rewrite = array_merge( $rewrite, array( $pagematch => $pagequery ) );
 			}
 
-			// Only on pages with comments add ../comment-page-xx/.
+			// Only on template-parts with comments add ../comment-page-xx/.
 			if ( EP_PAGES & $ep_mask || EP_PERMALINK & $ep_mask ) {
 				$rewrite = array_merge($rewrite, array($commentmatch => $commentquery));
 			} elseif ( EP_ROOT & $ep_mask && get_option('page_on_front') ) {
@@ -1192,7 +1192,7 @@ class WP_Rewrite {
 
 				/*
 				 * Create the final array for this dir by joining the $rewrite array (which currently
-				 * only contains rules/queries for trackback, pages etc) to the main regex/query for
+				 * only contains rules/queries for trackback, template-parts etc) to the main regex/query for
 				 * this dir
 				 */
 				$rewrite = array_merge($rewrite, array($match => $query));
@@ -1207,7 +1207,7 @@ class WP_Rewrite {
 
 					// Add regexes/queries for attachments, attachment trackbacks and so on.
 					if ( ! $page ) {
-						// Require <permalink>/attachment/stuff form for pages because of confusion with subpages.
+						// Require <permalink>/attachment/stuff form for template-parts because of confusion with subpages.
 						$rewrite = array_merge( $rewrite, array(
 							$sub1        => $subquery,
 							$sub1tb      => $subtbquery,
@@ -1862,7 +1862,7 @@ class WP_Rewrite {
 		unset($this->comment_feed_structure);
 		$this->use_trailing_slashes = ( '/' == substr($this->permalink_structure, -1, 1) );
 
-		// Enable generic rules for pages if permalink structure doesn't begin with a wildcard.
+		// Enable generic rules for template-parts if permalink structure doesn't begin with a wildcard.
 		if ( preg_match("/^[^%]*%(?:postname|category|tag|author)%/", $this->permalink_structure) )
 			 $this->use_verbose_page_rules = true;
 		else

@@ -890,7 +890,7 @@ function separate_comments(&$comments) {
 }
 
 /**
- * Calculate the total number of comment pages.
+ * Calculate the total number of comment template-parts.
  *
  * @since 2.7.0
  *
@@ -901,7 +901,7 @@ function separate_comments(&$comments) {
  * @param array $comments Optional array of WP_Comment objects. Defaults to $wp_query->comments
  * @param int   $per_page Optional comments per page.
  * @param bool  $threaded Optional control over flat or threaded comments.
- * @return int Number of comment pages.
+ * @return int Number of comment template-parts.
  */
 function get_comment_pages_count( $comments = null, $per_page = null, $threaded = null ) {
 	global $wp_query;

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for the content bottom widget areas on posts and pages
+ * The template for the content bottom widget areas on posts and template-parts
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen

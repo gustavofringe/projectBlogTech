@@ -30,12 +30,12 @@ function _wp_translate_postdata( $update = false, $post_data = null ) {
 
 	if ( $update && ! current_user_can( 'edit_post', $post_data['ID'] ) ) {
 		if ( 'page' == $post_data['post_type'] )
-			return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to edit pages as this user.' ) );
+			return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to edit template-parts as this user.' ) );
 		else
 			return new WP_Error( 'edit_others_posts', __( 'Sorry, you are not allowed to edit posts as this user.' ) );
 	} elseif ( ! $update && ! current_user_can( $ptype->cap->create_posts ) ) {
 		if ( 'page' == $post_data['post_type'] )
-			return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to create pages as this user.' ) );
+			return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to create template-parts as this user.' ) );
 		else
 			return new WP_Error( 'edit_others_posts', __( 'Sorry, you are not allowed to create posts as this user.' ) );
 	}
@@ -68,12 +68,12 @@ function _wp_translate_postdata( $update = false, $post_data = null ) {
 		 && ! current_user_can( $ptype->cap->edit_others_posts ) ) {
 		if ( $update ) {
 			if ( 'page' == $post_data['post_type'] )
-				return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to edit pages as this user.' ) );
+				return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to edit template-parts as this user.' ) );
 			else
 				return new WP_Error( 'edit_others_posts', __( 'Sorry, you are not allowed to edit posts as this user.' ) );
 		} else {
 			if ( 'page' == $post_data['post_type'] )
-				return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to create pages as this user.' ) );
+				return new WP_Error( 'edit_others_pages', __( 'Sorry, you are not allowed to create template-parts as this user.' ) );
 			else
 				return new WP_Error( 'edit_others_posts', __( 'Sorry, you are not allowed to create posts as this user.' ) );
 		}
@@ -407,8 +407,8 @@ function edit_post( $post_data = null ) {
 /**
  * Process the post data for the bulk editing of posts.
  *
- * Updates all bulk edited posts/pages, adding (but not removing) tags and
- * categories. Skips pages when they would be their own parent or child.
+ * Updates all bulk edited posts/template-parts, adding (but not removing) tags and
+ * categories. Skips template-parts when they would be their own parent or child.
  *
  * @since 2.7.0
  *
@@ -430,7 +430,7 @@ function bulk_edit_posts( $post_data = null ) {
 
 	if ( !current_user_can( $ptype->cap->edit_posts ) ) {
 		if ( 'page' == $ptype->name )
-			wp_die( __('Sorry, you are not allowed to edit pages.'));
+			wp_die( __('Sorry, you are not allowed to edit template-parts.'));
 		else
 			wp_die( __('Sorry, you are not allowed to edit posts.'));
 	}
@@ -723,7 +723,7 @@ function wp_write_post() {
 
 	if ( !current_user_can( $ptype->cap->edit_posts ) ) {
 		if ( 'page' == $ptype->name )
-			return new WP_Error( 'edit_pages', __( 'Sorry, you are not allowed to create pages on this site.' ) );
+			return new WP_Error( 'edit_pages', __( 'Sorry, you are not allowed to create template-parts on this site.' ) );
 		else
 			return new WP_Error( 'edit_posts', __( 'Sorry, you are not allowed to create posts or drafts on this site.' ) );
 	}

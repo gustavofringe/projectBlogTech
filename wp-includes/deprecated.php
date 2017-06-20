@@ -793,7 +793,7 @@ function get_author_link($echo, $author_id, $author_nicename = '') {
 }
 
 /**
- * Print list of pages based on arguments.
+ * Print list of template-parts based on arguments.
  *
  * @since 0.71
  * @deprecated 2.1.0 Use wp_link_pages()
@@ -3073,7 +3073,7 @@ function get_theme_data( $theme_file ) {
 /**
  * Alias of update_post_cache().
  *
- * @see update_post_cache() Posts and pages are the same, alias is intentional
+ * @see update_post_cache() Posts and template-parts are the same, alias is intentional
  *
  * @since 1.5.1
  * @deprecated 3.4.0 Use update_post_cache()

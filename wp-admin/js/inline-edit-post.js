@@ -8,7 +8,7 @@
 window.wp = window.wp || {};
 
 /**
- * Manages the quick edit and bulk edit windows for editing posts or pages.
+ * Manages the quick edit and bulk edit windows for editing posts or template-parts.
  *
  * @namespace
  *
@@ -41,7 +41,7 @@ var inlineEditPost;
 	init : function(){
 		var t = this, qeRow = $('#inline-edit'), bulkRow = $('#bulk-edit');
 
-		t.type = $('table.widefat').hasClass('pages') ? 'page' : 'post';
+		t.type = $('table.widefat').hasClass('template-parts') ? 'page' : 'post';
 		// Post id prefix.
 		t.what = '#post-';
 

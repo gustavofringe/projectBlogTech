@@ -1124,7 +1124,7 @@ final class WP_Customize_Manager {
 			$starter_content_auto_draft_post_ids = array_merge( $starter_content_auto_draft_post_ids, array_values( $attachment_ids ) );
 		}
 
-		// Posts & pages.
+		// Posts & template-parts.
 		if ( ! empty( $posts ) ) {
 			foreach ( array_keys( $posts ) as $post_symbol ) {
 				if ( empty( $posts[ $post_symbol ]['post_type'] ) || empty( $posts[ $post_symbol ]['post_name'] ) ) {
@@ -3147,7 +3147,7 @@ final class WP_Customize_Manager {
 	 *  @type array        $input_attrs           List of custom input attributes for control output, where attribute
 	 *                                            names are the keys and values are the values. Default empty array.
 	 *  @type bool         $allow_addition        Show UI for adding new content, currently only used for the
-	 *                                            dropdown-pages control. Default false.
+	 *                                            dropdown-template-parts control. Default false.
 	 *  @type string       $type                  The type of the control. Default 'text'.
 	 *  @type callback     $active_callback       Active callback.
 	 * }
@@ -4190,7 +4190,7 @@ final class WP_Customize_Manager {
 		$this->add_control( 'page_on_front', array(
 			'label' => __( 'Front page' ),
 			'section' => 'static_front_page',
-			'type' => 'dropdown-pages',
+			'type' => 'dropdown-template-parts',
 			'allow_addition' => true,
 		) );
 
@@ -4202,7 +4202,7 @@ final class WP_Customize_Manager {
 		$this->add_control( 'page_for_posts', array(
 			'label' => __( 'Posts page' ),
 			'section' => 'static_front_page',
-			'type' => 'dropdown-pages',
+			'type' => 'dropdown-template-parts',
 			'allow_addition' => true,
 		) );
 
@@ -4237,13 +4237,13 @@ final class WP_Customize_Manager {
 	}
 
 	/**
-	 * Return whether there are published pages.
+	 * Return whether there are published template-parts.
 	 *
 	 * Used as active callback for static front page section and controls.
 	 *
 	 * @since 4.7.0
 	 *
-	 * @returns bool Whether there are published (or to be published) pages.
+	 * @returns bool Whether there are published (or to be published) template-parts.
 	 */
 	public function has_published_pages() {
 

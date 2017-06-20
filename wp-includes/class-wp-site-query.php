@@ -87,7 +87,7 @@ class WP_Site_Query {
 	public $found_sites = 0;
 
 	/**
-	 * The number of pages.
+	 * The number of template-parts.
 	 *
 	 * @since 4.6.0
 	 * @access public

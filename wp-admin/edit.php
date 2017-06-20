@@ -234,14 +234,14 @@ if ( 'post' == $post_type ) {
 	'id'		=> 'overview',
 	'title'		=> __('Overview'),
 	'content'	=>
-		'<p>' . __('Pages are similar to posts in that they have a title, body text, and associated metadata, but they are different in that they are not part of the chronological blog stream, kind of like permanent posts. Pages are not categorized or tagged, but can have a hierarchy. You can nest pages under other pages by making one the &#8220;Parent&#8221; of the other, creating a group of pages.') . '</p>'
+		'<p>' . __('Pages are similar to posts in that they have a title, body text, and associated metadata, but they are different in that they are not part of the chronological blog stream, kind of like permanent posts. Pages are not categorized or tagged, but can have a hierarchy. You can nest template-parts under other template-parts by making one the &#8220;Parent&#8221; of the other, creating a group of template-parts.') . '</p>'
 	) );
 	get_current_screen()->add_help_tab( array(
-	'id'		=> 'managing-pages',
+	'id'		=> 'managing-template-parts',
 	'title'		=> __('Managing Pages'),
 	'content'	=>
-		'<p>' . __('Managing pages is very similar to managing posts, and the screens can be customized in the same way.') . '</p>' .
-		'<p>' . __('You can also perform the same types of actions, including narrowing the list by using the filters, acting on a page using the action links that appear when you hover over a row, or using the Bulk Actions menu to edit the metadata for multiple pages at once.') . '</p>'
+		'<p>' . __('Managing template-parts is very similar to managing posts, and the screens can be customized in the same way.') . '</p>' .
+		'<p>' . __('You can also perform the same types of actions, including narrowing the list by using the filters, acting on a page using the action links that appear when you hover over a row, or using the Bulk Actions menu to edit the metadata for multiple template-parts at once.') . '</p>'
 	) );
 
 	get_current_screen()->set_help_sidebar(
@@ -278,12 +278,12 @@ $bulk_messages['post'] = array(
 	'untrashed' => _n( '%s post restored from the Trash.', '%s posts restored from the Trash.', $bulk_counts['untrashed'] ),
 );
 $bulk_messages['page'] = array(
-	'updated'   => _n( '%s page updated.', '%s pages updated.', $bulk_counts['updated'] ),
+	'updated'   => _n( '%s page updated.', '%s template-parts updated.', $bulk_counts['updated'] ),
 	'locked'    => ( 1 == $bulk_counts['locked'] ) ? __( '1 page not updated, somebody is editing it.' ) :
-	                   _n( '%s page not updated, somebody is editing it.', '%s pages not updated, somebody is editing them.', $bulk_counts['locked'] ),
-	'deleted'   => _n( '%s page permanently deleted.', '%s pages permanently deleted.', $bulk_counts['deleted'] ),
-	'trashed'   => _n( '%s page moved to the Trash.', '%s pages moved to the Trash.', $bulk_counts['trashed'] ),
-	'untrashed' => _n( '%s page restored from the Trash.', '%s pages restored from the Trash.', $bulk_counts['untrashed'] ),
+	                   _n( '%s page not updated, somebody is editing it.', '%s template-parts not updated, somebody is editing them.', $bulk_counts['locked'] ),
+	'deleted'   => _n( '%s page permanently deleted.', '%s template-parts permanently deleted.', $bulk_counts['deleted'] ),
+	'trashed'   => _n( '%s page moved to the Trash.', '%s template-parts moved to the Trash.', $bulk_counts['trashed'] ),
+	'untrashed' => _n( '%s page restored from the Trash.', '%s template-parts restored from the Trash.', $bulk_counts['untrashed'] ),
 );
 
 /**

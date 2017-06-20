@@ -185,7 +185,7 @@ jQuery( document ).ready( function( $ ) {
 	 * rather than sending them to the devoted upload plugin page.
 	 * The `?tab=upload` page still exists for no-js support and for plugins that
 	 * might access it directly. When we're in this page, let the link behave
-	 * like a link. Otherwise we're in the normal plugin installer pages and the
+	 * like a link. Otherwise we're in the normal plugin installer template-parts and the
 	 * link should behave like a toggle button.
 	 */
 	if ( ! $wrap.hasClass( 'plugin-install-tab-upload' ) ) {

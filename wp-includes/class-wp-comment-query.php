@@ -116,7 +116,7 @@ class WP_Comment_Query {
 	public $found_comments = 0;
 
 	/**
-	 * The number of pages.
+	 * The number of template-parts.
 	 *
 	 * @since 4.4.0
 	 * @access public

@@ -45,7 +45,7 @@ function twentyseventeen_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	 * Enable support for Post Thumbnails on posts and template-parts.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
@@ -128,7 +128,7 @@ function twentyseventeen_setup() {
 			),
 		),
 
-		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		// Specify the core-defined template-parts to create and add custom thumbnails to some of them.
 		'posts' => array(
 			'home',
 			'about' => array(
@@ -145,7 +145,7 @@ function twentyseventeen_setup() {
 			),
 		),
 
-		// Create the custom image attachments used as post thumbnails for pages.
+		// Create the custom image attachments used as post thumbnails for template-parts.
 		'attachments' => array(
 			'image-espresso' => array(
 				'post_title' => _x( 'Espresso', 'Theme starter content', 'twentyseventeen' ),
@@ -161,14 +161,14 @@ function twentyseventeen_setup() {
 			),
 		),
 
-		// Default to a static front page and assign the front and posts pages.
+		// Default to a static front page and assign the front and posts template-parts.
 		'options' => array(
 			'show_on_front' => 'page',
 			'page_on_front' => '{{home}}',
 			'page_for_posts' => '{{blog}}',
 		),
 
-		// Set the front page section theme mods to the IDs of the core-registered pages.
+		// Set the front page section theme mods to the IDs of the core-registered template-parts.
 		'theme_mods' => array(
 			'panel_1' => '{{homepage-section}}',
 			'panel_2' => '{{about}}',
@@ -314,7 +314,7 @@ function twentyseventeen_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Blog Sidebar', 'twentyseventeen' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive template-parts.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

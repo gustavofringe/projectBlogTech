@@ -483,8 +483,8 @@ setCommentsList = function() {
 					total_items_i18n = response.supplemental.total_items_i18n || '';
 					if ( total_items_i18n ) {
 						$('.displaying-num').text( total_items_i18n );
-						$('.total-pages').text( response.supplemental.total_pages_i18n );
-						$('.tablenav-pages').find('.next-page, .last-page').toggleClass('disabled', response.supplemental.total_pages == $('.current-page').val());
+						$('.total-template-parts').text( response.supplemental.total_pages_i18n );
+						$('.tablenav-template-parts').find('.next-page, .last-page').toggleClass('disabled', response.supplemental.total_pages == $('.current-page').val());
 					}
 					updateTotalCount( total, response.supplemental.time, true );
 				} else if ( response.supplemental.time ) {
@@ -518,7 +518,7 @@ setCommentsList = function() {
 	};
 
 	refillTheExtraList = function(ev) {
-		var args = $.query.get(), total_pages = $('.total-pages').text(), per_page = $('input[name="_per_page"]', '#comments-form').val();
+		var args = $.query.get(), total_pages = $('.total-template-parts').text(), per_page = $('input[name="_per_page"]', '#comments-form').val();
 
 		if (! args.paged)
 			args.paged = 1;
@@ -902,7 +902,7 @@ $(document).ready(function(){
 				var first_last, l;
 
 				first_last = 'next' == which? 'first' : 'last';
-				l = $('.tablenav-pages .'+which+'-page:not(.disabled)');
+				l = $('.tablenav-template-parts .'+which+'-page:not(.disabled)');
 				if (l.length)
 					window.location = l[0].href.replace(/\&hotkeys_highlight_(first|last)=1/g, '')+'&hotkeys_highlight_'+first_last+'=1';
 			};

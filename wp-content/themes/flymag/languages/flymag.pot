@@ -703,7 +703,7 @@ msgid "Home page"
 msgstr ""
 
 #: functions.php:322
-msgid "Widgets added here will be displayed on pages using the Front Page template"
+msgid "Widgets added here will be displayed on template-parts using the Front Page template"
 msgstr ""
 
 #: functions.php:329
@@ -713,7 +713,7 @@ msgstr ""
 #: functions.php:331
 msgid ""
 "Widgets added here will be displayed above the main content area and "
-"sidebar on pages using the Front Page template"
+"sidebar on template-parts using the Front Page template"
 msgstr ""
 
 #: functions.php:338
@@ -863,7 +863,7 @@ msgid "Show carousel on blog index/archives/etc?"
 msgstr ""
 
 #: inc/customizer.php:274
-msgid "Show carousel on single posts and pages?"
+msgid "Show carousel on single posts and template-parts?"
 msgstr ""
 
 #: inc/customizer.php:285

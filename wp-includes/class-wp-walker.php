@@ -30,7 +30,7 @@ class Walker {
 	public $db_fields;
 
 	/**
-	 * Max number of pages walked by the paged walker
+	 * Max number of template-parts walked by the paged walker
 	 *
 	 * @since 2.7.0
 	 * @var int

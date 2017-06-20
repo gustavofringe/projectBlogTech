@@ -64,7 +64,7 @@ class WP_Widget_Text extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-includes/widgets/class-wp-widget-template-parts.php */
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
 		$text = ! empty( $instance['text'] ) ? $instance['text'] : '';

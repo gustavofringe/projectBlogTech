@@ -288,7 +288,7 @@ function is_tag( $tag = '' ) {
  *
  * @param string|array     $taxonomy Optional. Taxonomy slug or slugs.
  * @param int|string|array $term     Optional. Term ID, name, slug or array of Term IDs, names, and slugs.
- * @return bool True for custom taxonomy archive pages, false for built-in taxonomies (category and tag archives).
+ * @return bool True for custom taxonomy archive template-parts, false for built-in taxonomies (category and tag archives).
  */
 function is_tax( $taxonomy = '', $term = '' ) {
 	global $wp_query;
@@ -464,7 +464,7 @@ function is_month() {
  * Is the query for an existing single page?
  *
  * If the $page parameter is specified, this function will additionally
- * check if the query is for one of the pages specified.
+ * check if the query is for one of the template-parts specified.
  *
  * @see is_single()
  * @see is_singular()
@@ -570,7 +570,7 @@ function is_search() {
 /**
  * Is the query for an existing single post?
  *
- * Works for any post type, except attachments and pages
+ * Works for any post type, except attachments and template-parts
  *
  * If the $post parameter is specified, this function will additionally
  * check if the query is for one of the Posts specified.

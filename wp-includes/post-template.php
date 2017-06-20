@@ -250,8 +250,8 @@ function the_content( $more_link_text = null, $strip_teaser = false) {
  * @global int   $page      Page number of a single post/page.
  * @global int   $more      Boolean indicator for whether single post/page is being viewed.
  * @global bool  $preview   Whether post/page is in preview mode.
- * @global array $pages     Array of all pages in post/page. Each array element contains part of the content separated by the <!--nextpage--> tag.
- * @global int   $multipage Boolean indicator for whether multiple pages are in play.
+ * @global array $template-parts     Array of all template-parts in post/page. Each array element contains part of the content separated by the <!--nextpage--> tag.
+ * @global int   $multipage Boolean indicator for whether multiple template-parts are in play.
  *
  * @param string $more_link_text Optional. Content for when there is more text.
  * @param bool   $strip_teaser   Optional. Strip teaser content before the more text. Default is false.
@@ -820,7 +820,7 @@ function post_password_required( $post = null ) {
 //
 
 /**
- * The formatted output of a list of pages.
+ * The formatted output of a list of template-parts.
  *
  * Displays page links for paginated posts (i.e. includes the <!--nextpage-->.
  * Quicktag one or more times). This tag must be within The Loop.
@@ -1044,17 +1044,17 @@ function the_meta() {
 //
 
 /**
- * Retrieve or display list of pages as a dropdown (select list).
+ * Retrieve or display list of template-parts as a dropdown (select list).
  *
  * @since 2.1.0
  * @since 4.2.0 The `$value_field` argument was added.
  * @since 4.3.0 The `$class` argument was added.
  *
  * @param array|string $args {
- *     Optional. Array or string of arguments to generate a pages drop-down element.
+ *     Optional. Array or string of arguments to generate a template-parts drop-down element.
  *
  *     @type int          $depth                 Maximum depth. Default 0.
- *     @type int          $child_of              Page ID to retrieve child pages of. Default 0.
+ *     @type int          $child_of              Page ID to retrieve child template-parts of. Default 0.
  *     @type int|string   $selected              Value of the option that should be selected. Default 0.
  *     @type bool|int     $echo                  Whether to echo or return the generated markup. Accepts 0, 1,
  *                                               or their bool equivalents. Default 1.
@@ -1063,7 +1063,7 @@ function the_meta() {
  *     @type string       $id                    Value for the 'id' attribute of the select element.
  *     @type string       $class                 Value for the 'class' attribute of the select element. Default: none.
  *                                               Defaults to the value of `$name`.
- *     @type string       $show_option_none      Text to display for showing no pages. Default empty (does not display).
+ *     @type string       $show_option_none      Text to display for showing no template-parts. Default empty (does not display).
  *     @type string       $show_option_no_change Text to display for "no change" option. Default empty (does not display).
  *     @type string       $option_none_value     Value to use when no page is selected. Default empty.
  *     @type string       $value_field           Post field used to populate the 'value' attribute of the option
@@ -1109,12 +1109,12 @@ function wp_dropdown_pages( $args = '' ) {
 	}
 
 	/**
-	 * Filters the HTML output of a list of pages as a drop down.
+	 * Filters the HTML output of a list of template-parts as a drop down.
 	 *
 	 * @since 2.1.0
-	 * @since 4.4.0 `$r` and `$pages` added as arguments.
+	 * @since 4.4.0 `$r` and `$template-parts` added as arguments.
 	 *
-	 * @param string $output HTML output for drop down list of pages.
+	 * @param string $output HTML output for drop down list of template-parts.
 	 * @param array  $r      The parsed arguments array.
 	 * @param array  $pages  List of WP_Post objects returned by `get_pages()`
  	 */
@@ -1127,7 +1127,7 @@ function wp_dropdown_pages( $args = '' ) {
 }
 
 /**
- * Retrieve or display list of pages (or hierarchical post type items) in list (li) format.
+ * Retrieve or display list of template-parts (or hierarchical post type items) in list (li) format.
  *
  * @since 1.5.0
  * @since 4.7.0 Added the `item_spacing` argument.
@@ -1139,14 +1139,14 @@ function wp_dropdown_pages( $args = '' ) {
  * @param array|string $args {
  *     Array or string of arguments. Optional.
  *
- *     @type int          $child_of     Display only the sub-pages of a single page by ID. Default 0 (all pages).
+ *     @type int          $child_of     Display only the sub-template-parts of a single page by ID. Default 0 (all template-parts).
  *     @type string       $authors      Comma-separated list of author IDs. Default empty (all authors).
- *     @type string       $date_format  PHP date format to use for the listed pages. Relies on the 'show_date' parameter.
+ *     @type string       $date_format  PHP date format to use for the listed template-parts. Relies on the 'show_date' parameter.
  *                                      Default is the value of 'date_format' option.
- *     @type int          $depth        Number of levels in the hierarchy of pages to include in the generated list.
- *                                      Accepts -1 (any depth), 0 (all pages), 1 (top-level pages only), and n (pages to
+ *     @type int          $depth        Number of levels in the hierarchy of template-parts to include in the generated list.
+ *                                      Accepts -1 (any depth), 0 (all template-parts), 1 (top-level template-parts only), and n (template-parts to
  *                                      the given n depth). Default 0.
- *     @type bool         $echo         Whether or not to echo the list of pages. Default true.
+ *     @type bool         $echo         Whether or not to echo the list of template-parts. Default true.
  *     @type string       $exclude      Comma-separated list of page IDs to exclude. Default empty.
  *     @type array        $include      Comma-separated list of page IDs to include. Default empty.
  *     @type string       $link_after   Text or HTML to follow the page link label. Default null.
@@ -1155,16 +1155,16 @@ function wp_dropdown_pages( $args = '' ) {
  *     @type string|array $post_status  Comma-separated list or array of post statuses to include. Default 'publish'.
  *     @type string       $show_date    Whether to display the page publish or modified date for each page. Accepts
  *                                      'modified' or any other value. An empty value hides the date. Default empty.
- *     @type string       $sort_column  Comma-separated list of column names to sort the pages by. Accepts 'post_author',
+ *     @type string       $sort_column  Comma-separated list of column names to sort the template-parts by. Accepts 'post_author',
  *                                      'post_date', 'post_title', 'post_name', 'post_modified', 'post_modified_gmt',
  *                                      'menu_order', 'post_parent', 'ID', 'rand', or 'comment_count'. Default 'post_title'.
  *     @type string       $title_li     List heading. Passing a null or empty value will result in no heading, and the list
  *                                      will not be wrapped with unordered list `<ul>` tags. Default 'Pages'.
  *     @type string       $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve' or 'discard'.
  *                                      Default 'preserve'.
- *     @type Walker       $walker       Walker instance to use for listing pages. Default empty (Walker_Page).
+ *     @type Walker       $walker       Walker instance to use for listing template-parts. Default empty (Walker_Page).
  * }
- * @return string|void HTML list of pages.
+ * @return string|void HTML list of template-parts.
  */
 function wp_list_pages( $args = '' ) {
 	$defaults = array(
@@ -1196,11 +1196,11 @@ function wp_list_pages( $args = '' ) {
 	// sanitize, mostly to keep spaces out
 	$r['exclude'] = preg_replace( '/[^0-9,]/', '', $r['exclude'] );
 
-	// Allow plugins to filter an array of excluded pages (but don't put a nullstring into the array)
+	// Allow plugins to filter an array of excluded template-parts (but don't put a nullstring into the array)
 	$exclude_array = ( $r['exclude'] ) ? explode( ',', $r['exclude'] ) : array();
 
 	/**
-	 * Filters the array of pages to exclude from the pages list.
+	 * Filters the array of template-parts to exclude from the template-parts list.
 	 *
 	 * @since 2.1.0
 	 *
@@ -1208,7 +1208,7 @@ function wp_list_pages( $args = '' ) {
 	 */
 	$r['exclude'] = implode( ',', apply_filters( 'wp_list_pages_excludes', $exclude_array ) );
 
-	// Query pages.
+	// Query template-parts.
 	$r['hierarchical'] = 0;
 	$pages = get_pages( $r );
 
@@ -1234,14 +1234,14 @@ function wp_list_pages( $args = '' ) {
 	}
 
 	/**
-	 * Filters the HTML output of the pages to list.
+	 * Filters the HTML output of the template-parts to list.
 	 *
 	 * @since 1.5.1
-	 * @since 4.4.0 `$pages` added as arguments.
+	 * @since 4.4.0 `$template-parts` added as arguments.
 	 *
 	 * @see wp_list_pages()
 	 *
-	 * @param string $output HTML output of the pages list.
+	 * @param string $output HTML output of the template-parts list.
 	 * @param array  $r      An array of page-listing arguments.
 	 * @param array  $pages  List of WP_Post objects returned by `get_pages()`
 	 */
@@ -1255,7 +1255,7 @@ function wp_list_pages( $args = '' ) {
 }
 
 /**
- * Displays or retrieves a list of pages with an optional home link.
+ * Displays or retrieves a list of template-parts with an optional home link.
  *
  * The arguments are listed below and part of the arguments are for wp_list_pages()} function.
  * Check that function for more info on those arguments.
@@ -1267,7 +1267,7 @@ function wp_list_pages( $args = '' ) {
  * @param array|string $args {
  *     Optional. Arguments to generate a page menu. See wp_list_pages() for additional arguments.
  *
- *     @type string          $sort_column  How to short the list of pages. Accepts post column names.
+ *     @type string          $sort_column  How to short the list of template-parts. Accepts post column names.
  *                                         Default 'menu_order, post_title'.
  *     @type string          $menu_id      ID for the div containing the page list. Default is empty string.
  *     @type string          $menu_class   Class to use for the element containing the page list. Default 'menu'.
@@ -1281,7 +1281,7 @@ function wp_list_pages( $args = '' ) {
  *     @type string          $before       The HTML or text to prepend to the menu. Default is '<ul>'.
  *     @type string          $after        The HTML or text to append to the menu. Default is '</ul>'.
  *     @type string          $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve' or 'discard'. Default 'discard'.
- *     @type Walker          $walker       Walker instance to use for listing pages. Default empty (Walker_Page).
+ *     @type Walker          $walker       Walker instance to use for listing template-parts. Default empty (Walker_Page).
  * }
  * @return string|void HTML menu
  */
@@ -1626,7 +1626,7 @@ function get_the_password_form( $post = 0 ) {
  *
  * @since 2.5.0
  * @since 4.2.0 The `$template` parameter was changed to also accept an array of page templates.
- * @since 4.7.0 Now works with any post type, not just pages.
+ * @since 4.7.0 Now works with any post type, not just template-parts.
  *
  * @param string|array $template The specific template name or array of templates to match.
  * @return bool True on success, false on failure.
@@ -1659,7 +1659,7 @@ function is_page_template( $template = '' ) {
  * Get the specific template name for a given post.
  *
  * @since 3.4.0
- * @since 4.7.0 Now works with any post type, not just pages.
+ * @since 4.7.0 Now works with any post type, not just template-parts.
  *
  * @param int|WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
  * @return string|false Page template filename. Returns an empty string when the default page template

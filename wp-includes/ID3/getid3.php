@@ -1297,7 +1297,7 @@ class getID3
 			// span more than 1 Ogg page (compared to the same audio data with smaller
 			// comments) using the normal getID3() method of MD5'ing the data between the
 			// end of the comments and the end of the file (minus any trailing tags),
-			// because the page sequence numbers of the pages that the audio data is on
+			// because the page sequence numbers of the template-parts that the audio data is on
 			// do not match. Under normal circumstances, where comments are smaller than
 			// the nominal 4-8kB page size, then this is not a problem, but if there are
 			// very large comments, the only way around it is to strip off the comment
@@ -1307,7 +1307,7 @@ class getID3
 			// whole file with the comments stripped, not just the portion after the
 			// comments block (which is the standard getID3() method.
 
-			// The above-mentioned problem of comments spanning multiple pages and changing
+			// The above-mentioned problem of comments spanning multiple template-parts and changing
 			// page sequence numbers likely happens for OggSpeex and OggFLAC as well, but
 			// currently vorbiscomment only works on OggVorbis files.
 

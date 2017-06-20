@@ -44,7 +44,7 @@ class WP_Widget_Meta extends WP_Widget {
 	 * @param array $instance Settings for the current Meta widget instance.
 	 */
 	public function widget( $args, $instance ) {
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-includes/widgets/class-wp-widget-template-parts.php */
 		$title = apply_filters( 'widget_title', empty($instance['title']) ? __( 'Meta' ) : $instance['title'], $instance, $this->id_base );
 
 		echo $args['before_widget'];

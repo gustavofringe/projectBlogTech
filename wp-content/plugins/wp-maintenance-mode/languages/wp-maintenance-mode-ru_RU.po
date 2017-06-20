@@ -305,7 +305,7 @@ msgstr "Исключения"
 
 #: views/settings.php:97
 msgid ""
-"Exclude feed, pages, archives or IPs from maintenance mode. Add one slug / "
+"Exclude feed, template-parts, archives or IPs from maintenance mode. Add one slug / "
 "IP per line!"
 msgstr ""
 "Разрешите доступ к новостям (ленте), страницам, архивам или по IP во время "

@@ -186,7 +186,7 @@ if ( isset( $page_hook ) ) {
 
 set_current_screen();
 
-// Handle plugin admin pages.
+// Handle plugin admin template-parts.
 if ( isset($plugin_page) ) {
 	if ( $page_hook ) {
 		/**

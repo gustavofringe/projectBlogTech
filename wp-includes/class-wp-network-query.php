@@ -78,7 +78,7 @@ class WP_Network_Query {
 	public $found_networks = 0;
 
 	/**
-	 * The number of pages.
+	 * The number of template-parts.
 	 *
 	 * @since 4.6.0
 	 * @access public

@@ -575,7 +575,7 @@ msgstr "logovat požadavky 404 - Nenalezeno"
 
 #@ redirection
 #: view/admin/options.php:43
-msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and pages are often not found."
+msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and template-parts are often not found."
 msgstr "Zakázáním jedné nebo obou těchto voleb docílíte nižšího zatížení databáze a vyššího výkonu webu. To se hodí zejména u webů, které mají omezené systémové zdroje, velký počet přesměrování a chybných URL či v případech, kdy nepotřebujete záznamy o proběhlých přesměrováních."
 
 #@ redirection

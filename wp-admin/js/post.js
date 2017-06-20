@@ -2,7 +2,7 @@
 /* global theList:true, theExtraList:true, getUserSetting, setUserSetting, commentReply */
 
 /**
- * Contains all dynamic functionality needed on post and term pages.
+ * Contains all dynamic functionality needed on post and term template-parts.
  *
  * @summary Control page and term functionality.
  */
@@ -18,7 +18,7 @@ window.wp = window.wp || {};
 	var titleHasFocus = false;
 
 	/**
-	 * Control loading of comments on the post and term edit pages.
+	 * Control loading of comments on the post and term edit template-parts.
 	 *
 	 * @type {{st: number, get: commentsBox.get, load: commentsBox.load}}
 	 *

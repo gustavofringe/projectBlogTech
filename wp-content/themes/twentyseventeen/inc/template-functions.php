@@ -19,7 +19,7 @@ function twentyseventeen_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
-	// Add class of hfeed to non-singular pages.
+	// Add class of hfeed to non-singular template-parts.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}

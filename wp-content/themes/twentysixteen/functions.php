@@ -76,7 +76,7 @@ function twentysixteen_setup() {
 	) );
 
 	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	 * Enable support for Post Thumbnails on posts and template-parts.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
@@ -165,7 +165,7 @@ function twentysixteen_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => __( 'Appears at the bottom of the content on posts and template-parts.', 'twentysixteen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -175,7 +175,7 @@ function twentysixteen_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => __( 'Appears at the bottom of the content on posts and template-parts.', 'twentysixteen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -311,7 +311,7 @@ function twentysixteen_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
-	// Adds a class of hfeed to non-singular pages.
+	// Adds a class of hfeed to non-singular template-parts.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}

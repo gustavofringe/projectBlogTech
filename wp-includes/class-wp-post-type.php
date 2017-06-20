@@ -515,8 +515,8 @@ final class WP_Post_Type {
 			if ( ! isset( $args['rewrite']['with_front'] ) ) {
 				$args['rewrite']['with_front'] = true;
 			}
-			if ( ! isset( $args['rewrite']['pages'] ) ) {
-				$args['rewrite']['pages'] = true;
+			if ( ! isset( $args['rewrite']['template-parts'] ) ) {
+				$args['rewrite']['template-parts'] = true;
 			}
 			if ( ! isset( $args['rewrite']['feeds'] ) || ! $args['has_archive'] ) {
 				$args['rewrite']['feeds'] = (bool) $args['has_archive'];
@@ -591,7 +591,7 @@ final class WP_Post_Type {
 					add_rewrite_rule( "{$archive_slug}/feed/$feeds/?$", "index.php?post_type=$this->name" . '&feed=$matches[1]', 'top' );
 					add_rewrite_rule( "{$archive_slug}/$feeds/?$", "index.php?post_type=$this->name" . '&feed=$matches[1]', 'top' );
 				}
-				if ( $this->rewrite['pages'] ) {
+				if ( $this->rewrite['template-parts'] ) {
 					add_rewrite_rule( "{$archive_slug}/{$wp_rewrite->pagination_base}/([0-9]{1,})/?$", "index.php?post_type=$this->name" . '&paged=$matches[1]', 'top' );
 				}
 			}

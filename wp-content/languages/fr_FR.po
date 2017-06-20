@@ -395,8 +395,8 @@ msgid "Limit result set to terms with one or more specific slugs."
 msgstr "Limiter le jeu de résultats aux termes ayant un ou plusieurs identifiants spécifiques."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:335
-msgid "The page number requested is larger than the number of pages available."
-msgstr "Le numéro de page demandé est plus grand que le nombre de pages disponibles."
+msgid "The page number requested is larger than the number of template-parts available."
+msgstr "Le numéro de page demandé est plus grand que le nombre de template-parts disponibles."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:163
 msgid "You need to define an include parameter to order by include."
@@ -586,8 +586,8 @@ msgid "Id should start with a letter, followed only by letters, numbers, dashes,
 msgstr "l’ID doit commencer par une lettre, suivie uniquement par des lettres, chiffres, tirets, points, virgules ou tirets-bas."
 
 #: wp-includes/class-wp-customize-widgets.php:777
-msgid "You can navigate to other pages on your site while using the Customizer to view and edit the widgets displayed on those pages."
-msgstr "Vous pouvez naviguer sur d’autres pages de votre site pendant que vous utilisez l’outil de personnalisation pour voir et modifier les widgets affichés sur ces pages."
+msgid "You can navigate to other template-parts on your site while using the Customizer to view and edit the widgets displayed on those template-parts."
+msgstr "Vous pouvez naviguer sur d’autres template-parts de votre site pendant que vous utilisez l’outil de personnalisation pour voir et modifier les widgets affichés sur ces template-parts."
 
 #. translators: placeholder is the total number of widget areas registered
 #: wp-includes/class-wp-customize-widgets.php:756
@@ -2057,7 +2057,7 @@ msgstr "Attributs d’articles"
 
 #: wp-includes/post.php:1377
 msgid "View Pages"
-msgstr "Voir les pages"
+msgstr "Voir les template-parts"
 
 #: wp-includes/post.php:1377
 msgid "View Posts"
@@ -2152,8 +2152,8 @@ msgid "Allow link notifications from other blogs (pingbacks and trackbacks) on n
 msgstr "Autoriser les liens de notification d’autres blogs (pings et rétroliens) sur les nouveaux articles."
 
 #: wp-includes/option.php:1832
-msgid "Blog pages show at most."
-msgstr "Les pages de blog affichent au maximum."
+msgid "Blog template-parts show at most."
+msgstr "Les template-parts de blog affichent au maximum."
 
 #: wp-includes/option.php:1826
 msgid "Default post format."
@@ -2605,8 +2605,8 @@ msgstr "Nombre d’extensions trouvées&nbsp;: %d"
 
 #: wp-includes/class-wp-xmlrpc-server.php:2732
 #: wp-includes/class-wp-xmlrpc-server.php:2934
-msgid "Sorry, you are not allowed to edit pages."
-msgstr "Désolé, vous n’avez pas l’autorisation de modifier des pages."
+msgid "Sorry, you are not allowed to edit template-parts."
+msgstr "Désolé, vous n’avez pas l’autorisation de modifier des template-parts."
 
 #: wp-includes/class-wp-xmlrpc-server.php:2575
 #: wp-includes/class-wp-xmlrpc-server.php:2621
@@ -3529,7 +3529,7 @@ msgstr "Dans %1$s, utilisez la méthode %2$s et non la fonction %3$s. Voir %4$s.
 
 #: wp-includes/post.php:1393
 msgid "Pages list"
-msgstr "Liste des pages"
+msgstr "Liste des template-parts"
 
 #: wp-includes/post.php:1393
 msgid "Posts list"
@@ -3537,15 +3537,15 @@ msgstr "Liste des articles"
 
 #: wp-includes/post.php:1392
 msgid "Pages list navigation"
-msgstr "Navigation de la liste des pages"
+msgstr "Navigation de la liste des template-parts"
 
 #: wp-includes/post.php:1392
 msgid "Posts list navigation"
 msgstr "Navigation de la liste des articles"
 
 #: wp-includes/post.php:1391
-msgid "Filter pages list"
-msgstr "Filtrer la liste des pages"
+msgid "Filter template-parts list"
+msgstr "Filtrer la liste des template-parts"
 
 #: wp-includes/post.php:1391
 msgid "Filter posts list"
@@ -3553,7 +3553,7 @@ msgstr "Filtrer la liste des articles"
 
 #: wp-includes/post.php:1383
 msgid "Page Archives"
-msgstr "Archives des pages"
+msgstr "Archives des template-parts"
 
 #: wp-includes/post.php:1383
 msgid "Post Archives"
@@ -4310,8 +4310,8 @@ msgid "Menu Locations"
 msgstr "Emplacements de menus"
 
 #: wp-includes/class-wp-customize-nav-menus.php:559
-msgid "This panel is used for managing navigation menus for content you have already published on your site. You can create menus and add items for existing content such as pages, posts, categories, tags, formats, or custom links."
-msgstr "Ce panneau est utilisé pour gérer les menus de navigation pour le contenu que vous avez déjà publié sur votre site. Vous pouvez créer des menus et y ajouter des éléments pour le contenu existant, comme les pages, les articles, les catégories, les étiquettes, les formats, ou des liens personnalisés."
+msgid "This panel is used for managing navigation menus for content you have already published on your site. You can create menus and add items for existing content such as template-parts, posts, categories, tags, formats, or custom links."
+msgstr "Ce panneau est utilisé pour gérer les menus de navigation pour le contenu que vous avez déjà publié sur votre site. Vous pouvez créer des menus et y ajouter des éléments pour le contenu existant, comme les template-parts, les articles, les catégories, les étiquettes, les formats, ou des liens personnalisés."
 
 #. translators: 1: item name, 2: item position, 3: parent item name
 #: wp-includes/class-wp-customize-nav-menus.php:470
@@ -4451,8 +4451,8 @@ msgid "Navigation Label"
 msgstr "Titre de la navigation"
 
 #: wp-includes/customize/class-wp-customize-nav-menu-auto-add-control.php:47
-msgid "Automatically add new top-level pages to this menu"
-msgstr "Ajouter automatiquement les pages de premier niveau à ce menu"
+msgid "Automatically add new top-level template-parts to this menu"
+msgstr "Ajouter automatiquement les template-parts de premier niveau à ce menu"
 
 #: wp-includes/customize/class-wp-customize-nav-menu-control.php:61
 msgid "Delete Menu"
@@ -6247,7 +6247,7 @@ msgstr "Un formulaire de recherche pour votre site."
 
 #: wp-includes/widgets/class-wp-widget-pages.php:28
 msgid "A list of your site&#8217;s Pages."
-msgstr "Une liste des pages de votre site."
+msgstr "Une liste des template-parts de votre site."
 
 #. translators: If there are characters in your language that are not supported
 #. by Open Sans, translate this to 'off'. Do not translate into your own
@@ -6933,8 +6933,8 @@ msgid "Sorry, the user cannot be updated."
 msgstr "Désolé, cet utilisateur ne peut pas être mis à jour."
 
 #: wp-includes/class-wp-xmlrpc-server.php:4957
-msgid "Sorry, you are not allowed to create pages as this user."
-msgstr "Désolé, vous n’avez pas l’autorisation de créer des pages sous cet identifiant."
+msgid "Sorry, you are not allowed to create template-parts as this user."
+msgstr "Désolé, vous n’avez pas l’autorisation de créer des template-parts sous cet identifiant."
 
 #: wp-includes/widgets/class-wp-widget-recent-posts.php:139
 msgid "Display post date?"
@@ -7236,7 +7236,7 @@ msgstr "Les derniers articles"
 
 #: wp-includes/class-wp-customize-manager.php:4165
 msgid "Your theme supports a static front page."
-msgstr "Le thème actuel accepte les pages statiques."
+msgstr "Le thème actuel accepte les template-parts statiques."
 
 #: wp-includes/class-wp-customize-manager.php:4163
 msgid "Static Front Page"
@@ -7632,7 +7632,7 @@ msgstr "Votre compte est maintenant activé. <a href=\"%1$s\">Connectez-vous</a>
 
 #: wp-includes/post.php:1382
 msgid "All Pages"
-msgstr "Toutes les pages"
+msgstr "Toutes les template-parts"
 
 #: wp-includes/post.php:1382
 msgid "All Posts"
@@ -7809,11 +7809,11 @@ msgid "No posts found in Trash."
 msgstr "Aucun article trouvé dans la corbeille."
 
 #: wp-includes/post.php:1379
-msgid "No pages found."
+msgid "No template-parts found."
 msgstr "Aucune page trouvée."
 
 #: wp-includes/post.php:1380
-msgid "No pages found in Trash."
+msgid "No template-parts found in Trash."
 msgstr "Aucune page trouvée dans la corbeille."
 
 #: wp-includes/script-loader.php:708
@@ -8110,7 +8110,7 @@ msgstr "Ajouter un nouvel article"
 
 #: wp-includes/post.php:1378
 msgid "Search Pages"
-msgstr "Rechercher dans les pages"
+msgstr "Rechercher dans les template-parts"
 
 #: wp-includes/ms-default-constants.php:141
 msgid "<strong>Conflicting values for the constants VHOST and SUBDOMAIN_INSTALL.</strong> The value of SUBDOMAIN_INSTALL will be assumed to be your subdomain configuration setting."
@@ -8141,8 +8141,8 @@ msgid "Please include a %s template in your theme."
 msgstr "Veuillez inclure un modèle de %s à votre thème."
 
 #: wp-includes/class-wp-xmlrpc-server.php:4887
-msgid "Sorry, you are not allowed to publish pages on this site."
-msgstr "Désolé, vous n’avez pas l’autorisation de publier des pages sur ce site."
+msgid "Sorry, you are not allowed to publish template-parts on this site."
+msgstr "Désolé, vous n’avez pas l’autorisation de publier des template-parts sur ce site."
 
 #: wp-includes/class-wp-xmlrpc-server.php:3207
 #: wp-includes/class-wp-xmlrpc-server.php:5774
@@ -8579,7 +8579,7 @@ msgstr "Impossible d&rsquo;écrire le fichier %1$s (%2$s)."
 
 #: wp-includes/class-wp-xmlrpc-server.php:5298
 msgid "Sorry, you are not allowed to change the page author as this user."
-msgstr "Désolé, vous n’avez pas l’autorisation de modifier l’auteur des pages sous cet identifiant."
+msgstr "Désolé, vous n’avez pas l’autorisation de modifier l’auteur des template-parts sous cet identifiant."
 
 #: wp-includes/class-wp-xmlrpc-server.php:5293
 msgid "Sorry, you are not allowed to change the post author as this user."
@@ -10150,7 +10150,7 @@ msgstr "Vos liens préférés"
 
 #: wp-includes/widgets/class-wp-widget-pages.php:146
 msgid "Page IDs, separated by commas."
-msgstr "IDs de pages, séparés par une virgule."
+msgstr "IDs de template-parts, séparés par une virgule."
 
 #: wp-includes/widgets/class-wp-widget-pages.php:143
 msgid "Exclude:"

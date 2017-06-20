@@ -726,7 +726,7 @@ function is_admin() {
  *
  * @global WP_Screen $current_screen
  *
- * @return bool True if inside WordPress blog administration pages.
+ * @return bool True if inside WordPress blog administration template-parts.
  */
 function is_blog_admin() {
 	if ( isset( $GLOBALS['current_screen'] ) )
@@ -749,7 +749,7 @@ function is_blog_admin() {
  *
  * @global WP_Screen $current_screen
  *
- * @return bool True if inside WordPress network administration pages.
+ * @return bool True if inside WordPress network administration template-parts.
  */
 function is_network_admin() {
 	if ( isset( $GLOBALS['current_screen'] ) )
@@ -773,7 +773,7 @@ function is_network_admin() {
  *
  * @global WP_Screen $current_screen
  *
- * @return bool True if inside WordPress user administration pages.
+ * @return bool True if inside WordPress user administration template-parts.
  */
 function is_user_admin() {
 	if ( isset( $GLOBALS['current_screen'] ) )

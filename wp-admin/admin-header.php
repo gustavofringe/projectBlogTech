@@ -88,7 +88,7 @@ var ajaxurl = '<?php echo admin_url( 'admin-ajax.php', 'relative' ); ?>',
 <?php
 
 /**
- * Enqueue scripts for all admin pages.
+ * Enqueue scripts for all admin template-parts.
  *
  * @since 2.8.0
  *
@@ -104,7 +104,7 @@ do_action( 'admin_enqueue_scripts', $hook_suffix );
 do_action( "admin_print_styles-{$hook_suffix}" );
 
 /**
- * Fires when styles are printed for all admin pages.
+ * Fires when styles are printed for all admin template-parts.
  *
  * @since 2.6.0
  */
@@ -118,7 +118,7 @@ do_action( 'admin_print_styles' );
 do_action( "admin_print_scripts-{$hook_suffix}" );
 
 /**
- * Fires when scripts are printed for all admin pages.
+ * Fires when scripts are printed for all admin template-parts.
  *
  * @since 2.1.0
  */
@@ -135,7 +135,7 @@ do_action( 'admin_print_scripts' );
 do_action( "admin_head-{$hook_suffix}" );
 
 /**
- * Fires in head section for all admin pages.
+ * Fires in head section for all admin template-parts.
  *
  * @since 2.1.0
  */

@@ -48,7 +48,7 @@ $wp_query->is_404 = false;
 do_action( 'before_signup_header' );
 
 /**
- * Prints styles for front-end Multisite signup pages
+ * Prints styles for front-end Multisite signup template-parts
  *
  * @since MU
  */

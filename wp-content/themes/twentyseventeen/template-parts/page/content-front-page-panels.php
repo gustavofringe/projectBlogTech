@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying pages on front page
+ * Template part for displaying template-parts on front page
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen

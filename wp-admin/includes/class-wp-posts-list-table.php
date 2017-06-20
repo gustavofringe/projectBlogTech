@@ -522,7 +522,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 	 * @return array
 	 */
 	protected function get_table_classes() {
-		return array( 'widefat', 'fixed', 'striped', is_post_type_hierarchical( $this->screen->post_type ) ? 'pages' : 'posts' );
+		return array( 'widefat', 'fixed', 'striped', is_post_type_hierarchical( $this->screen->post_type ) ? 'template-parts' : 'posts' );
 	}
 
 	/**
@@ -683,9 +683,9 @@ class WP_Posts_List_Table extends WP_List_Table {
 		}
 
 		/*
-		 * Arrange pages into two parts: top level pages and children_pages
+		 * Arrange template-parts into two parts: top level template-parts and children_pages
 		 * children_pages is two dimensional array, eg.
-		 * children_pages[10][] contains all sub-pages whose parent is 10.
+		 * children_pages[10][] contains all sub-template-parts whose parent is 10.
 		 * It only takes O( N ) to arrange this and it takes O( 1 ) for subsequent lookup operations
 		 * If searching, ignore hierarchy and treat everything as top level
 		 */
@@ -696,7 +696,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 
 			foreach ( $pages as $page ) {
 
-				// Catch and repair bad pages.
+				// Catch and repair bad template-parts.
 				if ( $page->post_parent == $page->ID ) {
 					$page->post_parent = 0;
 					$wpdb->update( $wpdb->posts, array( 'post_parent' => 0 ), array( 'ID' => $page->ID ) );
@@ -731,7 +731,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 				$this->_page_rows( $children_pages, $count, $page->ID, $level + 1, $pagenum, $per_page, $to_display );
 		}
 
-		// If it is the last pagenum and there are orphaned pages, display them with paging as well.
+		// If it is the last pagenum and there are orphaned template-parts, display them with paging as well.
 		if ( isset( $children_pages ) && $count < $end ){
 			foreach ( $children_pages as $orphans ){
 				foreach ( $orphans as $op ) {
@@ -761,7 +761,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 	}
 
 	/**
-	 * Given a top level page ID, display the nested hierarchy of sub-pages
+	 * Given a top level page ID, display the nested hierarchy of sub-template-parts
 	 * together with paging support
 	 *
 	 * @since 3.1.0 (Standalone function exists since 2.6.0)
@@ -773,7 +773,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 	 * @param int $level
 	 * @param int $pagenum
 	 * @param int $per_page
-	 * @param array $to_display List of pages to be displayed. Passed by reference.
+	 * @param array $to_display List of template-parts to be displayed. Passed by reference.
 	 */
 	private function _page_rows( &$children_pages, &$count, $parent, $level, $pagenum, $per_page, &$to_display ) {
 		if ( ! isset( $children_pages[$parent] ) )
@@ -1132,7 +1132,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 			 * Fires in each custom column on the Posts list table.
 			 *
 			 * This hook only fires if the current post type is hierarchical,
-			 * such as pages.
+			 * such as template-parts.
 			 *
 			 * @since 2.5.0
 			 *

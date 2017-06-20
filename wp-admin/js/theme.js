@@ -1087,7 +1087,7 @@ themes.view.Themes = wp.Backbone.View.extend({
 		});
 	},
 
-	// Manages rendering of theme pages
+	// Manages rendering of theme template-parts
 	// and keeping theme count in sync
 	render: function() {
 		// Clear the DOM, please

@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for displaying pages
+ * The template for displaying template-parts
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
+ * This is the template that displays all template-parts by default.
+ * Please note that this is the WordPress construct of template-parts and that
+ * other "template-parts" on your WordPress site will use a different template.
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen

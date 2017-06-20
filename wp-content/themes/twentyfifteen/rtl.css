@@ -20,7 +20,7 @@ See: https://codex.wordpress.org/Right_to_Left_Language_Support
  * 8.0 - Header
  * 9.0 - Widgets
  * 10.0 - Content
- *   10.1 - Posts and pages
+ *   10.1 - Posts and template-parts
  *   10.2 - Comments
  * 11.0 - Media Queries
  *    11.1 - Mobile Large
@@ -299,7 +299,7 @@ img.alignleft {
  */
 
 /**
- * 10.1 Posts and pages
+ * 10.1 Posts and template-parts
  */
 
 .entry-content .more-link:after {

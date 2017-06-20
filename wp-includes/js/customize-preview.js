@@ -296,7 +296,7 @@
 			return false;
 		}
 
-		// Skip wp login and signup pages.
+		// Skip wp login and signup template-parts.
 		if ( /\/wp-(login|signup)\.php$/.test( element.pathname ) ) {
 			return false;
 		}

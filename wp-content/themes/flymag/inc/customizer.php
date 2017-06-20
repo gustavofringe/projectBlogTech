@@ -271,7 +271,7 @@ function flymag_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'carousel_display_singular',array(
 			'type'     => 'checkbox',
-			'label'    => __( 'Show carousel on single posts and pages?', 'flymag' ),
+			'label'    => __( 'Show carousel on single posts and template-parts?', 'flymag' ),
 			'section'  => 'flymag_carousel',
 			'priority' => 10,
 	) );

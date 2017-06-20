@@ -105,9 +105,9 @@ function twentyseventeen_customize_register( $wp_customize ) {
 		$wp_customize->add_control( 'panel_' . $i, array(
 			/* translators: %d is the front page section number */
 			'label'          => sprintf( __( 'Front Page Section %d Content', 'twentyseventeen' ), $i ),
-			'description'    => ( 1 !== $i ? '' : __( 'Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed.', 'twentyseventeen' ) ),
+			'description'    => ( 1 !== $i ? '' : __( 'Select template-parts to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed.', 'twentyseventeen' ) ),
 			'section'        => 'theme_options',
-			'type'           => 'dropdown-pages',
+			'type'           => 'dropdown-template-parts',
 			'allow_addition' => true,
 			'active_callback' => 'twentyseventeen_is_static_front_page',
 		) );
@@ -189,7 +189,7 @@ function twentyseventeen_is_static_front_page() {
  * Return whether we're on a view that supports a one or two column layout.
  */
 function twentyseventeen_is_view_with_layout_option() {
-	// This option is available on all pages. It's also available on archives when there isn't a sidebar.
+	// This option is available on all template-parts. It's also available on archives when there isn't a sidebar.
 	return ( is_page() || ( is_archive() && ! is_active_sidebar( 'sidebar-1' ) ) );
 }
 

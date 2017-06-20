@@ -229,7 +229,7 @@ Commenter avatars come from <a href="https://gravatar.com">Gravatar</a>.' );
 
 <blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>
 
-As a new WordPress user, you should go to <a href=\"%s\">your dashboard</a> to delete this page and create new pages for your content. Have fun!" ), admin_url() );
+As a new WordPress user, you should go to <a href=\"%s\">your dashboard</a> to delete this page and create new template-parts for your content. Have fun!" ), admin_url() );
 
 	$first_post_guid = get_option('home') . '/?page_id=2';
 	$wpdb->insert( $wpdb->posts, array(

@@ -73,7 +73,7 @@ function twentyfifteen_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	 * Enable support for Post Thumbnails on posts and template-parts.
 	 *
 	 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */

@@ -44,7 +44,7 @@ if ( is_network_admin() ) {
 // Create list of page plugin hook names.
 foreach ($menu as $menu_page) {
 	if ( false !== $pos = strpos($menu_page[2], '?') ) {
-		// Handle post_type=post|page|foo pages.
+		// Handle post_type=post|page|foo template-parts.
 		$hook_name = substr($menu_page[2], 0, $pos);
 		$hook_args = substr($menu_page[2], $pos + 1);
 		wp_parse_str($hook_args, $hook_args);
@@ -70,7 +70,7 @@ unset($menu_page, $compat);
 
 $_wp_submenu_nopriv = array();
 $_wp_menu_nopriv = array();
-// Loop over submenus and remove pages for which the user does not have privs.
+// Loop over submenus and remove template-parts for which the user does not have privs.
 foreach ($submenu as $parent => $sub) {
 	foreach ($sub as $index => $data) {
 		if ( ! current_user_can($data[1]) ) {

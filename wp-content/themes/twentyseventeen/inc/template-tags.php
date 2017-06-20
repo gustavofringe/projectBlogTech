@@ -107,7 +107,7 @@ if ( ! function_exists( 'twentyseventeen_edit_link' ) ) :
  * This also gives us a little context about what exactly we're editing
  * (post or page?) so that users understand a bit more where they are in terms
  * of the template hierarchy and their content. Helpful when/if the single-page
- * layout with multiple posts/pages shown gets confusing.
+ * layout with multiple posts/template-parts shown gets confusing.
  */
 function twentyseventeen_edit_link() {
 	edit_post_link(

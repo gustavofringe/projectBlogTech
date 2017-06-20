@@ -673,7 +673,7 @@ class WP {
 					@header( 'X-Pingback: ' . get_bloginfo( 'pingback_url', 'display' ) );
 				}
 
-				// check for paged content that exceeds the max number of pages
+				// check for paged content that exceeds the max number of template-parts
 				$next = '<!--nextpage-->';
 				if ( $p && false !== strpos( $p->post_content, $next ) && ! empty( $this->query_vars['page'] ) ) {
 					$page = trim( $this->query_vars['page'], '/' );

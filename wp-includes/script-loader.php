@@ -1116,7 +1116,7 @@ function wp_style_loader_src( $src, $handle ) {
 }
 
 /**
- * Prints the script queue in the HTML head on admin pages.
+ * Prints the script queue in the HTML head on admin template-parts.
  *
  * Postpones the scripts that were queued for the footer.
  * print_footer_scripts() is called in the footer to print these scripts.
@@ -1297,7 +1297,7 @@ function wp_enqueue_scripts() {
 }
 
 /**
- * Prints the styles queue in the HTML head on admin pages.
+ * Prints the styles queue in the HTML head on admin template-parts.
  *
  * @since 2.8.0
  *

@@ -89,7 +89,7 @@
 	function adjustHeaderHeight() {
 		if ( 'none' === $menuToggle.css( 'display' ) ) {
 
-			// The margin should be applied to different elements on front-page or home vs interior pages.
+			// The margin should be applied to different elements on front-page or home vs interior template-parts.
 			if ( isFrontPage ) {
 				$branding.css( 'margin-bottom', navigationOuterHeight );
 			} else {

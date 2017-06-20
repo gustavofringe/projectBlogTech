@@ -2458,7 +2458,7 @@ $page_links = paginate_links( array(
 ));
 
 if ( $page_links )
-	echo "<div class='tablenav-pages'>$page_links</div>";
+	echo "<div class='tablenav-template-parts'>$page_links</div>";
 ?>
 
 <div class="alignleft actions">
@@ -2828,7 +2828,7 @@ function edit_form_image_editor( $post ) {
 
 	<label for="attachment_content"><strong><?php _e( 'Description' ); ?></strong><?php
 	if ( preg_match( '#^(audio|video)/#', $post->post_mime_type ) ) {
-		echo ': ' . __( 'Displayed on attachment pages.' );
+		echo ': ' . __( 'Displayed on attachment template-parts.' );
 	} ?></label>
 	<?php wp_editor( $post->post_content, 'attachment_content', $editor_args ); ?>
 

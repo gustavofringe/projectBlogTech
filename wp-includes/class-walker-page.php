@@ -8,7 +8,7 @@
  */
 
 /**
- * Core walker class used to create an HTML list of pages.
+ * Core walker class used to create an HTML list of template-parts.
  *
  * @since 2.1.0
  *

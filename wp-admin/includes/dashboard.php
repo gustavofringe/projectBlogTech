@@ -1573,10 +1573,10 @@ function wp_welcome_panel() {
 		<ul>
 		<?php if ( 'page' == get_option( 'show_on_front' ) && ! get_option( 'page_for_posts' ) ) : ?>
 			<li><?php printf( '<a href="%s" class="welcome-icon welcome-edit-page">' . __( 'Edit your front page' ) . '</a>', get_edit_post_link( get_option( 'page_on_front' ) ) ); ?></li>
-			<li><?php printf( '<a href="%s" class="welcome-icon welcome-add-page">' . __( 'Add additional pages' ) . '</a>', admin_url( 'post-new.php?post_type=page' ) ); ?></li>
+			<li><?php printf( '<a href="%s" class="welcome-icon welcome-add-page">' . __( 'Add additional template-parts' ) . '</a>', admin_url( 'post-new.php?post_type=page' ) ); ?></li>
 		<?php elseif ( 'page' == get_option( 'show_on_front' ) ) : ?>
 			<li><?php printf( '<a href="%s" class="welcome-icon welcome-edit-page">' . __( 'Edit your front page' ) . '</a>', get_edit_post_link( get_option( 'page_on_front' ) ) ); ?></li>
-			<li><?php printf( '<a href="%s" class="welcome-icon welcome-add-page">' . __( 'Add additional pages' ) . '</a>', admin_url( 'post-new.php?post_type=page' ) ); ?></li>
+			<li><?php printf( '<a href="%s" class="welcome-icon welcome-add-page">' . __( 'Add additional template-parts' ) . '</a>', admin_url( 'post-new.php?post_type=page' ) ); ?></li>
 			<li><?php printf( '<a href="%s" class="welcome-icon welcome-write-blog">' . __( 'Add a blog post' ) . '</a>', admin_url( 'post-new.php' ) ); ?></li>
 		<?php else : ?>
 			<li><?php printf( '<a href="%s" class="welcome-icon welcome-write-blog">' . __( 'Write your first blog post' ) . '</a>', admin_url( 'post-new.php' ) ); ?></li>

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying 404 pages (not found).
+ * The template for displaying 404 template-parts (not found).
  *
  * @package FlyMag
  */

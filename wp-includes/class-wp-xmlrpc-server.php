@@ -10,7 +10,7 @@
  * WordPress XMLRPC server implementation.
  *
  * Implements compatibility for Blogger API, MetaWeblog API, MovableType, and
- * pingback. Additional WordPress API for managing comments, pages, posts,
+ * pingback. Additional WordPress API for managing comments, template-parts, posts,
  * options, etc.
  *
  * As of WordPress 3.5.0, XML-RPC is enabled by default. It can be disabled
@@ -2729,7 +2729,7 @@ class wp_xmlrpc_server extends IXR_Server {
 			return $this->error;
 
 		if ( !current_user_can( 'edit_pages' ) )
-			return new IXR_Error( 401, __( 'Sorry, you are not allowed to edit pages.' ) );
+			return new IXR_Error( 401, __( 'Sorry, you are not allowed to edit template-parts.' ) );
 
 		/** This action is documented in wp-includes/class-wp-xmlrpc-server.php */
 		do_action( 'xmlrpc_call', 'wp.getPages' );
@@ -2737,7 +2737,7 @@ class wp_xmlrpc_server extends IXR_Server {
 		$pages = get_posts( array('post_type' => 'page', 'post_status' => 'any', 'numberposts' => $num_pages) );
 		$num_pages = count($pages);
 
-		// If we have pages, put together their info.
+		// If we have template-parts, put together their info.
 		if ( $num_pages >= 1 ) {
 			$pages_struct = array();
 
@@ -2821,7 +2821,7 @@ class wp_xmlrpc_server extends IXR_Server {
 		if ( !$actual_page || ($actual_page['post_type'] != 'page') )
 			return new IXR_Error( 404, __( 'Sorry, no such page.' ) );
 
-		// Make sure the user can delete pages.
+		// Make sure the user can delete template-parts.
 		if ( !current_user_can('delete_page', $page_id) )
 			return new IXR_Error( 401, __( 'Sorry, you are not allowed to delete this page.' ) );
 
@@ -2883,7 +2883,7 @@ class wp_xmlrpc_server extends IXR_Server {
 		if ( !$actual_page || ($actual_page['post_type'] != 'page') )
 			return new IXR_Error( 404, __( 'Sorry, no such page.' ) );
 
-		// Make sure the user is allowed to edit pages.
+		// Make sure the user is allowed to edit template-parts.
 		if ( !current_user_can('edit_page', $page_id) )
 			return new IXR_Error( 401, __( 'Sorry, you are not allowed to edit this page.' ) );
 
@@ -2931,12 +2931,12 @@ class wp_xmlrpc_server extends IXR_Server {
 			return $this->error;
 
 		if ( !current_user_can( 'edit_pages' ) )
-			return new IXR_Error( 401, __( 'Sorry, you are not allowed to edit pages.' ) );
+			return new IXR_Error( 401, __( 'Sorry, you are not allowed to edit template-parts.' ) );
 
 		/** This action is documented in wp-includes/class-wp-xmlrpc-server.php */
 		do_action( 'xmlrpc_call', 'wp.getPageList' );
 
-		// Get list of pages ids and titles
+		// Get list of template-parts ids and titles
 		$page_list = $wpdb->get_results("
 			SELECT ID page_id,
 				post_title page_title,
@@ -4884,7 +4884,7 @@ class wp_xmlrpc_server extends IXR_Server {
 					$cap  = 'publish_pages';
 				else
 					$cap = 'edit_pages';
-				$error_message = __( 'Sorry, you are not allowed to publish pages on this site.' );
+				$error_message = __( 'Sorry, you are not allowed to publish template-parts on this site.' );
 				$post_type = 'page';
 				if ( !empty( $content_struct['wp_page_template'] ) )
 					$page_template = $content_struct['wp_page_template'];
@@ -4954,7 +4954,7 @@ class wp_xmlrpc_server extends IXR_Server {
 					break;
 				case "page":
 					if ( !current_user_can( 'edit_others_pages' ) )
-						return new IXR_Error( 401, __( 'Sorry, you are not allowed to create pages as this user.' ) );
+						return new IXR_Error( 401, __( 'Sorry, you are not allowed to create template-parts as this user.' ) );
 					break;
 				default:
 					return new IXR_Error( 401, __( 'Invalid post type.' ) );

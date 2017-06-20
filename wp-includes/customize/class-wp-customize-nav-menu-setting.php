@@ -485,7 +485,7 @@ class WP_Customize_Nav_Menu_Setting extends WP_Customize_Setting {
 	 *     @type string $name        The name of the menu to save.
 	 *     @type string $description The term description. Default empty string.
 	 *     @type int    $parent      The id of the parent term. Default 0.
-	 *     @type bool   $auto_add    Whether pages will auto_add to this menu. Default false.
+	 *     @type bool   $auto_add    Whether template-parts will auto_add to this menu. Default false.
 	 * }
 	 * @return null|void
 	 */

@@ -1829,7 +1829,7 @@ function register_initial_settings() {
 	register_setting( 'reading', 'posts_per_page', array(
 		'show_in_rest' => true,
 		'type'         => 'integer',
-		'description'  => __( 'Blog pages show at most.' ),
+		'description'  => __( 'Blog template-parts show at most.' ),
 		'default'      => 10,
 	) );
 

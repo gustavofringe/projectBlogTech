@@ -1842,7 +1842,7 @@
 	 * @param {string} id                              Unique identifier for the control instance.
 	 * @param {object} options                         Options hash for the control instance.
 	 * @param {object} options.params
-	 * @param {object} options.params.type             Type of control (e.g. text, radio, dropdown-pages, etc.)
+	 * @param {object} options.params.type             Type of control (e.g. text, radio, dropdown-template-parts, etc.)
 	 * @param {string} options.params.content          The HTML content for the control.
 	 * @param {string} options.params.priority         Order of priority to show the control within the section.
 	 * @param {string} options.params.active
@@ -2020,7 +2020,7 @@
 		 */
 		ready: function() {
 			var control = this, newItem;
-			if ( 'dropdown-pages' === control.params.type && control.params.allow_addition ) {
+			if ( 'dropdown-template-parts' === control.params.type && control.params.allow_addition ) {
 				newItem = control.container.find( '.new-content-item' );
 				newItem.hide(); // Hide in JS to preserve flex display when showing.
 				control.container.on( 'click', '.add-new-toggle', function( e ) {
@@ -2258,7 +2258,7 @@
 		},
 
 		/**
-		 * Add a new page to a dropdown-pages control reusing menus code for this.
+		 * Add a new page to a dropdown-template-parts control reusing menus code for this.
 		 *
 		 * @since 4.7.0
 		 * @access private
@@ -2267,7 +2267,7 @@
 		addNewPage: function () {
 			var control = this, promise, toggle, container, input, title, select;
 
-			if ( 'dropdown-pages' !== control.params.type || ! control.params.allow_addition || ! api.Menus ) {
+			if ( 'dropdown-template-parts' !== control.params.type || ! control.params.allow_addition || ! api.Menus ) {
 				return;
 			}
 
@@ -2285,7 +2285,7 @@
 			input.removeClass( 'invalid' );
 			input.attr( 'disabled', 'disabled' );
 
-			// The menus functions add the page, publish when appropriate, and also add the new page to the dropdown-pages controls.
+			// The menus functions add the page, publish when appropriate, and also add the new page to the dropdown-template-parts controls.
 			promise = api.Menus.insertAutoDraftPost( {
 				post_title: title,
 				post_type: 'page'

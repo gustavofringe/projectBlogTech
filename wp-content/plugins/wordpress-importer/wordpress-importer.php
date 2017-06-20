@@ -2,7 +2,7 @@
 /*
 Plugin Name: WordPress Importer
 Plugin URI: http://wordpress.org/extend/plugins/wordpress-importer/
-Description: Import posts, pages, comments, custom fields, categories, tags and more from a WordPress export file.
+Description: Import posts, template-parts, comments, custom fields, categories, tags and more from a WordPress export file.
 Author: wordpressdotorg
 Author URI: http://wordpress.org/
 Version: 0.6.3
@@ -1138,7 +1138,7 @@ class WP_Import extends WP_Importer {
 	 */
 	function greet() {
 		echo '<div class="narrow">';
-		echo '<p>'.__( 'Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site.', 'wordpress-importer' ).'</p>';
+		echo '<p>'.__( 'Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, template-parts, comments, custom fields, categories, and tags into this site.', 'wordpress-importer' ).'</p>';
 		echo '<p>'.__( 'Choose a WXR (.xml) file to upload, then click Upload file and import.', 'wordpress-importer' ).'</p>';
 		wp_import_upload_form( 'admin.php?import=wordpress&amp;step=1' );
 		echo '</div>';
@@ -1213,6 +1213,6 @@ function wordpress_importer_init() {
 	 * @global WP_Import $wp_import
 	 */
 	$GLOBALS['wp_import'] = new WP_Import();
-	register_importer( 'wordpress', 'WordPress', __('Import <strong>posts, pages, comments, custom fields, categories, and tags</strong> from a WordPress export file.', 'wordpress-importer'), array( $GLOBALS['wp_import'], 'dispatch' ) );
+	register_importer( 'wordpress', 'WordPress', __('Import <strong>posts, template-parts, comments, custom fields, categories, and tags</strong> from a WordPress export file.', 'wordpress-importer'), array( $GLOBALS['wp_import'], 'dispatch' ) );
 }
 add_action( 'admin_init', 'wordpress_importer_init' );

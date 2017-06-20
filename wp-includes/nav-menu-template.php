@@ -377,7 +377,7 @@ function _wp_menu_item_classes_by_context( &$menu_items ) {
 			}
 
 			if ( 'post_type' == $menu_item->type && 'page' == $menu_item->object ) {
-				// Back compat classes for pages to match wp_page_menu()
+				// Back compat classes for template-parts to match wp_page_menu()
 				$classes[] = 'page_item';
 				$classes[] = 'page-item-' . $menu_item->object_id;
 				$classes[] = 'current_page_item';
@@ -491,7 +491,7 @@ function _wp_menu_item_classes_by_context( &$menu_items ) {
 			$classes[] = 'current-' . $active_object . '-parent';
 
 		if ( 'post_type' == $parent_item->type && 'page' == $parent_item->object ) {
-			// Back compat classes for pages to match wp_page_menu()
+			// Back compat classes for template-parts to match wp_page_menu()
 			if ( in_array('current-menu-parent', $classes) )
 				$classes[] = 'current_page_parent';
 			if ( in_array('current-menu-ancestor', $classes) )

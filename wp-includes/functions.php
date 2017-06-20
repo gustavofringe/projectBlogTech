@@ -2501,7 +2501,7 @@ function wp_get_mime_types() {
 	// iWork formats.
 	'key' => 'application/vnd.apple.keynote',
 	'numbers' => 'application/vnd.apple.numbers',
-	'pages' => 'application/vnd.apple.pages',
+	'template-parts' => 'application/vnd.apple.template-parts',
 	) );
 }
 
@@ -2528,7 +2528,7 @@ function wp_get_ext_types() {
 		'image'       => array( 'jpg', 'jpeg', 'jpe',  'gif',  'png',  'bmp',   'tif',  'tiff', 'ico' ),
 		'audio'       => array( 'aac', 'ac3',  'aif',  'aiff', 'm3a',  'm4a',   'm4b',  'mka',  'mp1',  'mp2',  'mp3', 'ogg', 'oga', 'ram', 'wav', 'wma' ),
 		'video'       => array( '3g2',  '3gp', '3gpp', 'asf', 'avi',  'divx', 'dv',   'flv',  'm4v',   'mkv',  'mov',  'mp4',  'mpeg', 'mpg', 'mpv', 'ogm', 'ogv', 'qt',  'rm', 'vob', 'wmv' ),
-		'document'    => array( 'doc', 'docx', 'docm', 'dotm', 'odt',  'pages', 'pdf',  'xps',  'oxps', 'rtf',  'wp', 'wpd', 'psd', 'xcf' ),
+		'document'    => array( 'doc', 'docx', 'docm', 'dotm', 'odt',  'template-parts', 'pdf',  'xps',  'oxps', 'rtf',  'wp', 'wpd', 'psd', 'xcf' ),
 		'spreadsheet' => array( 'numbers',     'ods',  'xls',  'xlsx', 'xlsm',  'xlsb' ),
 		'interactive' => array( 'swf', 'key',  'ppt',  'pptx', 'pptm', 'pps',   'ppsx', 'ppsm', 'sldx', 'sldm', 'odp' ),
 		'text'        => array( 'asc', 'csv',  'tsv',  'txt' ),
@@ -5011,7 +5011,7 @@ function wp_find_hierarchy_loop_tortoise_hare( $callback, $start, $override = ar
 }
 
 /**
- * Send a HTTP header to limit rendering of pages to same origin iframes.
+ * Send a HTTP header to limit rendering of template-parts to same origin iframes.
  *
  * @since 3.1.3
  *

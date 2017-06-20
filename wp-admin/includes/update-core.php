@@ -224,7 +224,7 @@ $_old_files = array(
 'wp-admin/categories.php',
 'wp-admin/edit-category-form.php',
 'wp-admin/edit-page-form.php',
-'wp-admin/edit-pages.php',
+'wp-admin/edit-template-parts.php',
 'wp-admin/images/admin-header-footer.png',
 'wp-admin/images/browse-happy.gif',
 'wp-admin/images/ico-add.png',

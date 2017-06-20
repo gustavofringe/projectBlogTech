@@ -242,8 +242,8 @@ msgid "Content Bottom 1"
 msgstr "Contenu du bas 1"
 
 #: functions.php:168 functions.php:178
-msgid "Appears at the bottom of the content on posts and pages."
-msgstr "S&nbsp;affiche en bas du contenu des articles et des pages."
+msgid "Appears at the bottom of the content on posts and template-parts."
+msgstr "S&nbsp;affiche en bas du contenu des articles et des template-parts."
 
 #: functions.php:176
 msgid "Content Bottom 2"

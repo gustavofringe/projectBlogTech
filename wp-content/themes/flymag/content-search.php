@@ -1,6 +1,6 @@
 <?php
 /**
- * The template part for displaying results in search pages.
+ * The template part for displaying results in search template-parts.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *

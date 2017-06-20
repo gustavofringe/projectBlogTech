@@ -151,7 +151,7 @@ function install_themes_upload() {
 }
 
 /**
- * Prints a theme on the Install Themes pages.
+ * Prints a theme on the Install Themes template-parts.
  *
  * @deprecated 3.4.0
  *

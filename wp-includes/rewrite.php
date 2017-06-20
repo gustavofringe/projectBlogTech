@@ -98,7 +98,7 @@ define('EP_TAGS', 1024);
 define('EP_AUTHORS', 2048);
 
 /**
- * Endpoint Mask for pages.
+ * Endpoint Mask for template-parts.
  *
  * @since 2.1.0
  */
@@ -419,12 +419,12 @@ function wp_resolve_numeric_slug_conflicts( $query_vars = array() ) {
 
 	$post_page_count = substr_count( $post->post_content, '<!--nextpage-->' ) + 1;
 
-	// If the post doesn't have multiple pages, but a 'page' candidate is found, resolve to the date archive.
+	// If the post doesn't have multiple template-parts, but a 'page' candidate is found, resolve to the date archive.
 	if ( 1 === $post_page_count && $maybe_page ) {
 		return $query_vars;
 	}
 
-	// If the post has multiple pages and the 'page' number isn't valid, resolve to the date archive.
+	// If the post has multiple template-parts and the 'page' number isn't valid, resolve to the date archive.
 	if ( $post_page_count > 1 && $maybe_page > $post_page_count ) {
 		return $query_vars;
 	}

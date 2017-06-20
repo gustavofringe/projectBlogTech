@@ -301,7 +301,7 @@ msgstr "Ausschluss"
 
 #: views/settings.php:97
 msgid ""
-"Exclude feed, pages, archives or IPs from maintenance mode. Add one slug / "
+"Exclude feed, template-parts, archives or IPs from maintenance mode. Add one slug / "
 "IP per line!"
 msgstr ""
 "Ausschluss vom Wartungsmodus von Feed, Seiten, Archiven oder IPs möglich. "

@@ -28,7 +28,7 @@ class WP_Widget_Pages extends WP_Widget {
 			'description' => __( 'A list of your site&#8217;s Pages.' ),
 			'customize_selective_refresh' => true,
 		);
-		parent::__construct( 'pages', __( 'Pages' ), $widget_ops );
+		parent::__construct( 'template-parts', __( 'Pages' ), $widget_ops );
 	}
 
 	/**
@@ -67,7 +67,7 @@ class WP_Widget_Pages extends WP_Widget {
 		 *
 		 * @see wp_list_pages()
 		 *
-		 * @param array $args An array of arguments to retrieve the pages list.
+		 * @param array $args An array of arguments to retrieve the template-parts list.
 		 */
 		$out = wp_list_pages( apply_filters( 'widget_pages_args', array(
 			'title_li'    => '',

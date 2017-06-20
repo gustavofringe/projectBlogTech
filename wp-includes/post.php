@@ -55,7 +55,7 @@ function create_initial_post_types() {
 		'delete_with_user' => true,
 		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'page-attributes', 'custom-fields', 'comments', 'revisions' ),
 		'show_in_rest' => true,
-		'rest_base' => 'pages',
+		'rest_base' => 'template-parts',
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
 	) );
 
@@ -358,8 +358,8 @@ function _wp_relative_upload_path( $path ) {
 /**
  * Retrieve all children of the post parent ID.
  *
- * Normally, without any enhancements, the children would apply to pages. In the
- * context of the inner workings of WordPress, pages, posts, and attachments
+ * Normally, without any enhancements, the children would apply to template-parts. In the
+ * context of the inner workings of WordPress, template-parts, posts, and attachments
  * share the same table, so therefore the functionality could apply to any one
  * of them. It is then noted that while this function does not work on posts, it
  * does not mean that it won't work on posts. It is recommended that you know
@@ -390,7 +390,7 @@ function _wp_relative_upload_path( $path ) {
  *
  * The 'post_type' and 'post_status' arguments can be used to choose what
  * criteria of posts to retrieve. The 'post_type' can be anything, but WordPress
- * post types are 'post', 'pages', and 'attachments'. The 'post_status'
+ * post types are 'post', 'template-parts', and 'attachments'. The 'post_status'
  * argument will accept any post status within the write administration panels.
  *
  * @since 2.0.0
@@ -1325,9 +1325,9 @@ function _post_type_meta_capabilities( $capabilities = null ) {
  * - `view_item` - Label for viewing a singular item. Default is 'View Post' / 'View Page'.
  * - `view_items` - Label for viewing post type archives. Default is 'View Posts' / 'View Pages'.
  * - `search_items` - Label for searching plural items. Default is 'Search Posts' / 'Search Pages'.
- * - `not_found` - Label used when no items are found. Default is 'No posts found' / 'No pages found'.
+ * - `not_found` - Label used when no items are found. Default is 'No posts found' / 'No template-parts found'.
  * - `not_found_in_trash` - Label used when no items are in the trash. Default is 'No posts found in Trash' /
- *                        'No pages found in Trash'.
+ *                        'No template-parts found in Trash'.
  * - `parent_item_colon` - Label used to prefix parents of hierarchical items. Not used on non-hierarchical
  *                       post types. Default is 'Parent Page:'.
  * - `all_items` - Label to signify all items in a submenu link. Default is 'All Posts' / 'All Pages'.
@@ -1342,13 +1342,13 @@ function _post_type_meta_capabilities( $capabilities = null ) {
  * - `use_featured_image` - Label in the media frame for using a featured image. Default is 'Use as featured image'.
  * - `menu_name` - Label for the menu name. Default is the same as `name`.
  * - `filter_items_list` - Label for the table views hidden heading. Default is 'Filter posts list' /
- *                       'Filter pages list'.
+ *                       'Filter template-parts list'.
  * - `items_list_navigation` - Label for the table pagination hidden heading. Default is 'Posts list navigation' /
  *                           'Pages list navigation'.
  * - `items_list` - Label for the table hidden heading. Default is 'Posts list' / 'Pages list'.
  *
  * Above, the first default value is for non-hierarchical post types (like posts)
- * and the second one is for hierarchical post types (like pages).
+ * and the second one is for hierarchical post types (like template-parts).
  *
  * Note: To set labels used in post type admin notices, see the {@see 'post_updated_messages'} filter.
  *
@@ -1376,8 +1376,8 @@ function get_post_type_labels( $post_type_object ) {
 		'view_item' => array( __('View Post'), __('View Page') ),
 		'view_items' => array( __('View Posts'), __('View Pages') ),
 		'search_items' => array( __('Search Posts'), __('Search Pages') ),
-		'not_found' => array( __('No posts found.'), __('No pages found.') ),
-		'not_found_in_trash' => array( __('No posts found in Trash.'), __('No pages found in Trash.') ),
+		'not_found' => array( __('No posts found.'), __('No template-parts found.') ),
+		'not_found_in_trash' => array( __('No posts found in Trash.'), __('No template-parts found in Trash.') ),
 		'parent_item_colon' => array( null, __('Parent Page:') ),
 		'all_items' => array( __( 'All Posts' ), __( 'All Pages' ) ),
 		'archives' => array( __( 'Post Archives' ), __( 'Page Archives' ) ),
@@ -1388,7 +1388,7 @@ function get_post_type_labels( $post_type_object ) {
 		'set_featured_image' => array( _x( 'Set featured image', 'post' ), _x( 'Set featured image', 'page' ) ),
 		'remove_featured_image' => array( _x( 'Remove featured image', 'post' ), _x( 'Remove featured image', 'page' ) ),
 		'use_featured_image' => array( _x( 'Use as featured image', 'post' ), _x( 'Use as featured image', 'page' ) ),
-		'filter_items_list' => array( __( 'Filter posts list' ), __( 'Filter pages list' ) ),
+		'filter_items_list' => array( __( 'Filter posts list' ), __( 'Filter template-parts list' ) ),
 		'items_list_navigation' => array( __( 'Posts list navigation' ), __( 'Pages list navigation' ) ),
 		'items_list' => array( __( 'Posts list' ), __( 'Pages list' ) ),
 	);
@@ -1613,7 +1613,7 @@ function set_post_type( $post_id = 0, $post_type = 'post' ) {
 /**
  * Determines whether a post type is considered "viewable".
  *
- * For built-in post types such as posts and pages, the 'public' value will be evaluated.
+ * For built-in post types such as posts and template-parts, the 'public' value will be evaluated.
  * For all others, the 'publicly_queryable' value will be used.
  *
  * @since 4.4.0
@@ -4348,7 +4348,7 @@ function get_page_by_title( $page_title, $output = OBJECT, $post_type = 'page' )
 /**
  * Identify descendants of a given page ID in a list of page objects.
  *
- * Descendants are identified from the `$pages` array passed to the function. No database queries are performed.
+ * Descendants are identified from the `$template-parts` array passed to the function. No database queries are performed.
  *
  * @since 1.5.1
  *
@@ -4367,7 +4367,7 @@ function get_page_children( $page_id, $pages ) {
 
 	// Start the search by looking at immediate children.
 	if ( isset( $children[ $page_id ] ) ) {
-		// Always start at the end of the stack in order to preserve original `$pages` order.
+		// Always start at the end of the stack in order to preserve original `$template-parts` order.
 		$to_look = array_reverse( $children[ $page_id ] );
 
 		while ( $to_look ) {
@@ -4386,7 +4386,7 @@ function get_page_children( $page_id, $pages ) {
 }
 
 /**
- * Order the pages with children under parents in a flat list.
+ * Order the template-parts with children under parents in a flat list.
  *
  * It uses auxiliary structure to hold parent-children relationships and
  * runs in O(N) complexity
@@ -4439,7 +4439,7 @@ function _page_traverse_name( $page_id, &$children, &$result ){
 /**
  * Build the URI path for a page.
  *
- * Sub pages will be in the "directory" under the parent page post name.
+ * Sub template-parts will be in the "directory" under the parent page post name.
  *
  * @since 1.5.0
  * @since 4.6.0 Converted the `$page` parameter to optional.
@@ -4476,46 +4476,46 @@ function get_page_uri( $page = 0 ) {
 }
 
 /**
- * Retrieve a list of pages (or hierarchical post type items).
+ * Retrieve a list of template-parts (or hierarchical post type items).
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
  * @since 1.5.0
  *
  * @param array|string $args {
- *     Optional. Array or string of arguments to retrieve pages.
+ *     Optional. Array or string of arguments to retrieve template-parts.
  *
- *     @type int          $child_of     Page ID to return child and grandchild pages of. Note: The value
+ *     @type int          $child_of     Page ID to return child and grandchild template-parts of. Note: The value
  *                                      of `$hierarchical` has no bearing on whether `$child_of` returns
  *                                      hierarchical results. Default 0, or no restriction.
- *     @type string       $sort_order   How to sort retrieved pages. Accepts 'ASC', 'DESC'. Default 'ASC'.
- *     @type string       $sort_column  What columns to sort pages by, comma-separated. Accepts 'post_author',
+ *     @type string       $sort_order   How to sort retrieved template-parts. Accepts 'ASC', 'DESC'. Default 'ASC'.
+ *     @type string       $sort_column  What columns to sort template-parts by, comma-separated. Accepts 'post_author',
  *                                      'post_date', 'post_title', 'post_name', 'post_modified', 'menu_order',
  *                                      'post_modified_gmt', 'post_parent', 'ID', 'rand', 'comment_count'.
  *                                      'post_' can be omitted for any values that start with it.
  *                                      Default 'post_title'.
- *     @type bool         $hierarchical Whether to return pages hierarchically. If false in conjunction with
+ *     @type bool         $hierarchical Whether to return template-parts hierarchically. If false in conjunction with
  *                                      `$child_of` also being false, both arguments will be disregarded.
  *                                      Default true.
  *     @type array        $exclude      Array of page IDs to exclude. Default empty array.
  *     @type array        $include      Array of page IDs to include. Cannot be used with `$child_of`,
  *                                      `$parent`, `$exclude`, `$meta_key`, `$meta_value`, or `$hierarchical`.
  *                                      Default empty array.
- *     @type string       $meta_key     Only include pages with this meta key. Default empty.
- *     @type string       $meta_value   Only include pages with this meta value. Requires `$meta_key`.
+ *     @type string       $meta_key     Only include template-parts with this meta key. Default empty.
+ *     @type string       $meta_value   Only include template-parts with this meta value. Requires `$meta_key`.
  *                                      Default empty.
  *     @type string       $authors      A comma-separated list of author IDs. Default empty.
  *     @type int          $parent       Page ID to return direct children of. Default -1, or no restriction.
  *     @type string|array $exclude_tree Comma-separated string or array of page IDs to exclude.
  *                                      Default empty array.
- *     @type int          $number       The number of pages to return. Default 0, or all pages.
- *     @type int          $offset       The number of pages to skip before returning. Requires `$number`.
+ *     @type int          $number       The number of template-parts to return. Default 0, or all template-parts.
+ *     @type int          $offset       The number of template-parts to skip before returning. Requires `$number`.
  *                                      Default 0.
  *     @type string       $post_type    The post type to query. Default 'page'.
  *     @type string|array $post_status  A comma-separated list or array of post statuses to include.
  *                                      Default 'publish'.
  * }
- * @return array|false List of pages matching defaults or `$args`.
+ * @return array|false List of template-parts matching defaults or `$args`.
  */
 function get_pages( $args = array() ) {
 	global $wpdb;
@@ -4764,11 +4764,11 @@ function get_pages( $args = array() ) {
 	$pages = array_map( 'get_post', $pages );
 
 	/**
-	 * Filters the retrieved list of pages.
+	 * Filters the retrieved list of template-parts.
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param array $pages List of pages to retrieve.
+	 * @param array $pages List of template-parts to retrieve.
 	 * @param array $r     Array of get_pages() arguments.
 	 */
 	return apply_filters( 'get_pages', $pages, $r );

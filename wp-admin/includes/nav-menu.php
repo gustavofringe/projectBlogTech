@@ -154,7 +154,7 @@ function wp_nav_menu_setup() {
 }
 
 /**
- * Limit the amount of meta boxes to pages, posts, links, and categories for first time users.
+ * Limit the amount of meta boxes to template-parts, posts, links, and categories for first time users.
  *
  * @since 3.0.0
  *
@@ -212,7 +212,7 @@ function wp_nav_menu_post_type_meta_boxes() {
 		$post_type = apply_filters( 'nav_menu_meta_box_object', $post_type );
 		if ( $post_type ) {
 			$id = $post_type->name;
-			// Give pages a higher priority.
+			// Give template-parts a higher priority.
 			$priority = ( 'page' == $post_type->name ? 'core' : 'default' );
 			add_meta_box( "add-post-type-{$id}", $post_type->labels->name, 'wp_nav_menu_item_post_type_meta_box', 'nav-menus', 'side', $priority, $post_type );
 		}
@@ -484,7 +484,7 @@ function wp_nav_menu_item_post_type_meta_box( $object, $box ) {
 				$args['walker'] = $walker;
 
 				/*
-				 * If we're dealing with pages, let's put a checkbox for the front
+				 * If we're dealing with template-parts, let's put a checkbox for the front
 				 * page at the top of the list.
 				 */
 				if ( 'page' == $post_type_name ) {
@@ -1058,8 +1058,8 @@ function wp_nav_menu_update_menu_items ( $nav_menu_selected_id, $nav_menu_select
 		}
 	}
 
-	// Store 'auto-add' pages.
-	$auto_add = ! empty( $_POST['auto-add-pages'] );
+	// Store 'auto-add' template-parts.
+	$auto_add = ! empty( $_POST['auto-add-template-parts'] );
 	$nav_menu_option = (array) get_option( 'nav_menu_options' );
 	if ( ! isset( $nav_menu_option['auto_add'] ) )
 		$nav_menu_option['auto_add'] = array();

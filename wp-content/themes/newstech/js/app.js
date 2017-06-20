@@ -63,11 +63,11 @@ function tabs(id) {
         var tab = document.getElementById('tab_'+i)
         if (tab)
         {
-            tab.classList.remove('active');
+            tab.parentNode.classList.remove('active');
         }
     }
     if (tabs){
-        tabs.classList.toggle('active')
+        tabs.parentNode.classList.toggle('active')
     }
 }
 

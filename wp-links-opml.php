@@ -5,7 +5,7 @@
  * another. Links aren't exported by the WordPress export, so this file handles
  * that.
  *
- * This file is not added by default to WordPress theme pages when outputting
+ * This file is not added by default to WordPress theme template-parts when outputting
  * feed links. It will have to be added manually for browsers and users to pick
  * up that this file exists.
  *

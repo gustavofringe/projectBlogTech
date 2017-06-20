@@ -470,7 +470,7 @@ msgid "log 404 Not Found requests"
 msgstr "Houd 404-fouten bij in een log."
 
 #: view/admin/options.php:43
-msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and pages are often not found."
+msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and template-parts are often not found."
 msgstr "Zet een of beide vinkjes uit om logging uit te schakelen. Daardoor kan je de belasting van de database verminderen, wat handig kan zijn als je veel redirects hebt of als je site heel drukbezocht is."
 
 #: view/admin/options.php:47

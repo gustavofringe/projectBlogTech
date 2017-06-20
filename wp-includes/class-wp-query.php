@@ -184,7 +184,7 @@ class WP_Query {
 	public $found_posts = 0;
 
 	/**
-	 * The amount of pages.
+	 * The amount of template-parts.
 	 *
 	 * @since 2.1.0
 	 * @access public
@@ -193,7 +193,7 @@ class WP_Query {
 	public $max_num_pages = 0;
 
 	/**
-	 * The amount of comment pages.
+	 * The amount of comment template-parts.
 	 *
 	 * @since 2.7.0
 	 * @access public
@@ -710,10 +710,10 @@ class WP_Query {
 	 *     @type string       $post_mime_type          The mime type of the post. Used for 'attachment' post_type.
 	 *     @type array        $post__not_in            An array of post IDs not to retrieve. Note: a string of comma-
 	 *                                                 separated IDs will NOT work.
-	 *     @type int          $post_parent             Page ID to retrieve child pages for. Use 0 to only retrieve
-	 *                                                 top-level pages.
-	 *     @type array        $post_parent__in         An array containing parent page IDs to query child pages from.
-	 *     @type array        $post_parent__not_in     An array containing parent page IDs not to query child pages from.
+	 *     @type int          $post_parent             Page ID to retrieve child template-parts for. Use 0 to only retrieve
+	 *                                                 top-level template-parts.
+	 *     @type array        $post_parent__in         An array containing parent page IDs to query child template-parts from.
+	 *     @type array        $post_parent__not_in     An array containing parent page IDs not to query child template-parts from.
 	 *     @type string|array $post_type               A post type slug (string) or array of post type slugs.
 	 *                                                 Default 'any' if using 'tax_query'.
 	 *     @type string|array $post_status             A post status (string) or array of post statuses.
@@ -3031,7 +3031,7 @@ class WP_Query {
 	}
 
 	/**
-	 * Set up the amount of found posts and the number of pages (if limit clause was used)
+	 * Set up the amount of found posts and the number of template-parts (if limit clause was used)
 	 * for the current query.
 	 *
 	 * @since 3.5.0
@@ -3581,7 +3581,7 @@ class WP_Query {
 	 *
 	 * @param mixed $taxonomy Optional. Taxonomy slug or slugs.
 	 * @param mixed $term     Optional. Term ID, name, slug or array of Term IDs, names, and slugs.
-	 * @return bool True for custom taxonomy archive pages, false for built-in taxonomies (category and tag archives).
+	 * @return bool True for custom taxonomy archive template-parts, false for built-in taxonomies (category and tag archives).
 	 */
 	public function is_tax( $taxonomy = '', $term = '' ) {
 		global $wp_taxonomies;
@@ -3736,7 +3736,7 @@ class WP_Query {
 	 * Is the query for an existing single page?
 	 *
 	 * If the $page parameter is specified, this function will additionally
-	 * check if the query is for one of the pages specified.
+	 * check if the query is for one of the template-parts specified.
 	 *
 	 * @see WP_Query::is_single()
 	 * @see WP_Query::is_singular()
@@ -3826,7 +3826,7 @@ class WP_Query {
 	/**
 	 * Is the query for an existing single post?
 	 *
-	 * Works for any post type excluding pages.
+	 * Works for any post type excluding template-parts.
 	 *
 	 * If the $post parameter is specified, this function will additionally
 	 * check if the query is for one of the Posts specified.
@@ -4034,14 +4034,14 @@ class WP_Query {
 		}
 
 		/**
-		 * Filters the "pages" derived from splitting the post content.
+		 * Filters the "template-parts" derived from splitting the post content.
 		 *
 		 * "Pages" are determined by splitting the post content based on the presence
 		 * of `<!-- nextpage -->` tags.
 		 *
 		 * @since 4.4.0
 		 *
-		 * @param array   $pages Array of "pages" derived from the post content.
+		 * @param array   $pages Array of "template-parts" derived from the post content.
 		 *                       of `<!-- nextpage -->` tags..
 		 * @param WP_Post $post  Current post object.
 		 */

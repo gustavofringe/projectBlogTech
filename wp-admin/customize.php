@@ -160,7 +160,7 @@ do_action( 'customize_controls_print_scripts' );
 					<button type="button" class="customize-help-toggle dashicons dashicons-editor-help" aria-expanded="false"><span class="screen-reader-text"><?php _e( 'Help' ); ?></span></button>
 				</div>
 				<div class="customize-panel-description"><?php
-					_e( 'The Customizer allows you to preview changes to your site before publishing them. You can navigate to different pages on your site within the preview. Edit shortcuts are shown for some editable elements.' );
+					_e( 'The Customizer allows you to preview changes to your site before publishing them. You can navigate to different template-parts on your site within the preview. Edit shortcuts are shown for some editable elements.' );
 				?></div>
 			</div>
 

@@ -820,7 +820,7 @@ function page_attributes_meta_box($post) {
 		 *
 		 * @see wp_dropdown_pages()
 		 *
-		 * @param array   $dropdown_args Array of arguments used to generate the pages drop-down.
+		 * @param array   $dropdown_args Array of arguments used to generate the template-parts drop-down.
 		 * @param WP_Post $post          The current WP_Post object.
 		 */
 		$dropdown_args = apply_filters( 'page_attributes_dropdown_pages_args', $dropdown_args, $post );
@@ -830,7 +830,7 @@ function page_attributes_meta_box($post) {
 <p class="post-attributes-label-wrapper"><label class="post-attributes-label" for="parent_id"><?php _e( 'Parent' ); ?></label></p>
 <?php echo $pages; ?>
 <?php
-		endif; // end empty pages check
+		endif; // end empty template-parts check
 	endif;  // end hierarchical check.
 
 	if ( count( get_page_templates( $post ) ) > 0 && get_option( 'page_for_posts' ) != $post->ID ) :

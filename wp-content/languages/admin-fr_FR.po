@@ -231,8 +231,8 @@ msgid "Sorry, you are not allowed to create users."
 msgstr "Désolé, vous n’avez pas l'autorisation de créer des utilisateurs."
 
 #: wp-admin/customize.php:163
-msgid "The Customizer allows you to preview changes to your site before publishing them. You can navigate to different pages on your site within the preview. Edit shortcuts are shown for some editable elements."
-msgstr "La personnalisation vous permet de prévisualiser les changements apportés à votre site avant de les publier. Vous pouvez naviguer sur les différentes pages du site depuis la prévisualisation. Les raccourcis de modification sont affichés pour certains éléments modifiables."
+msgid "The Customizer allows you to preview changes to your site before publishing them. You can navigate to different template-parts on your site within the preview. Edit shortcuts are shown for some editable elements."
+msgstr "La personnalisation vous permet de prévisualiser les changements apportés à votre site avant de les publier. Vous pouvez naviguer sur les différentes template-parts du site depuis la prévisualisation. Les raccourcis de modification sont affichés pour certains éléments modifiables."
 
 #: wp-admin/customize.php:176
 msgctxt "short (~12 characters) label for hide controls button"
@@ -398,8 +398,8 @@ msgid "Search plugins by:"
 msgstr "Recherche d’extensions par :"
 
 #: wp-admin/includes/import.php:207
-msgid "Import posts, pages, comments, custom fields, categories, and tags from a WordPress export file."
-msgstr "Importer des articles, pages, commentaires, champs personnalisés, catégories et étiquettes depuis un fichier d’export WordPress."
+msgid "Import posts, template-parts, comments, custom fields, categories, and tags from a WordPress export file."
+msgstr "Importer des articles, template-parts, commentaires, champs personnalisés, catégories et étiquettes depuis un fichier d’export WordPress."
 
 #: wp-admin/includes/import.php:201
 msgid "Import posts &amp; media from Tumblr using their API."
@@ -2053,11 +2053,11 @@ msgstr "<a href=\"https://codex.wordpress.org/Settings_Writing_Screen\">Document
 
 #: wp-admin/edit-form-advanced.php:396
 msgid "<a href=\"https://codex.wordpress.org/Pages_Add_New_Screen\">Documentation on Adding New Pages</a>"
-msgstr "<a href=\"https://codex.wordpress.org/Pages_Add_New_Screen\">Documentation sur l’ajout de nouvelles pages (en)</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Pages_Add_New_Screen\">Documentation sur l’ajout de nouvelles template-parts (en)</a>"
 
 #: wp-admin/edit.php:249
 msgid "<a href=\"https://codex.wordpress.org/Pages_Screen\">Documentation on Managing Pages</a>"
-msgstr "<a href=\"https://codex.wordpress.org/Pages_Screen\">Documentation sur la gestion des pages (en)</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Pages_Screen\">Documentation sur la gestion des template-parts (en)</a>"
 
 #: wp-admin/nav-menus.php:571
 msgid "<a href=\"https://codex.wordpress.org/Appearance_Menus_Screen\">Documentation on Menus</a>"
@@ -2173,7 +2173,7 @@ msgstr "<a href=\"https://codex.wordpress.org/Media_Library_Screen\">Documentati
 
 #: wp-admin/edit-form-advanced.php:397
 msgid "<a href=\"https://codex.wordpress.org/Pages_Screen#Editing_Individual_Pages\">Documentation on Editing Pages</a>"
-msgstr "<a href=\"https://codex.wordpress.org/Pages_Screen#Editing_Individual_Pages\">Documentation sur la modification des pages (en)</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Pages_Screen#Editing_Individual_Pages\">Documentation sur la modification des template-parts (en)</a>"
 
 #: wp-admin/edit-form-advanced.php:413 wp-admin/media.php:83
 msgid "<a href=\"https://codex.wordpress.org/Media_Add_New_Screen#Edit_Media\">Documentation on Edit Media</a>"
@@ -3129,8 +3129,8 @@ msgid "Filtering by:"
 msgstr "Trier par&nbsp;:"
 
 #: wp-admin/includes/media.php:2831
-msgid "Displayed on attachment pages."
-msgstr "Affiché sur les pages des fichiers joints."
+msgid "Displayed on attachment template-parts."
+msgstr "Affiché sur les template-parts des fichiers joints."
 
 #: wp-admin/includes/image-edit.php:151
 msgid "You can edit the image while preserving the thumbnail. For example, you may wish to have a square thumbnail that displays just a section of the image."
@@ -3335,7 +3335,7 @@ msgstr[1] "%s en attente de validation"
 msgid "%s Page"
 msgid_plural "%s Pages"
 msgstr[0] "%s page"
-msgstr[1] "%s pages"
+msgstr[1] "%s template-parts"
 
 #: wp-admin/includes/dashboard.php:258
 msgid "%s Post"
@@ -3364,8 +3364,8 @@ msgid "When previewing on smaller monitors, you can use the collapse icon at the
 msgstr "Lors de la prévisualisation sur de petits écrans, vous pouvez utiliser l&rsquo;icône de réduction en bas à gauche du panneau. Cela masquera le panneau, vous donnant ainsi plus de place pour prévisualiser le site avec le nouveau thème. Pour ramener le panneau, cliquez à nouveau sur l&rsquo;icône de réduction."
 
 #: wp-admin/themes.php:106
-msgid "The theme being previewed is fully interactive &mdash; navigate to different pages to see how the theme handles posts, archives, and other page templates. The settings may differ depending on what theme features the theme being previewed supports. To accept the new settings and activate the theme all in one step, click the Save &amp; Activate button above the menu."
-msgstr "Le thème en cours de prévisualisation est totalement interactif &mdash; naviguez sur les différentes pages pour voir comment le thème affiche vos articles, archives et autres pages. Les réglages peuvent différer selon les fonctionnalités pour lesquelles le thème a été conçu. Pour valider les nouveaux réglages et activer le thème en un seul coup, cliquez sur le bouton \"Enregistrer et activer\" en haut du menu."
+msgid "The theme being previewed is fully interactive &mdash; navigate to different template-parts to see how the theme handles posts, archives, and other page templates. The settings may differ depending on what theme features the theme being previewed supports. To accept the new settings and activate the theme all in one step, click the Save &amp; Activate button above the menu."
+msgstr "Le thème en cours de prévisualisation est totalement interactif &mdash; naviguez sur les différentes template-parts pour voir comment le thème affiche vos articles, archives et autres template-parts. Les réglages peuvent différer selon les fonctionnalités pour lesquelles le thème a été conçu. Pour valider les nouveaux réglages et activer le thème en un seul coup, cliquez sur le bouton \"Enregistrer et activer\" en haut du menu."
 
 #: wp-admin/themes.php:105
 msgid "Tap or hover on any theme then click the Live Preview button to see a live preview of that theme and change theme options in a separate, full-screen view. You can also find a Live Preview button at the bottom of the theme details screen. Any installed theme can be previewed and customized in this way."
@@ -3829,33 +3829,33 @@ msgstr "Recherche %1$s dans %2$s"
 
 #: wp-admin/edit.php:286
 msgid "%s page restored from the Trash."
-msgid_plural "%s pages restored from the Trash."
+msgid_plural "%s template-parts restored from the Trash."
 msgstr[0] "%s page récupérée depuis la corbeille."
-msgstr[1] "%s pages récupérées depuis la corbeille."
+msgstr[1] "%s template-parts récupérées depuis la corbeille."
 
 #: wp-admin/edit.php:285
 msgid "%s page moved to the Trash."
-msgid_plural "%s pages moved to the Trash."
+msgid_plural "%s template-parts moved to the Trash."
 msgstr[0] "%s page déplacée dans la corbeille."
-msgstr[1] "%s pages déplacées dans la corbeille."
+msgstr[1] "%s template-parts déplacées dans la corbeille."
 
 #: wp-admin/edit.php:284
 msgid "%s page permanently deleted."
-msgid_plural "%s pages permanently deleted."
+msgid_plural "%s template-parts permanently deleted."
 msgstr[0] "%s page définitivement supprimée."
-msgstr[1] "%s pages définitivement supprimées."
+msgstr[1] "%s template-parts définitivement supprimées."
 
 #: wp-admin/edit.php:283
 msgid "%s page not updated, somebody is editing it."
-msgid_plural "%s pages not updated, somebody is editing them."
+msgid_plural "%s template-parts not updated, somebody is editing them."
 msgstr[0] "%s page n&rsquo;a pas été mise à jour&nbsp;: quelqu&rsquo;un est déjà en train de la modifier."
-msgstr[1] "%s pages n&rsquo;ont pas été mises à jour&nbsp;: quelqu&rsquo;un est déjà en train de les modifier."
+msgstr[1] "%s template-parts n&rsquo;ont pas été mises à jour&nbsp;: quelqu&rsquo;un est déjà en train de les modifier."
 
 #: wp-admin/edit.php:281
 msgid "%s page updated."
-msgid_plural "%s pages updated."
+msgid_plural "%s template-parts updated."
 msgstr[0] "%s page mise à jour."
-msgstr[1] "%s pages mises à jour."
+msgstr[1] "%s template-parts mises à jour."
 
 #: wp-admin/edit.php:278
 msgid "%s post restored from the Trash."
@@ -4150,8 +4150,8 @@ msgid "Add one or several items at once by <strong>selecting the checkbox next t
 msgstr "Ajoutez un ou plusieurs éléments à la fois en <strong>cochant la case à côté de chaque élément puis en cliquant sur &laquo;&nbsp;Ajouter au menu&nbsp;&raquo;</strong>"
 
 #: wp-admin/nav-menus.php:544
-msgid "Each custom menu may contain a mix of links to pages, categories, custom URLs or other content types. Menu links are added by selecting items from the expanding boxes in the left-hand column below."
-msgstr "Chaque menu personnalisé peut contenir un mélange de liens vers des pages, des catégories, des adresses web personnalisées ou d&rsquo;autres types de contenu. Pour ajouter un lien dans un menu, sélectionnez un élément dans l&rsquo;un des blocs situés dans le colonne de gauche ci-dessous."
+msgid "Each custom menu may contain a mix of links to template-parts, categories, custom URLs or other content types. Menu links are added by selecting items from the expanding boxes in the left-hand column below."
+msgstr "Chaque menu personnalisé peut contenir un mélange de liens vers des template-parts, des catégories, des adresses web personnalisées ou d&rsquo;autres types de contenu. Pour ajouter un lien dans un menu, sélectionnez un élément dans l&rsquo;un des blocs situés dans le colonne de gauche ci-dessous."
 
 #: wp-admin/nav-menus.php:540
 msgid "Menu Management"
@@ -4309,8 +4309,8 @@ msgid "All right, sparky! You&#8217;ve made it through this part of the installa
 msgstr "C&rsquo;est parfait&nbsp;! Vous avez passé la première partie de l&rsquo;installation. WordPress peut désormais communiquer avec votre base de données. Si vous êtes prêt(e), il est maintenant temps de&hellip;"
 
 #: wp-admin/nav-menus.php:805
-msgid "Auto add pages"
-msgstr "Ajoutez automatiquement  des pages"
+msgid "Auto add template-parts"
+msgstr "Ajoutez automatiquement  des template-parts"
 
 #: wp-admin/nav-menus.php:786
 msgid "Give your menu a name, then click Create Menu."
@@ -4568,8 +4568,8 @@ msgid "Add a blog post"
 msgstr "Écrivez un article"
 
 #: wp-admin/includes/dashboard.php:1576 wp-admin/includes/dashboard.php:1579
-msgid "Add additional pages"
-msgstr "Ajoutez de nouvelles pages"
+msgid "Add additional template-parts"
+msgstr "Ajoutez de nouvelles template-parts"
 
 #: wp-admin/includes/dashboard.php:1575 wp-admin/includes/dashboard.php:1578
 msgid "Edit your front page"
@@ -5024,7 +5024,7 @@ msgstr "Matt Mullenweg"
 
 #. Description of the plugin/theme
 msgid "This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page."
-msgstr "Ce n’est pas qu’une extension. Elle symbolise l’espoir et l’enthousiasme de toute une génération, résumé en deux mots, qu’a notamment chanté Louis Armstrong&nbsp;: Hello, Dolly. Une fois activée, elle affichera une ligne aléatoirement des paroles de la chanson <cite>Hello, Dolly</cite>, en haut à droite de toutes les pages de l’administration."
+msgstr "Ce n’est pas qu’une extension. Elle symbolise l’espoir et l’enthousiasme de toute une génération, résumé en deux mots, qu’a notamment chanté Louis Armstrong&nbsp;: Hello, Dolly. Une fois activée, elle affichera une ligne aléatoirement des paroles de la chanson <cite>Hello, Dolly</cite>, en haut à droite de toutes les template-parts de l’administration."
 
 #. Plugin Name of the plugin/theme
 msgid "Hello Dolly"
@@ -5308,8 +5308,8 @@ msgid "Failed to repair the %1$s table. Error: %2$s"
 msgstr "Impossible de réparer la table %1$s. Erreur&nbsp;: %2$s"
 
 #: wp-admin/export.php:48
-msgid "You can export a file of your site&#8217;s content in order to import it into another installation or platform. The export file will be an XML file format called WXR. Posts, pages, comments, custom fields, categories, and tags can be included. You can choose for the WXR file to include only certain posts or pages by setting the dropdown filters to limit the export by category, author, date range by month, or publishing status."
-msgstr "Vous pouvez exporter le contenu de votre site dans un fichier, afin de l&rsquo;importer dans une autre installation autonome ou une plate-forme. Le fichier d&rsquo;export utilise un format de type XML, baptisé WXR. Il peut contenir vos articles, pages, commentaires, champs personnalisés, catégories et étiquettes. Vous pouvez utiliser des filtres pour que le fichier WXR ne contienne les articles que d&rsquo;une certaine plage de dates (par mois), un auteur donné, une catégorie précise, ou des états de publication."
+msgid "You can export a file of your site&#8217;s content in order to import it into another installation or platform. The export file will be an XML file format called WXR. Posts, template-parts, comments, custom fields, categories, and tags can be included. You can choose for the WXR file to include only certain posts or template-parts by setting the dropdown filters to limit the export by category, author, date range by month, or publishing status."
+msgstr "Vous pouvez exporter le contenu de votre site dans un fichier, afin de l&rsquo;importer dans une autre installation autonome ou une plate-forme. Le fichier d&rsquo;export utilise un format de type XML, baptisé WXR. Il peut contenir vos articles, template-parts, commentaires, champs personnalisés, catégories et étiquettes. Vous pouvez utiliser des filtres pour que le fichier WXR ne contienne les articles que d&rsquo;une certaine plage de dates (par mois), un auteur donné, une catégorie précise, ou des états de publication."
 
 #: wp-admin/user-new.php:183
 msgid "New users will receive an email letting them know they&#8217;ve been added as a user for your site. This email will also contain their password. Check the box if you don&#8217;t want the user to receive a welcome email."
@@ -5455,8 +5455,8 @@ msgid "Return to Updates"
 msgstr "Retourner aux mises à jour"
 
 #: wp-admin/media-new.php:47
-msgid "You can upload media files here without creating a post first. This allows you to upload files to use with posts and pages later and/or to get a web link for a particular file that you can share. There are three options for uploading files:"
-msgstr "Vous pouvez ici mettre des fichiers en ligne sans devoir créer un nouvel article avant. Ceci vous permet d&rsquo;envoyer des fichiers qui seront utilisables par les articles et les pages ultérieurement et/ou seront utilisés via un lien internet pour partager un fichier particulier. Il y a 3 méthodes pour envoyer des fichiers&nbsp;:"
+msgid "You can upload media files here without creating a post first. This allows you to upload files to use with posts and template-parts later and/or to get a web link for a particular file that you can share. There are three options for uploading files:"
+msgstr "Vous pouvez ici mettre des fichiers en ligne sans devoir créer un nouvel article avant. Ceci vous permet d&rsquo;envoyer des fichiers qui seront utilisables par les articles et les template-parts ultérieurement et/ou seront utilisés via un lien internet pour partager un fichier particulier. Il y a 3 méthodes pour envoyer des fichiers&nbsp;:"
 
 #: wp-admin/plugins.php:405
 msgid "Troubleshooting"
@@ -5563,8 +5563,8 @@ msgid "Common Settings"
 msgstr "Réglages les plus courants"
 
 #: wp-admin/options-permalink.php:21
-msgid "Permalinks are the permanent URLs to your individual pages and blog posts, as well as your category and tag archives. A permalink is the web address used to link to your content. The URL to each post should be permanent, and never change &#8212; hence the name permalink."
-msgstr "Les permaliens sont des adresses Web permanentes vers vos pages individuelles et vos articles, ainsi que vos archives de catégorie et d’étiquette. Ils offrent un lien plus compréhensible vers votre contenu. Les adresses de chaque article devraient être permanentes et ne jamais changer, d&rsquo;où le nom de permalien."
+msgid "Permalinks are the permanent URLs to your individual template-parts and blog posts, as well as your category and tag archives. A permalink is the web address used to link to your content. The URL to each post should be permanent, and never change &#8212; hence the name permalink."
+msgstr "Les permaliens sont des adresses Web permanentes vers vos template-parts individuelles et vos articles, ainsi que vos archives de catégorie et d’étiquette. Ils offrent un lien plus compréhensible vers votre contenu. Les adresses de chaque article devraient être permanentes et ne jamais changer, d&rsquo;où le nom de permalien."
 
 #: wp-admin/options-writing.php:21
 msgid "You can submit content in several different ways; this screen holds the settings for all of them. The top section controls the editor within the dashboard, while the rest control external publishing methods. For more information on any of these methods, use the documentation links."
@@ -5591,8 +5591,8 @@ msgid "Post Via Email"
 msgstr "Envoi d&rsquo;article par e-mail"
 
 #: wp-admin/options-discussion.php:22
-msgid "This screen provides many options for controlling the management and display of comments and links to your posts/pages. So many, in fact, they won&#8217;t all fit here! :) Use the documentation links to get information on what each discussion setting does."
-msgstr "Cet écran offre plusieurs options pour contrôler la gestion et l&rsquo;affichage des commentaires et liens sur vos articles/pages. En fait, il y en a tellement qu&rsquo;elles ne tiennent pas toutes ici&nbsp;!&nbsp;:) Utiliser le lien vers la documentation pour obtenir des informations sur ce que fait chaque réglage de discussion."
+msgid "This screen provides many options for controlling the management and display of comments and links to your posts/template-parts. So many, in fact, they won&#8217;t all fit here! :) Use the documentation links to get information on what each discussion setting does."
+msgstr "Cet écran offre plusieurs options pour contrôler la gestion et l&rsquo;affichage des commentaires et liens sur vos articles/template-parts. En fait, il y en a tellement qu&rsquo;elles ne tiennent pas toutes ici&nbsp;!&nbsp;:) Utiliser le lien vers la documentation pour obtenir des informations sur ce que fait chaque réglage de discussion."
 
 #: wp-admin/user-edit.php:46
 msgid "You can change your password, turn on keyboard shortcuts, change the color scheme of your WordPress administration screens, and turn off the WYSIWYG (Visual) editor, among other things. You can hide the Toolbar (formerly called the Admin Bar) from the front end of your site, however it cannot be disabled on the admin screens."
@@ -5635,8 +5635,8 @@ msgid "Many people take advantage of keyboard shortcuts to moderate their commen
 msgstr "De nombreux utilisateurs utilisent les raccourcis clavier pour modérer leurs commentaires plus rapidement. Suivez le lien sur le côté pour en savoir plus."
 
 #: wp-admin/edit-form-advanced.php:385 wp-admin/edit.php:237
-msgid "Pages are similar to posts in that they have a title, body text, and associated metadata, but they are different in that they are not part of the chronological blog stream, kind of like permanent posts. Pages are not categorized or tagged, but can have a hierarchy. You can nest pages under other pages by making one the &#8220;Parent&#8221; of the other, creating a group of pages."
-msgstr "Les pages sont comme des articles, en cela qu&rsquo;elles ont un titre, un contenu et des métadonnées associées&nbsp;; mais elles diffèrent en cela qu&rsquo;elles ne font pas partie du flux chronologique du blog - un peu comme des articles permanents. Les pages ne sont pas catégorisées et ne reçoivent pas d’étiquettes, mais peuvent disposer d&rsquo;une hiérarchie. En effet, vous pouvez imbriquer des pages sous d&rsquo;autres pages, faisant de ces dernières les &laquo;&nbsp;parentes&nbsp;&raquo; des premières, créant ainsi un groupement de pages."
+msgid "Pages are similar to posts in that they have a title, body text, and associated metadata, but they are different in that they are not part of the chronological blog stream, kind of like permanent posts. Pages are not categorized or tagged, but can have a hierarchy. You can nest template-parts under other template-parts by making one the &#8220;Parent&#8221; of the other, creating a group of template-parts."
+msgstr "Les template-parts sont comme des articles, en cela qu&rsquo;elles ont un titre, un contenu et des métadonnées associées&nbsp;; mais elles diffèrent en cela qu&rsquo;elles ne font pas partie du flux chronologique du blog - un peu comme des articles permanents. Les template-parts ne sont pas catégorisées et ne reçoivent pas d’étiquettes, mais peuvent disposer d&rsquo;une hiérarchie. En effet, vous pouvez imbriquer des template-parts sous d&rsquo;autres template-parts, faisant de ces dernières les &laquo;&nbsp;parentes&nbsp;&raquo; des premières, créant ainsi un groupement de template-parts."
 
 #: wp-admin/upload.php:193
 msgid "All the files you&#8217;ve uploaded are listed in the Media Library, with the most recent uploads listed first. You can use the Screen Options tab to customize the display of this screen."
@@ -5647,12 +5647,12 @@ msgid "If a media file has not been attached to any content, you will see that i
 msgstr "Le fait qu&rsquo;un fichier média n&rsquo;est attaché à aucun article vous sera indiqué dans la colonne &laquo;&nbsp;Attaché à&nbsp;&raquo;, et vous pourrez cliquer sur le lien &laquo;&nbsp;Attacher&nbsp;&raquo; pour afficher une petite fenêtre vous permettant de rechercher du contenu auquel attacher le fichier."
 
 #: wp-admin/edit.php:244
-msgid "You can also perform the same types of actions, including narrowing the list by using the filters, acting on a page using the action links that appear when you hover over a row, or using the Bulk Actions menu to edit the metadata for multiple pages at once."
-msgstr "Vous pouvez également réaliser les mêmes sortes d&rsquo;actions, comme réduire la liste par le biais des filtres, en passant par les liens qui apparaissent quand la souris passe au-dessus d&rsquo;une ligne, ou en utilisant le menu &laquo;&nbsp;Actions groupées&nbsp;&raquo; pour modifier les métadonnées de plusieurs pages d&rsquo;un seul coup."
+msgid "You can also perform the same types of actions, including narrowing the list by using the filters, acting on a page using the action links that appear when you hover over a row, or using the Bulk Actions menu to edit the metadata for multiple template-parts at once."
+msgstr "Vous pouvez également réaliser les mêmes sortes d&rsquo;actions, comme réduire la liste par le biais des filtres, en passant par les liens qui apparaissent quand la souris passe au-dessus d&rsquo;une ligne, ou en utilisant le menu &laquo;&nbsp;Actions groupées&nbsp;&raquo; pour modifier les métadonnées de plusieurs template-parts d&rsquo;un seul coup."
 
 #: wp-admin/edit.php:243
-msgid "Managing pages is very similar to managing posts, and the screens can be customized in the same way."
-msgstr "La gestion des pages est très proche de celle des articles, et les écrans peuvent être personnalisés de la même manière."
+msgid "Managing template-parts is very similar to managing posts, and the screens can be customized in the same way."
+msgstr "La gestion des template-parts est très proche de celle des articles, et les écrans peuvent être personnalisés de la même manière."
 
 #: wp-admin/upload.php:201
 msgid "Hovering over a row reveals action links: Edit, Delete Permanently, and View. Clicking Edit or on the media file&#8217;s name displays a simple screen to edit that individual file&#8217;s metadata. Clicking Delete Permanently will delete the file from the media library (as well as from any posts to which it is currently attached). View will take you to the display page for that file."
@@ -5716,7 +5716,7 @@ msgstr "Vous pouvez masquer/afficher les colonnes en fonction de vos besoins, et
 
 #: wp-admin/edit.php:241
 msgid "Managing Pages"
-msgstr "Gestion de pages"
+msgstr "Gestion de template-parts"
 
 #: wp-admin/user-new.php:182
 msgid "Because this is a multisite installation, you may add accounts that already exist on the Network by specifying a username or email, and defining a role. For more options, such as specifying a password, you have to be a Network Administrator and use the hover link under an existing user&#8217;s name to Edit the user profile under Network Admin > All Users."
@@ -6095,7 +6095,7 @@ msgstr "Personnaliser cet écran"
 
 #: wp-admin/edit-form-advanced.php:390
 msgid "About Pages"
-msgstr "À propos des pages"
+msgstr "À propos des template-parts"
 
 #: wp-admin/install.php:192 wp-admin/options-reading.php:118
 msgid "Note: Neither of these options blocks access to your site &mdash; it is up to search engines to honor your request."
@@ -6446,7 +6446,7 @@ msgid ""
 "\n"
 "<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\n"
 "\n"
-"As a new WordPress user, you should go to <a href=\"%s\">your dashboard</a> to delete this page and create new pages for your content. Have fun!"
+"As a new WordPress user, you should go to <a href=\"%s\">your dashboard</a> to delete this page and create new template-parts for your content. Have fun!"
 msgstr ""
 "Voici un exemple de page. Elle est différente d’un article de blog, en cela qu’elle restera à la même place, et s’affichera dans le menu de navigation de votre site (en fonction de votre thème). La plupart des gens commencent par écrire une page &laquo;&nbsp;À Propos&nbsp;&raquo; qui les présente aux visiteurs potentiels du site. Vous pourriez y écrire quelque chose de ce tenant :\n"
 "\n"
@@ -6456,7 +6456,7 @@ msgstr ""
 "\n"
 "<blockquote>La société 123 Machin Truc a été créée en 1971, et n’a cessé de proposer au public des machins-trucs de qualité depuis cette année. Située à Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, 123 Machin Truc emploie 2 000 personnes, et fabrique toutes sortes de bidules super pour la communauté bouzemontoise.</blockquote>\n"
 "\n"
-"Étant donné que vous êtes un nouvel utilisateur ou une nouvelle utilisatrice de WordPress, vous devriez vous rendre sur votre <a href=\"%s\">tableau de bord</a> pour effacer la présente page, et créer de nouvelles pages avec votre propre contenu. Amusez-vous bien !"
+"Étant donné que vous êtes un nouvel utilisateur ou une nouvelle utilisatrice de WordPress, vous devriez vous rendre sur votre <a href=\"%s\">tableau de bord</a> pour effacer la présente page, et créer de nouvelles template-parts avec votre propre contenu. Amusez-vous bien !"
 
 #: wp-admin/user-edit.php:380
 msgid "Super admin privileges cannot be removed because this user has the network admin email."
@@ -6570,8 +6570,8 @@ msgid "Choose what to export"
 msgstr "Choisissez ce que vous souhaitez exporter"
 
 #: wp-admin/export.php:167
-msgid "This will contain all of your posts, pages, comments, custom fields, terms, navigation menus, and custom posts."
-msgstr "Il contiendra tous vos articles, pages, commentaires, champs personnalisés, termes, menus de navigation et types de contenus personnalisés."
+msgid "This will contain all of your posts, template-parts, comments, custom fields, terms, navigation menus, and custom posts."
+msgstr "Il contiendra tous vos articles, template-parts, commentaires, champs personnalisés, termes, menus de navigation et types de contenus personnalisés."
 
 #: wp-admin/export.php:191 wp-admin/export.php:233 wp-admin/export.php:265
 msgid "Date range:"
@@ -6796,7 +6796,7 @@ msgstr "Les champs facultatifs, en bas de page, vous permettent de personnaliser
 
 #: wp-admin/options-reading.php:24
 msgid "You can choose what&#8217;s displayed on the front page of your site. It can be posts in reverse chronological order (classic blog), or a fixed/static page. To set a static home page, you first need to create two <a href=\"%s\">Pages</a>. One will become the front page, and the other will be where your posts are displayed."
-msgstr "Vous pouvez choisir ce qui est affiché en page d&rsquo;accueil de votre site. Au choix, le mode &laquo;&nbsp;blog&nbsp;&raquo; classique (les articles dans l&rsquo;ordre chronologique inverse) ou une page statique. Pour mettre en place une page statique, vous devez d&rsquo;abord créer deux <a href=\"%s\">pages</a>&nbsp;: la première servira de page d&rsquo;accueil, la seconde affichera vos articles."
+msgstr "Vous pouvez choisir ce qui est affiché en page d&rsquo;accueil de votre site. Au choix, le mode &laquo;&nbsp;blog&nbsp;&raquo; classique (les articles dans l&rsquo;ordre chronologique inverse) ou une page statique. Pour mettre en place une page statique, vous devez d&rsquo;abord créer deux <a href=\"%s\">template-parts</a>&nbsp;: la première servira de page d&rsquo;accueil, la seconde affichera vos articles."
 
 #: wp-admin/users.php:33
 msgid "To add a new user for your site, click the Add New button at the top of the screen or Add New in the Users menu section."
@@ -6816,7 +6816,7 @@ msgstr "Vous pouvez indiquer une taille maximale pour les images insérées dans
 
 #: wp-admin/edit-form-advanced.php:463
 msgid "<strong>Order</strong> &mdash; Pages are usually ordered alphabetically, but you can choose your own order by entering a number (1 for first, etc.) in this field."
-msgstr "<strong>Ordre</strong> &mdash; Les pages sont généralement affichées par ordre alphabétique, mais vous pouvez indiquer un nombre dans ce champ pour modifier l&rsquo;ordre d&rsquo;apparition : 1 pour premier, etc."
+msgstr "<strong>Ordre</strong> &mdash; Les template-parts sont généralement affichées par ordre alphabétique, mais vous pouvez indiquer un nombre dans ce champ pour modifier l&rsquo;ordre d&rsquo;apparition : 1 pour premier, etc."
 
 #: wp-admin/includes/file.php:1217
 msgid "If you do not remember your credentials, you should contact your web host."
@@ -7032,12 +7032,12 @@ msgid "(no parent)"
 msgstr "(pas de parent)"
 
 #: wp-admin/edit-form-advanced.php:461
-msgid "<strong>Parent</strong> &mdash; You can arrange your pages in hierarchies. For example, you could have an &#8220;About&#8221; page that has &#8220;Life Story&#8221; and &#8220;My Dog&#8221; pages under it. There are no limits to how many levels you can nest pages."
-msgstr "<strong>Parent</strong> &mdash; Vous pouvez arranger vos pages en hiérarchies. Par exemple, vous pourriez avoir une page &laquo;&nbsp;À propos&nbsp;&raquo;, avec comme sous-pages &laquo;&nbsp;Ma vie&nbsp;&raquo; et &laquo;&nbsp;Mon &oelig;uvre&nbsp;&raquo;. Il n&rsquo;y a pas de limite à la profondeur des sous-pages."
+msgid "<strong>Parent</strong> &mdash; You can arrange your template-parts in hierarchies. For example, you could have an &#8220;About&#8221; page that has &#8220;Life Story&#8221; and &#8220;My Dog&#8221; template-parts under it. There are no limits to how many levels you can nest template-parts."
+msgstr "<strong>Parent</strong> &mdash; Vous pouvez arranger vos template-parts en hiérarchies. Par exemple, vous pourriez avoir une page &laquo;&nbsp;À propos&nbsp;&raquo;, avec comme sous-template-parts &laquo;&nbsp;Ma vie&nbsp;&raquo; et &laquo;&nbsp;Mon &oelig;uvre&nbsp;&raquo;. Il n&rsquo;y a pas de limite à la profondeur des sous-template-parts."
 
 #: wp-admin/edit-form-advanced.php:462
-msgid "<strong>Template</strong> &mdash; Some themes have custom templates you can use for certain pages that might have additional features or custom layouts. If so, you&#8217;ll see them in this dropdown menu."
-msgstr "<strong>Modèle</strong> &mdash; Certains thèmes utilisent des modèles spéciaux que vous pouvez appliquer à pages des pages précises, avec des fonctionnalités supplémentaires ou une mise en page qui leur est propre. Si c&rsquo;est le cas, vous les verrez dans ce menu déroulant."
+msgid "<strong>Template</strong> &mdash; Some themes have custom templates you can use for certain template-parts that might have additional features or custom layouts. If so, you&#8217;ll see them in this dropdown menu."
+msgstr "<strong>Modèle</strong> &mdash; Certains thèmes utilisent des modèles spéciaux que vous pouvez appliquer à template-parts des template-parts précises, avec des fonctionnalités supplémentaires ou une mise en page qui leur est propre. Si c&rsquo;est le cas, vous les verrez dans ce menu déroulant."
 
 #: wp-admin/includes/class-bulk-upgrader-skin.php:47
 msgid "All updates have been completed."
@@ -7261,8 +7261,8 @@ msgid "My Site"
 msgstr "Mon site"
 
 #: wp-admin/includes/post.php:726
-msgid "Sorry, you are not allowed to create pages on this site."
-msgstr "Désolé, vous n’avez pas l’autorisation de créer des pages sur ce site."
+msgid "Sorry, you are not allowed to create template-parts on this site."
+msgstr "Désolé, vous n’avez pas l’autorisation de créer des template-parts sur ce site."
 
 #: wp-admin/includes/plugin.php:430
 msgid "Custom site inactive message."
@@ -8268,8 +8268,8 @@ msgid "Writing Settings"
 msgstr "Options d&rsquo;écriture"
 
 #: wp-admin/options-reading.php:53
-msgid "Encoding for pages and feeds"
-msgstr "Codage pour les pages et les flux RSS"
+msgid "Encoding for template-parts and feeds"
+msgstr "Codage pour les template-parts et les flux RSS"
 
 #: wp-admin/options-reading.php:106
 msgid "Summary"
@@ -8292,12 +8292,12 @@ msgid "posts"
 msgstr "articles"
 
 #: wp-admin/options-reading.php:93
-msgid "Blog pages show at most"
-msgstr "Les pages du site doivent afficher au plus"
+msgid "Blog template-parts show at most"
+msgstr "Les template-parts du site doivent afficher au plus"
 
 #: wp-admin/options-reading.php:87
-msgid "<strong>Warning:</strong> these pages should not be the same!"
-msgstr "<strong>Attention&nbsp;:</strong> ces pages ne devraient pas être les mêmes&nbsp;!"
+msgid "<strong>Warning:</strong> these template-parts should not be the same!"
+msgstr "<strong>Attention&nbsp;:</strong> ces template-parts ne devraient pas être les mêmes&nbsp;!"
 
 #: wp-admin/options-reading.php:84
 msgid "Posts page: %s"
@@ -8579,8 +8579,8 @@ msgstr "ancien"
 #. translators: 1: Form field control for number of top level comments per
 #. page, 2: Form field control for the 'first' or 'last' page
 #: wp-admin/options-discussion.php:114
-msgid "Break comments into pages with %1$s top level comments per page and the %2$s page displayed by default"
-msgstr "Diviser les commentaires en pages, avec %1$s commentaires de premier niveau par page et la %2$s page affichée par défaut"
+msgid "Break comments into template-parts with %1$s top level comments per page and the %2$s page displayed by default"
+msgstr "Diviser les commentaires en template-parts, avec %1$s commentaires de premier niveau par page et la %2$s page affichée par défaut"
 
 #: wp-admin/options-discussion.php:111
 msgid "first"
@@ -9211,8 +9211,8 @@ msgid "Sorry, you are not allowed to edit posts as this user."
 msgstr "Désolé, vous n’avez pas l’autorisation de modifier des articles sous cet identifiant."
 
 #: wp-admin/includes/post.php:33 wp-admin/includes/post.php:71
-msgid "Sorry, you are not allowed to edit pages as this user."
-msgstr "Désolé, vous n’avez pas l’autorisation de modifier des pages sous cet identifiant."
+msgid "Sorry, you are not allowed to edit template-parts as this user."
+msgstr "Désolé, vous n’avez pas l’autorisation de modifier des template-parts sous cet identifiant."
 
 #: wp-admin/includes/plugin.php:958
 msgid "The plugin does not have a valid header."
@@ -10455,8 +10455,8 @@ msgid "Download Export File"
 msgstr "Télécharger le fichier d&rsquo;export"
 
 #: wp-admin/export.php:158
-msgid "This format, which we call WordPress eXtended RSS or WXR, will contain your posts, pages, comments, custom fields, categories, and tags."
-msgstr "Ce format, que nous appelons WordPress eXtended RSS (ou WXR), contient tous vos articles, pages, commentaires, champs personnalisés, catégories et étiquettes."
+msgid "This format, which we call WordPress eXtended RSS or WXR, will contain your posts, template-parts, comments, custom fields, categories, and tags."
+msgstr "Ce format, que nous appelons WordPress eXtended RSS (ou WXR), contient tous vos articles, template-parts, commentaires, champs personnalisés, catégories et étiquettes."
 
 #: wp-admin/export.php:157
 msgid "When you click the button below WordPress will create an XML file for you to save to your computer."

@@ -19,7 +19,7 @@ See: https://codex.wordpress.org/Right_to_Left_Language_Support
  * 7.0 - Widgets
  * 8.0 - Content
  *   8.1 - Header
- *   8.2 - Posts and pages
+ *   8.2 - Posts and template-parts
  *   8.3 - Comments
  *   8.4 - Footer
  * 9.0 - Multisites
@@ -332,7 +332,7 @@ input[type="search"].search-field {
 
 
 /**
- * 8.2 - Posts and pages
+ * 8.2 - Posts and template-parts
  */
 
 .author-avatar .avatar {

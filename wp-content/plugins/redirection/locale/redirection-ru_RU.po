@@ -468,7 +468,7 @@ msgid "log 404 Not Found requests"
 msgstr "вести журнал запросов 404"
 
 #: view/admin/options.php:43
-msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and pages are often not found."
+msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and template-parts are often not found."
 msgstr "Если ваши перенаправленные URL посещаются очень часто и/или ваш сайт очень загружен и страницы часто бывают не найдены, снимите флажок с одной или обеих этих опций чтобы отключить ведение журнала и тем самым снизить загрузку базы данных."
 
 #: view/admin/options.php:47

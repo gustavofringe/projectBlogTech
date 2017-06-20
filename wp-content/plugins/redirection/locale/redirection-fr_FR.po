@@ -865,7 +865,7 @@ msgstr "Redirection peut détecter les changements d'URL et générer une redire
 
 #: ../view/admin/options.php:57
 msgid "Post &amp; Page URLs"
-msgstr "URL d'articles et de pages"
+msgstr "URL d'articles et de template-parts"
 
 #: ../view/admin/options.php:60
 #: ../view/admin/options.php:72

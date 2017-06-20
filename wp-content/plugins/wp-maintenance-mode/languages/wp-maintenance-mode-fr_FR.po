@@ -304,10 +304,10 @@ msgstr "Exclure"
 
 #: views/settings.php:97
 msgid ""
-"Exclude feed, pages, archives or IPs from maintenance mode. Add one slug / "
+"Exclude feed, template-parts, archives or IPs from maintenance mode. Add one slug / "
 "IP per line!"
 msgstr ""
-"Exclure les flux, pages, archives ou adresses IP du mode maintenance. "
+"Exclure les flux, template-parts, archives ou adresses IP du mode maintenance. "
 "Ajouter une exclusion par ligne."
 
 #: views/settings.php:101

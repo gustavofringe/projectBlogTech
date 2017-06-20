@@ -32,7 +32,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 10.0 - Widgets
  * 11.0 - Content
  *    11.1 - Header
- *    11.2 - Posts and pages
+ *    11.2 - Posts and template-parts
  *    11.3 - Post Formats
  *    11.4 - Comments
  *    11.5 - Sidebar
@@ -1674,7 +1674,7 @@ blockquote:after,
 }
 
 /**
- * 11.2 - Posts and pages
+ * 11.2 - Posts and template-parts
  */
 
 .site-main > article {

@@ -1,9 +1,9 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive template-parts
  *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
+ * Used to display archive-type template-parts if nothing more specific matches a query.
+ * For example, puts together date-based template-parts if no date.php file exists.
  *
  * If you'd like to further customize these archive views, you may create a
  * new template file for each one. For example, tag.php (Tag archives),

@@ -113,11 +113,11 @@
 						api.section( 'static_front_page' ).activate();
 					}
 
-					// Add new page to dropdown-pages controls.
+					// Add new page to dropdown-template-parts controls.
 					api.control.each( function( control ) {
 						var select;
-						if ( 'dropdown-pages' === control.params.type ) {
-							select = control.container.find( 'select[name^="_customize-dropdown-pages-"]' );
+						if ( 'dropdown-template-parts' === control.params.type ) {
+							select = control.container.find( 'select[name^="_customize-dropdown-template-parts-"]' );
 							select.append( new Option( params.post_title, response.post_id ) );
 						}
 					} );

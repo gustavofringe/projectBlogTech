@@ -8,7 +8,7 @@
  */
 
 /**
- * Core class used to create an HTML drop-down list of pages.
+ * Core class used to create an HTML drop-down list of template-parts.
  *
  * @since 2.1.0
  *
@@ -49,7 +49,7 @@ class Walker_PageDropdown extends Walker {
 	 *
 	 * @param string  $output Used to append additional content. Passed by reference.
 	 * @param WP_Post $page   Page data object.
-	 * @param int     $depth  Optional. Depth of page in reference to parent pages. Used for padding.
+	 * @param int     $depth  Optional. Depth of page in reference to parent template-parts. Used for padding.
 	 *                        Default 0.
 	 * @param array   $args   Optional. Uses 'selected' argument for selected page to set selected HTML
 	 *                        attribute for option element. Uses 'value_field' argument to fill "value"
@@ -75,7 +75,7 @@ class Walker_PageDropdown extends Walker {
 		}
 
 		/**
-		 * Filters the page title when creating an HTML drop-down list of pages.
+		 * Filters the page title when creating an HTML drop-down list of template-parts.
 		 *
 		 * @since 3.1.0
 		 *

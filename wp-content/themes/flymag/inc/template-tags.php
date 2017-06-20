@@ -98,7 +98,7 @@ if ( ! function_exists( 'flymag_entry_footer' ) ) :
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
 	function flymag_entry_footer() {
-		// Hide category and tag text for pages.
+		// Hide category and tag text for template-parts.
 		if ( 'post' == get_post_type() ) {
 			$categories_list = get_the_category_list( __( ', ', 'flymag' ) );
 			if ( $categories_list && flymag_categorized_blog() && get_theme_mod( 'flymag_single_cats' ) != 1 ) {

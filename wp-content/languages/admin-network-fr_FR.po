@@ -1083,7 +1083,7 @@ msgid "You can sort the table by clicking on any of the table headings and switc
 msgstr "Un clic sur le titre d’une colonne permet de changer le tri du tableau. Les icônes en haut à droite permettent d’afficher des extraits ou non."
 
 #: wp-admin/network/user-new.php:21
-msgid "Users who are signed up to the network without a site are added as subscribers to the main or primary dashboard site, giving them profile pages to manage their accounts. These users will only see Dashboard and My Sites in the main navigation until a site is created for them."
+msgid "Users who are signed up to the network without a site are added as subscribers to the main or primary dashboard site, giving them profile template-parts to manage their accounts. These users will only see Dashboard and My Sites in the main navigation until a site is created for them."
 msgstr "Les utilisateurs qui se sont inscrits sur le réseau sans créer de site deviennent abonnés du site d&rsquo;accueil. Celui-ci leur permet d&rsquo;accéder à leur compte. Ces utilisateurs ne voient dans la navigation principale que les options &laquo;&nbsp;Tableau de bord&nbsp;&raquo; et &laquo;&nbsp;Mes sites&nbsp;&raquo;, jusqu&rsquo;à ce qu&rsquo;un site leur soit créé."
 
 #: wp-admin/network/sites.php:29

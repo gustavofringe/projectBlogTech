@@ -1258,7 +1258,7 @@ function get_preview_post_link( $post = null, $query_args = array(), $preview_li
  * Retrieves the edit post link for post.
  *
  * Can be used within the WordPress loop or outside of it. Can be used with
- * pages, posts, attachments, and revisions.
+ * template-parts, posts, attachments, and revisions.
  *
  * @since 2.3.0
  *
@@ -1818,7 +1818,7 @@ function adjacent_posts_rel_link( $title = '%title', $in_same_term = false, $exc
 }
 
 /**
- * Displays relational links for the posts adjacent to the current post for single post pages.
+ * Displays relational links for the posts adjacent to the current post for single post template-parts.
  *
  * This is meant to be attached to actions like 'wp_head'. Do not call this directly in plugins
  * or theme templates.
@@ -2157,7 +2157,7 @@ function get_pagenum_link($pagenum = 1, $escape = true ) {
  *
  * @global int $paged
  *
- * @param int $max_page Optional. Max pages. Default 0.
+ * @param int $max_page Optional. Max template-parts. Default 0.
  * @return string|void The link URL for next posts page.
  */
 function get_next_posts_page_link($max_page = 0) {
@@ -2177,7 +2177,7 @@ function get_next_posts_page_link($max_page = 0) {
  *
  * @since 0.71
  *
- * @param int   $max_page Optional. Max pages. Default 0.
+ * @param int   $max_page Optional. Max template-parts. Default 0.
  * @param bool  $echo     Optional. Whether to echo the link. Default true.
  * @return string|void The link URL for next posts page if `$echo = false`.
  */
@@ -2199,7 +2199,7 @@ function next_posts( $max_page = 0, $echo = true ) {
  * @global WP_Query $wp_query
  *
  * @param string $label    Content for link text.
- * @param int    $max_page Optional. Max pages. Default 0.
+ * @param int    $max_page Optional. Max template-parts. Default 0.
  * @return string|void HTML-formatted next posts page link.
  */
 function get_next_posts_link( $label = null, $max_page = 0 ) {
@@ -2236,7 +2236,7 @@ function get_next_posts_link( $label = null, $max_page = 0 ) {
  * @since 0.71
  *
  * @param string $label    Content for link text.
- * @param int    $max_page Optional. Max pages. Default 0.
+ * @param int    $max_page Optional. Max template-parts. Default 0.
  */
 function next_posts_link( $label = null, $max_page = 0 ) {
 	echo get_next_posts_link( $label, $max_page );
@@ -2324,14 +2324,14 @@ function previous_posts_link( $label = null ) {
 }
 
 /**
- * Retrieves the post pages link navigation for previous and next pages.
+ * Retrieves the post template-parts link navigation for previous and next template-parts.
  *
  * @since 2.8.0
  *
  * @global WP_Query $wp_query
  *
  * @param string|array $args {
- *     Optional. Arguments to build the post pages link navigation.
+ *     Optional. Arguments to build the post template-parts link navigation.
  *
  *     @type string $sep      Separator character. Default '&#8212;'.
  *     @type string $prelabel Link text to display for the previous page link.
@@ -2373,13 +2373,13 @@ function get_posts_nav_link( $args = array() ) {
 }
 
 /**
- * Displays the post pages link navigation for previous and next pages.
+ * Displays the post template-parts link navigation for previous and next template-parts.
  *
  * @since 0.71
  *
  * @param string $sep      Optional. Separator for posts navigation links. Default empty.
- * @param string $prelabel Optional. Label for previous pages. Default empty.
- * @param string $nxtlabel Optional Label for next pages. Default empty.
+ * @param string $prelabel Optional. Label for previous template-parts. Default empty.
+ * @param string $nxtlabel Optional Label for next template-parts. Default empty.
  */
 function posts_nav_link( $sep = '', $prelabel = '', $nxtlabel = '' ) {
 	$args = array_filter( compact('sep', 'prelabel', 'nxtlabel') );
@@ -2617,7 +2617,7 @@ function _navigation_markup( $links, $class = 'posts-navigation', $screen_reader
  * @global WP_Rewrite $wp_rewrite
  *
  * @param int $pagenum  Optional. Page number. Default 1.
- * @param int $max_page Optional. The maximum number of comment pages. Default 0.
+ * @param int $max_page Optional. The maximum number of comment template-parts. Default 0.
  * @return string The comments page number link URL.
  */
 function get_comments_pagenum_link( $pagenum = 1, $max_page = 0 ) {

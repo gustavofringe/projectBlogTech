@@ -1021,7 +1021,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 */
 		public function style_and_scripts( $hook_suffix ) {
 
-			// this is needed on all admin pages, not just the about page, for the badge action count in the wordpress main sidebar
+			// this is needed on all admin template-parts, not just the about page, for the badge action count in the wordpress main sidebar
 			wp_enqueue_style( 'ti-about-page-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css.css' );
 
 			if ( 'appearance_page_' . $this->theme_slug . '-welcome' == $hook_suffix ) {

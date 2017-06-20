@@ -202,7 +202,7 @@ msgstr ""
 #: wordpress-importer.php:1141
 msgid ""
 "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
-"the posts, pages, comments, custom fields, categories, and tags into this "
+"the posts, template-parts, comments, custom fields, categories, and tags into this "
 "site."
 msgstr ""
 
@@ -212,7 +212,7 @@ msgstr ""
 
 #: wordpress-importer.php:1216
 msgid ""
-"Import <strong>posts, pages, comments, custom fields, categories, and tags</"
+"Import <strong>posts, template-parts, comments, custom fields, categories, and tags</"
 "strong> from a WordPress export file."
 msgstr ""
 
@@ -226,7 +226,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Import posts, pages, comments, custom fields, categories, tags and more from "
+"Import posts, template-parts, comments, custom fields, categories, tags and more from "
 "a WordPress export file."
 msgstr ""
 

@@ -323,7 +323,7 @@ function get_theme_feature_list( $api = true ) {
 }
 
 /**
- * Retrieves theme installer pages from the WordPress.org Themes API.
+ * Retrieves theme installer template-parts from the WordPress.org Themes API.
  *
  * It is possible for a theme to override the Themes API result with three
  * filters. Assume this is for themes, which can extend on the Theme Info to
@@ -418,13 +418,13 @@ function themes_api( $action, $args = array() ) {
 	}
 
 	/**
-	 * Filters arguments used to query for installer pages from the WordPress.org Themes API.
+	 * Filters arguments used to query for installer template-parts from the WordPress.org Themes API.
 	 *
 	 * Important: An object MUST be returned to this filter.
 	 *
 	 * @since 2.8.0
 	 *
-	 * @param object $args   Arguments used to query for installer pages from the WordPress.org Themes API.
+	 * @param object $args   Arguments used to query for installer template-parts from the WordPress.org Themes API.
 	 * @param string $action Requested action. Likely values are 'theme_information',
 	 *                       'feature_list', or 'query_themes'.
 	 */
@@ -443,7 +443,7 @@ function themes_api( $action, $args = array() ) {
 	 * @param false|object|array $override Whether to override the WordPress.org Themes API. Default false.
 	 * @param string             $action   Requested action. Likely values are 'theme_information',
 	 *                                    'feature_list', or 'query_themes'.
-	 * @param object             $args     Arguments used to query for installer pages from the Themes API.
+	 * @param object             $args     Arguments used to query for installer template-parts from the Themes API.
 	 */
 	$res = apply_filters( 'themes_api', false, $action, $args );
 
@@ -506,7 +506,7 @@ function themes_api( $action, $args = array() ) {
 	 * @param array|object|WP_Error $res    WordPress.org Themes API response.
 	 * @param string                $action Requested action. Likely values are 'theme_information',
 	 *                                      'feature_list', or 'query_themes'.
-	 * @param object                $args   Arguments used to query for installer pages from the WordPress.org Themes API.
+	 * @param object                $args   Arguments used to query for installer template-parts from the WordPress.org Themes API.
 	 */
 	return apply_filters( 'themes_api_result', $res, $action, $args );
 }

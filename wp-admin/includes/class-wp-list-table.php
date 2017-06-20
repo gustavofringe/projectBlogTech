@@ -791,7 +791,7 @@ class WP_List_Table {
 		}
 
 		if ( $disable_first ) {
-			$page_links[] = '<span class="tablenav-pages-navspan" aria-hidden="true">&laquo;</span>';
+			$page_links[] = '<span class="tablenav-template-parts-navspan" aria-hidden="true">&laquo;</span>';
 		} else {
 			$page_links[] = sprintf( "<a class='first-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( remove_query_arg( 'paged', $current_url ) ),
@@ -801,7 +801,7 @@ class WP_List_Table {
 		}
 
 		if ( $disable_prev ) {
-			$page_links[] = '<span class="tablenav-pages-navspan" aria-hidden="true">&lsaquo;</span>';
+			$page_links[] = '<span class="tablenav-template-parts-navspan" aria-hidden="true">&lsaquo;</span>';
 		} else {
 			$page_links[] = sprintf( "<a class='prev-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( add_query_arg( 'paged', max( 1, $current-1 ), $current_url ) ),
@@ -820,11 +820,11 @@ class WP_List_Table {
 				strlen( $total_pages )
 			);
 		}
-		$html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
+		$html_total_pages = sprintf( "<span class='total-template-parts'>%s</span>", number_format_i18n( $total_pages ) );
 		$page_links[] = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 
 		if ( $disable_next ) {
-			$page_links[] = '<span class="tablenav-pages-navspan" aria-hidden="true">&rsaquo;</span>';
+			$page_links[] = '<span class="tablenav-template-parts-navspan" aria-hidden="true">&rsaquo;</span>';
 		} else {
 			$page_links[] = sprintf( "<a class='next-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( add_query_arg( 'paged', min( $total_pages, $current+1 ), $current_url ) ),
@@ -834,7 +834,7 @@ class WP_List_Table {
 		}
 
 		if ( $disable_last ) {
-			$page_links[] = '<span class="tablenav-pages-navspan" aria-hidden="true">&raquo;</span>';
+			$page_links[] = '<span class="tablenav-template-parts-navspan" aria-hidden="true">&raquo;</span>';
 		} else {
 			$page_links[] = sprintf( "<a class='last-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( add_query_arg( 'paged', $total_pages, $current_url ) ),
@@ -852,9 +852,9 @@ class WP_List_Table {
 		if ( $total_pages ) {
 			$page_class = $total_pages < 2 ? ' one-page' : '';
 		} else {
-			$page_class = ' no-pages';
+			$page_class = ' no-template-parts';
 		}
-		$this->_pagination = "<div class='tablenav-pages{$page_class}'>$output</div>";
+		$this->_pagination = "<div class='tablenav-template-parts{$page_class}'>$output</div>";
 
 		echo $this->_pagination;
 	}

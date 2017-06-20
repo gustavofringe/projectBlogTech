@@ -973,7 +973,7 @@
 			},
 
 			/**
-			 * Returns true if there are more pages of objects available.
+			 * Returns true if there are more template-parts of objects available.
 			 *
 			 * @returns null|boolean.
 			 */
@@ -1207,7 +1207,7 @@
 							wp.api.WPApiBaseModel.prototype.initialize.call( this, attributes, options );
 
 							/**
-							 * Posts and pages support trashing, other types don't support a trash
+							 * Posts and template-parts support trashing, other types don't support a trash
 							 * and require that you pass ?force=true to actually delete them.
 							 *
 							 * @todo we should be getting trashability from the Schema, not hard coding types here.

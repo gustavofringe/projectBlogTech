@@ -470,7 +470,7 @@ msgid "log 404 Not Found requests"
 msgstr "весці часопіс запытаў 404"
 
 #: view/admin/options.php:43
-msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and pages are often not found."
+msgid "Uncheck one or both of these to turn off logging and reduce database load if your redirected URLs are hit very frequently, and/or your site is very busy and template-parts are often not found."
 msgstr "Калі вашы перанакіраваныя URL наведваюцца вельмі часта і/ці ваш сайт вельмі загружаны і старонкі часта бываюць не знойдзены, зніміце сцяжок з адной ці абедзвюх гэтых опцый каб адключыць вядзенне часопіса і тым самым зменшыць загрузку базы дадзеных."
 
 #: view/admin/options.php:47

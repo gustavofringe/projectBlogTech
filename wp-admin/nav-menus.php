@@ -541,7 +541,7 @@ if ( ! $locations_screen ) : // Main tab
 		'content' => $menu_management
 	) );
 
-	$editing_menus  = '<p>' . __( 'Each custom menu may contain a mix of links to pages, categories, custom URLs or other content types. Menu links are added by selecting items from the expanding boxes in the left-hand column below.' ) . '</p>';
+	$editing_menus  = '<p>' . __( 'Each custom menu may contain a mix of links to template-parts, categories, custom URLs or other content types. Menu links are added by selecting items from the expanding boxes in the left-hand column below.' ) . '</p>';
 	$editing_menus .= '<p>' . __( '<strong>Clicking the arrow to the right of any menu item</strong> in the editor will reveal a standard group of settings. Additional settings such as link target, CSS classes, link relationships, and link descriptions can be enabled and disabled via the Screen Options tab.' ) . '</p>';
 	$editing_menus .= '<ul><li>' . __( 'Add one or several items at once by <strong>selecting the checkbox next to each item and clicking Add to Menu</strong>' ) . '</li>';
 	$editing_menus .= '<li>' . __( 'To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>' ) .'</li>';
@@ -802,9 +802,9 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 								} ?>
 
 								<fieldset class="menu-settings-group auto-add-pages">
-									<legend class="menu-settings-group-name howto"><?php _e( 'Auto add pages' ); ?></legend>
+									<legend class="menu-settings-group-name howto"><?php _e( 'Auto add template-parts' ); ?></legend>
 									<div class="menu-settings-input checkbox-input">
-										<input type="checkbox"<?php checked( $auto_add ); ?> name="auto-add-pages" id="auto-add-pages" value="1" /> <label for="auto-add-pages"><?php printf( __('Automatically add new top-level pages to this menu' ), esc_url( admin_url( 'edit.php?post_type=page' ) ) ); ?></label>
+										<input type="checkbox"<?php checked( $auto_add ); ?> name="auto-add-pages" id="auto-add-pages" value="1" /> <label for="auto-add-pages"><?php printf( __('Automatically add new top-level template-parts to this menu' ), esc_url( admin_url( 'edit.php?post_type=page' ) ) ); ?></label>
 									</div>
 								</fieldset>
 

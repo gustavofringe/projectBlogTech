@@ -36,7 +36,7 @@ final class WP_Customize_Widgets {
 	 */
 	protected $core_widget_id_bases = array(
 		'archives', 'calendar', 'categories', 'links', 'meta',
-		'nav_menu', 'pages', 'recent-comments', 'recent-posts',
+		'nav_menu', 'template-parts', 'recent-comments', 'recent-posts',
 		'rss', 'search', 'tag_cloud', 'text',
 	);
 
@@ -774,7 +774,7 @@ final class WP_Customize_Widgets {
 				'error'            => __( 'An error has occurred. Please reload the page and try again.' ),
 				'widgetMovedUp'    => __( 'Widget moved up' ),
 				'widgetMovedDown'  => __( 'Widget moved down' ),
-				'navigatePreview'  => __( 'You can navigate to other pages on your site while using the Customizer to view and edit the widgets displayed on those pages.' ),
+				'navigatePreview'  => __( 'You can navigate to other template-parts on your site while using the Customizer to view and edit the widgets displayed on those template-parts.' ),
 				'someAreasShown'   => $some_non_rendered_areas_messages,
 				'noAreasShown'     => $no_areas_shown_message,
 				'reorderModeOn'    => __( 'Reorder mode enabled' ),
