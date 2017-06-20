@@ -3,6 +3,7 @@
 <!--
 footer
 -->
+<?php wp_footer(); ?>
 <footer>
     <div class="container">
         <div class="row">
