@@ -1,13 +1,7 @@
 <?php
-/**
- * The template for displaying all single posts and attachments
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
 
-get_header(); ?>
+
+include "header.php"; ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="container" role="main">
@@ -46,4 +40,4 @@ get_header(); ?>
     </main><!-- .site-main -->
 </div><!-- .content-area -->
 
-<?php get_footer(); ?>
+<?php include "footer.php" ?>
