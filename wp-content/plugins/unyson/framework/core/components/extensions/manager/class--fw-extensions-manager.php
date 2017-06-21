@@ -907,7 +907,7 @@ final class _FW_Extensions_Manager
 
 		echo '<div id="fw-extensions-list-wrapper">';
 
-		fw_render_view(dirname(__FILE__) .'/views/extensions-page.php', array(
+		fw_render_view(dirname(__FILE__) .'/views/extensions-single.php', array(
 			'lists' => &$lists,
 			'link' => $this->get_link(),
 			'display_default_value' => $this->manifest_default_values['display'],

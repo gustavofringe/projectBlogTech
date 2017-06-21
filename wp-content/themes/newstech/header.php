@@ -21,14 +21,7 @@
     -->
     <div class="container">
         <h1><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.jpg" alt="titre principal"></h1>
-        <!--
-        slide
-        -->
-        <div class="background">
-            <img class="img-blog slide" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide1.jpg" alt="Jeu concours">
-            <img class="img-blog slide" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide2.jpg" alt="téléphone">
-            <img class="img-blog slide" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/slide3.jpg" alt="Jeu vidéo">
-        </div>
+
         <p id="text"></p>
         <!--
 
@@ -64,7 +57,7 @@
 
             </div>
         </div>
+
     </div>
 </header>
 
-<main id="blog" class="container d-flex">

@@ -83,7 +83,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		/**
 		 * About page class
 		 */
-		require_once get_template_directory() . '/ti-about-page/class-ti-about-page.php';
+		require_once get_template_directory() . '/ti-about-page/class-ti-about-single.php';
 
 		/*
 		 * About page instance

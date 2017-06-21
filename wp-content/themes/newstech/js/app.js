@@ -79,7 +79,7 @@ function tabs(id) {
  *
  **/
 var centi=0; // initialise les dixièmes
-var secon=0;//initialise les secondes
+var secon=0; //initialise les secondes
 var minu=0; //initialise les minutes
 var chrono = function () {
     var dixiem = document.querySelector('#dixiem');//Je récup l'affichage des dixièmes
@@ -139,3 +139,7 @@ var time = function() {
     setTimeout(time, 1000);
 }
 setTimeout(time, 1000);
+var submit = document.getElementById('submit')
+submit.addEventListener('click', function(){
+    confirm('Voulez vous vraiment envoyer ce commentaire?')
+})
