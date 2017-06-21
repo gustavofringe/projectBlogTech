@@ -1,23 +1,19 @@
-<?php
+<?php include "header.php"; ?>
 
 
-include "header.php"; ?>
-
-<div id="primary" class="content-area">
-    <main id="main" class="container" role="main">
-
+    <main class="container">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">accueil</a>
         <?php
         //
-        while ( have_posts() ) : the_post();
+        if ( have_posts() ) : the_post();
 
             the_content();
             if ( comments_open() || get_comments_number() ) :
                 comments_template();
             endif;
-        endwhile;
+        endif;
         ?>
 
-    </main><!-- .site-main -->
-</div><!-- .content-area -->
+    </main>
 
 <?php include "footer.php" ?>

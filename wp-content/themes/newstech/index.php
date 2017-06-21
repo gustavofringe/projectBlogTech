@@ -64,10 +64,6 @@
                         }
                     endwhile;
                     ?>
-                    <!--<div class="col-md-12 col-lg-6">
-                        <img src="<?php /*echo esc_url(get_template_directory_uri()); */?>/img/img_blog1.jpg"
-                             alt="enceinte bluetooth">
-                    </div>-->
             <div class="pub mt-4 hidden-md-down">
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pub.jpg" alt="publicité">
             </div>

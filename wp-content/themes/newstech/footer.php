@@ -28,9 +28,8 @@ footer
     </div>
 </footer>
 
-<script src="public/js/jquery-3.2.1.min.js"></script>
-<script src="public/js/bootstrap.min.js"></script>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/app.js"></script>
+
+<script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/js/app.js"></script>
 </body>
 
 </html>
