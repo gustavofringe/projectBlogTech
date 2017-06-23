@@ -44,7 +44,6 @@
             <!--
             content tabs
             -->
-            <a href="<?php get_template_part( 'about', 'page'); ?>">a proos</a>
             <div class="tabs-content">
                 <p class="content" id="content_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
                     ab
@@ -61,5 +60,6 @@
         </div>
 
     </div>
+    <?php wp_nav_menu(); ?>
 </header>
 
