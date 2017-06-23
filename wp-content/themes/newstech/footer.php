@@ -20,16 +20,17 @@ footer
         </div>
         <div class="social">
             <span class="d-inline">Nous suivre</span>
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/gplus.png" alt="google plus" class="d-inline">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/twitter.png" alt="twitter" class="d-inline">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/youtube.png" alt="youtube" class="d-inline">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/facebook.png" alt="facebook" class="d-inline">
+            <img src="<?php bloginfo("template_directory"); ?>/img/gplus.png" alt="google plus" class="d-inline">
+            <img src="<?php bloginfo("template_directory"); ?>/img/twitter.png" alt="twitter" class="d-inline">
+            <img src="<?php bloginfo("template_directory"); ?>/img/youtube.png" alt="youtube" class="d-inline">
+            <img src="<?php bloginfo("template_directory"); ?>/img/facebook.png" alt="facebook" class="d-inline">
+            <img src="<?php bloginfo("template_directory"); ?>/img/facebook.png" alt="facebook" class="d-inline">
         </div>
     </div>
 </footer>
-
-
 <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/js/app.js"></script>
+
+
 </body>
 
 </html>

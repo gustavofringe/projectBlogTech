@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.css"/>
+
     <link rel="icon" href="favicon.ico" />
     <title>Le blog</title>
     <?php wp_head(); ?>
@@ -43,6 +44,7 @@
             <!--
             content tabs
             -->
+            <a href="<?php get_template_part( 'about', 'page'); ?>">a proos</a>
             <div class="tabs-content">
                 <p class="content" id="content_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
                     ab
