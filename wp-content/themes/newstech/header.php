@@ -12,11 +12,12 @@
 
     <link rel="icon" href="favicon.ico" />
     <title>Le blog</title>
-    <?php wp_head(); ?>
 </head>
 
 <body>
 <header>
+
+    <?php wp_nav_menu(); ?>
     <!--
     title of site
     -->
@@ -60,6 +61,5 @@
         </div>
 
     </div>
-    <?php wp_nav_menu(); ?>
 </header>
 

@@ -1,25 +1,33 @@
 <?php
 /**
- * Template Name: about
- * The template used for displaying page content
+ * Template Name: page
+ * The template for displaying template-parts
+ *
+ * This is the template that displays all template-parts by default.
+ * Please note that this is the WordPress construct of template-parts and that
+ * other "template-parts" on your WordPress site will use a different template.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage Twenty_Fifteen
+ * @since Twenty Fifteen 1.0
  */
-?>
-<header class="entry-header">
-    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-</header><!-- .entry-header -->
 
-    <div>
+get_header(); ?>
+
+    <main class="container">
+
         <?php
-        the_title('<h1>','</h1>');
-        if ( have_posts() ) : the_post();
-            the_content();
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
-        endif;
+        // Start the loop.
+        while ( have_posts() ) : the_post();
+
+            // Include the page content template.
+            get_template_part( 'content', 'page' );
+
+
+            // End the loop.
+        endwhile;
         ?>
-    </div>
+
+    </main><!-- .site-main -->
+
+<?php get_footer(); ?>
