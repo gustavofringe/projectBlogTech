@@ -42,12 +42,29 @@ html, body {
 *=================================================== page title
 *
 **/
-/* line 37, assets/sass/style.scss */
+/**
+*
+*menu
+*
+*
+*/
+/* line 43, assets/sass/style.scss */
+.menu {
+  display: inline-block;
+}
+/* line 45, assets/sass/style.scss */
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+/* line 51, assets/sass/style.scss */
 h1 {
   width: 300px;
   margin: 50px auto !important;
 }
-/* line 40, assets/sass/style.scss */
+/* line 54, assets/sass/style.scss */
 h1 img {
   width: 300px;
 }
@@ -58,14 +75,14 @@ h1 img {
 *====================================================== slide header
 *
 **/
-/* line 50, assets/sass/style.scss */
+/* line 64, assets/sass/style.scss */
 .background {
   background-image: url("img/png.png");
   width: 100%;
   height: 300px;
   margin: 0 auto;
 }
-/* line 55, assets/sass/style.scss */
+/* line 69, assets/sass/style.scss */
 .background .slide {
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -90,7 +107,7 @@ h1 img {
 *================================================== tabs dropdown
 *
 **/
-/* line 75, assets/sass/style.scss */
+/* line 89, assets/sass/style.scss */
 .tabs-content .content {
   display: none;
   position: absolute;
@@ -101,12 +118,12 @@ h1 img {
   z-index: 2;
 }
 
-/* line 85, assets/sass/style.scss */
+/* line 99, assets/sass/style.scss */
 .nav-item.active {
   background-color: red;
 }
 
-/* line 88, assets/sass/style.scss */
+/* line 102, assets/sass/style.scss */
 .content.active {
   display: block;
 }
@@ -117,7 +134,7 @@ h1 img {
 *================================================ alt effect
 *
 **/
-/* line 97, assets/sass/style.scss */
+/* line 111, assets/sass/style.scss */
 #text {
   -webkit-animation: animate-object 10s infinite;
   -moz-animation: animate-object 10s infinite;
@@ -186,19 +203,19 @@ h1 img {
 *================================================== aside
 *
 **/
-/* line 125, assets/sass/style.scss */
+/* line 139, assets/sass/style.scss */
 aside {
   width: 25%;
 }
-/* line 127, assets/sass/style.scss */
+/* line 141, assets/sass/style.scss */
 aside p {
   text-align: justify;
 }
-/* line 130, assets/sass/style.scss */
+/* line 144, assets/sass/style.scss */
 aside img {
   width: 100%;
 }
-/* line 133, assets/sass/style.scss */
+/* line 147, assets/sass/style.scss */
 aside h2 {
   text-transform: uppercase;
 }
@@ -209,12 +226,12 @@ aside h2 {
 *=================================================== blog part
 *
 **/
-/* line 144, assets/sass/style.scss */
+/* line 158, assets/sass/style.scss */
 .new img {
   width: 100%;
   height: 350px;
 }
-/* line 148, assets/sass/style.scss */
+/* line 162, assets/sass/style.scss */
 .new .icon-user, .new .icon-comment-alt {
   font-family: 'fontawesome';
   font-weight: normal;
@@ -222,17 +239,17 @@ aside h2 {
   display: inline-block;
   text-decoration: inherit;
 }
-/* line 155, assets/sass/style.scss */
+/* line 169, assets/sass/style.scss */
 .new .icon-user:before {
   content: '\f007';
   color: grey;
 }
-/* line 159, assets/sass/style.scss */
+/* line 173, assets/sass/style.scss */
 .new .icon-comment-alt:before {
   content: '\f0e5';
   color: grey;
 }
-/* line 163, assets/sass/style.scss */
+/* line 177, assets/sass/style.scss */
 .new .row {
   border-bottom: 2px solid grey;
 }
@@ -242,7 +259,7 @@ aside h2 {
 *========================================= pub
 *
 **/
-/* line 173, assets/sass/style.scss */
+/* line 187, assets/sass/style.scss */
 .pub img {
   height: 125px;
 }
@@ -253,7 +270,7 @@ aside h2 {
 *======================================== footer
 *
 **/
-/* line 184, assets/sass/style.scss */
+/* line 198, assets/sass/style.scss */
 footer {
   line-height: 60px;
   height: 100%;

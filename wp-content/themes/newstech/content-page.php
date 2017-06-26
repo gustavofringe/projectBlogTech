@@ -9,8 +9,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">accueil</a>
         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
     <div class="entry-content">

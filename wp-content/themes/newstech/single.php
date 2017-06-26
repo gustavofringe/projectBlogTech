@@ -2,7 +2,6 @@
 
 
     <main class="container">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">accueil</a>
         <?php
         if ( have_posts() ) : the_post();
             the_content();

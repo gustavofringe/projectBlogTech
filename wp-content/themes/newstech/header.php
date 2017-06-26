@@ -17,7 +17,11 @@
 <body>
 <header>
 
-    <?php wp_nav_menu(); ?>
+    <?php wp_nav_menu();
+    if ( is_front_page() && is_home() ) : ?>
+    <?php else : ?>
+    <p class="menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Accueil</a></p>
+<?php endif; ?>
     <!--
     title of site
     -->
